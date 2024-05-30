@@ -165,10 +165,9 @@ def generate_queries_yaml(yaml_files, queries_yaml_path, ignore_list):
                             
                             existing_queries = set(normalize_query(q) for q in engine_entry['queries'])
                             added_queries = new_queries - existing_queries
-                            engine_entry['queries'].extend(added_queries)
-                            
                             if added_queries:
                                 logger.info(f"Added new queries to {vendor}:{product} on platform {platform}: {added_queries}")
+                            engine_entry['queries'].extend(added_queries)
                             
                             # Add mapped queries for other platforms
                             for query in added_queries:
