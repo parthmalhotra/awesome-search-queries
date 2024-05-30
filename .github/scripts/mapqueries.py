@@ -164,15 +164,13 @@ def generate_queries_yaml(yaml_files, queries_yaml_path, ignore_list):
                                 entry['engines'].append(engine_entry)
                             
                             existing_queries = set(normalize_query(q) for q in engine_entry['queries'])
-                            updated_queries = existing_queries.union(new_queries)
-                            
-                            if len(updated_queries) > len(existing_queries):
-                                added_queries = updated_queries - existing_queries
+                            added_queries = new_queries - existing_queries
+                            if added_queries:
                                 logger.info(f"Added new queries to {vendor}:{product} on platform {platform}: {added_queries}")
-                            engine_entry['queries'] = list(updated_queries)
+                            engine_entry['queries'].extend(added_queries)
                             
                             # Add mapped queries for other platforms
-                            for query in updated_queries:
+                            for query in added_queries:
                                 if should_ignore_query(platform, query, ignore_list):
                                     logger.info(f"Skipping ignored query: {platform}:{query}")
                                     continue
@@ -313,14 +311,12 @@ def generate_queries_yaml(yaml_files, queries_yaml_path, ignore_list):
             first_entry = False
     logger.info(f"Updated {queries_yaml_path}")
 
-
 def main():
     parser = argparse.ArgumentParser(description='Process YAML templates and generate/update QUERIES.yaml')
     parser.add_argument('-tdir', default='~/nuclei-templates', help='Directory containing YAML templates')
     parser.add_argument('-t', help='Single template file to process')
     parser.add_argument('-out', default='QUERIES17.yaml', help='Output file for the queries YAML')
     parser.add_argument('-ignore', default='.ignore', help='Ignore file')
-
 
     args = parser.parse_args()
 
