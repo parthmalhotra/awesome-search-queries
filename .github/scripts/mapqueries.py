@@ -164,14 +164,15 @@ def generate_queries_yaml(yaml_files, queries_yaml_path, ignore_list):
                                 entry['engines'].append(engine_entry)
                             
                             existing_queries = set(normalize_query(q) for q in engine_entry['queries'])
-                            added_queries = new_queries - existing_queries
-                            engine_entry['queries'].extend(added_queries)
+                            updated_queries = existing_queries.union(new_queries)
                             
-                            if added_queries:
+                            if len(updated_queries) > len(existing_queries):
+                                added_queries = updated_queries - existing_queries
                                 logger.info(f"Added new queries to {vendor}:{product} on platform {platform}: {added_queries}")
+                            engine_entry['queries'] = list(updated_queries)
                             
                             # Add mapped queries for other platforms
-                            for query in added_queries:
+                            for query in updated_queries:
                                 if should_ignore_query(platform, query, ignore_list):
                                     logger.info(f"Skipping ignored query: {platform}:{query}")
                                     continue
@@ -203,6 +204,45 @@ def generate_queries_yaml(yaml_files, queries_yaml_path, ignore_list):
                                                     entry['engines'].append(other_engine_entry)
                                                 other_engine_entry['queries'].extend(queries)
                                                 other_engine_entry['queries'] = list(set(other_engine_entry['queries']))
+                                    else:
+                                        # Check if the query starts with "http.title:", "http.html:", "intitle:", or "intext:"
+                                        if query.startswith("http.title:"):
+                                            query_value = query.split(":", 1)[1].strip()
+                                            mapped_queries = {
+                                                "fofa": [f"title={query_value}"],
+                                                "google": [f"intitle:{query_value}"]
+                                            }
+                                        elif query.startswith("http.html:"):
+                                            query_value = query.split(":", 1)[1].strip()
+                                            mapped_queries = {
+                                                "fofa": [f"body={query_value}"]
+                                            }
+                                        elif query.startswith("intitle:"):
+                                            query_value = query.split(":", 1)[1].strip()
+                                            mapped_queries = {
+                                                "shodan": [f"http.title:{query_value}"],
+                                                "fofa": [f"title={query_value}"]
+                                            }
+                                        elif query.startswith("intext:"):
+                                            query_value = query.split(":", 1)[1].strip()
+                                            mapped_queries = {
+                                                "shodan": [f"http.html:{query_value}"],
+                                                "fofa": [f"body={query_value}"]
+                                            }
+                                        else:
+                                            continue
+
+                                        for other_platform, queries in mapped_queries.items():
+                                            for mapped_query in queries:
+                                                if should_ignore_query(other_platform, mapped_query, ignore_list):
+                                                    logger.info(f"Skipping ignored mapped query: {other_platform}:{mapped_query}")
+                                                    continue
+                                            other_engine_entry = next((e for e in entry['engines'] if e['platform'] == other_platform), None)
+                                            if other_engine_entry is None:
+                                                other_engine_entry = {'platform': other_platform, 'queries': []}
+                                                entry['engines'].append(other_engine_entry)
+                                            other_engine_entry['queries'].extend(queries)
+                                            other_engine_entry['queries'] = list(set(other_engine_entry['queries']))
 
     # Convert the modified data_dict back to list form
     updated_queries_data = list(data_dict.values())
@@ -273,12 +313,14 @@ def generate_queries_yaml(yaml_files, queries_yaml_path, ignore_list):
             first_entry = False
     logger.info(f"Updated {queries_yaml_path}")
 
+
 def main():
     parser = argparse.ArgumentParser(description='Process YAML templates and generate/update QUERIES.yaml')
     parser.add_argument('-tdir', default='~/nuclei-templates', help='Directory containing YAML templates')
     parser.add_argument('-t', help='Single template file to process')
     parser.add_argument('-out', default='QUERIES17.yaml', help='Output file for the queries YAML')
     parser.add_argument('-ignore', default='.ignore', help='Ignore file')
+
 
     args = parser.parse_args()
 
