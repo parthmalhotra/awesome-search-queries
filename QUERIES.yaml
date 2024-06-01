@@ -4951,6 +4951,9 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:dnnsoftware:dotnetnuke"
+    - platform: fofa
+      queries:
+        - app="dotnetnuke"
 
 - name: docker
   vendor: docker
@@ -5033,6 +5036,9 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:elastic:elasticsearch"
+    - platform: fofa
+      queries:
+        - index_not_found_exception
 
 - name: appweb
   vendor: embedthis
@@ -8412,6 +8418,12 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:h:contec:solarview_compact"
+        - http.html:"solarview compact"
+        - http.favicon.hash:"-244067125"
+    - platform: fofa
+      queries:
+        - icon_hash="-244067125"
+        - body="solarview compact"
 
 - name: mc3
   vendor: crestron
@@ -9316,6 +9328,13 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:h:dlink:dir-615"
+        - http.title:"roteador wireless"
+    - platform: fofa
+      queries:
+        - title="roteador wireless"
+    - platform: google
+      queries:
+        - intitle:"roteador wireless"
 
 - name: dir-655
   vendor: dlink
@@ -11518,6 +11537,10 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:o:linux:linux_kernel"
+        - http.html:"aspera faspex"
+    - platform: fofa
+      queries:
+        - body="aspera faspex"
 
 - name: windows
   vendor: microsoft
@@ -11526,6 +11549,13 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:o:microsoft:windows"
+        - http.title:"filemage"
+    - platform: fofa
+      queries:
+        - title="filemage"
+    - platform: google
+      queries:
+        - intitle:"filemage"
 
 - name: windows-9x
   vendor: microsoft
@@ -12125,6 +12155,7 @@
     - platform: shodan
       queries:
         - apache 2.4.49
+        - cpe:"cpe:2.3:a:apache:http_server"
 
 - name: mycloud_nas
   vendor: western_digital
@@ -12457,6 +12488,7 @@
     - platform: shodan
       queries:
         - http.title:"gitlab"
+        - cpe:"cpe:2.3:a:gitlab:gitlab"
     - platform: fofa
       queries:
         - title="gitlab"
@@ -14703,13 +14735,16 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"openvpn connect"
         - http.title:"adobe connect"
     - platform: fofa
       queries:
         - title="adobe connect"
+        - title="openvpn connect"
     - platform: google
       queries:
         - intitle:"adobe connect"
+        - intitle:"openvpn connect"
 
 - name: mstore_api
   vendor: inspireui
@@ -15209,6 +15244,7 @@
     - platform: shodan
       queries:
         - http.title:"sign in - gogs"
+        - cpe:"cpe:2.3:a:gogs:gogs"
     - platform: fofa
       queries:
         - title="sign in - gogs"
@@ -15301,9 +15337,11 @@
     - platform: shodan
       queries:
         - http.title:"login - jorani"
+        - http.favicon.hash:-2032163853
     - platform: fofa
       queries:
         - title="login - jorani"
+        - icon_hash=-2032163853
     - platform: google
       queries:
         - intitle:"login - jorani"
@@ -15482,6 +15520,7 @@
     - platform: google
       queries:
         - inurl:/backups-dup-lite/dup-installer/
+        - inurl:"/wp-content/plugins/duplicator"
 
 - name: tos
   vendor: terra-master
@@ -15979,12 +16018,15 @@
     - platform: shodan
       queries:
         - http.title:"icewarp"
+        - http.title:"gotify"
     - platform: fofa
       queries:
+        - title="gotify"
         - title="icewarp"
     - platform: google
       queries:
         - intitle:"icewarp"
+        - intitle:"gotify"
 
 - name: pagination
   vendor: bestwebsoft
@@ -16409,10 +16451,15 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"revive adserver"
         - http.favicon.hash:106844876
     - platform: fofa
       queries:
         - icon_hash=106844876
+        - title="revive adserver"
+    - platform: google
+      queries:
+        - intitle:"revive adserver"
 
 - name: popup_maker
   vendor: code-atlantic
@@ -16449,8 +16496,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -16927,9 +16974,14 @@
       queries:
         - icon_hash=217119619
         - app="rstudio-connect"
+        - title="openvpn connect"
     - platform: shodan
       queries:
+        - http.title:"openvpn connect"
         - http.favicon.hash:217119619
+    - platform: google
+      queries:
+        - intitle:"openvpn connect"
 
 - name: newspaper
   vendor: tagdiv
@@ -19875,7 +19927,10 @@
 - name: awstats
   vendor: awstats
   type: product
-  engines: []
+  engines:
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:a:laurent_destailleur:awstats"
 
 - name: ultraseek
   vendor: autonomy
@@ -19930,7 +19985,10 @@
 - name: elasticsearch
   vendor: elasticsearch
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - index_not_found_exception
 
 - name: simatic_s7_cpu_1200_firmware
   vendor: siemens
@@ -19991,6 +20049,17 @@
   vendor: orchardproject
   type: product
   engines: []
+
+- name: webtitan
+  vendor: spamtitan
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash=1090061843
+    - platform: shodan
+      queries:
+        - http.title:"webtitan"
 
 - name: unified_ip_interactive_voice_response
   vendor: cisco
@@ -20282,6 +20351,14 @@
   type: product
   engines: []
 
+- name: sdt-cs3b1
+  vendor: telesquare
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"sdt-cw3b1"
+
 - name: seo_panel
   vendor: seopanel
   type: product
@@ -20379,6 +20456,11 @@
 
 - name: rosariosis
   vendor: rosariosis
+  type: product
+  engines: []
+
+- name: hyperflex_hx220c_af_m5
+  vendor: cisco
   type: product
   engines: []
 
@@ -20717,7 +20799,7 @@
   type: product
   engines: []
 
-- name: gryphon_tower_firmware
+- name: gryphon_tower
   vendor: gryphonconnect
   type: product
   engines: []
@@ -20812,7 +20894,7 @@
   type: product
   engines: []
 
-- name: wireless-n_wifi_repeater_firmware
+- name: wireless-n_wifi_repeater
   vendor: acexy
   type: product
   engines: []
@@ -20842,7 +20924,7 @@
   type: product
   engines: []
 
-- name: dap-1620_firmware
+- name: dap-1620
   vendor: dlink
   type: product
   engines: []
@@ -20870,7 +20952,16 @@
 - name: cobbler
   vendor: cobbler_project
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - title="cobbler web interface"
+    - platform: google
+      queries:
+        - intitle:"cobbler web interface"
+    - platform: shodan
+      queries:
+        - http.title:"cobbler web interface"
 
 - name: dir-820l_firmware
   vendor: dlink
@@ -20880,9 +20971,12 @@
 - name: web_server
   vendor: zerof
   type: product
-  engines: []
+  engines:
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:a:google:web_server"
 
-- name: win_300_firmware
+- name: win_300
   vendor: intelbras
   type: product
   engines: []
@@ -20972,6 +21066,14 @@
   type: product
   engines: []
 
+- name: tlr-2855ks6
+  vendor: telesquare
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - product=="telesquare-tlr-2855ks6"
+
 - name: jive
   vendor: jivesoftware
   type: product
@@ -20982,12 +21084,20 @@
   type: product
   engines: []
 
+- name: tlr-2005ksh
+  vendor: telesquare
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"tlr-2005ksh"
+
 - name: button_generator
   vendor: wow-company
   type: product
   engines: []
 
-- name: ip_audtio_gateway_firmware
+- name: ip_audtio_gateway
   vendor: tieline
   type: product
   engines: []
@@ -21047,10 +21157,27 @@
   type: product
   engines: []
 
+- name: nsa_2650
+  vendor: sonicwall
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - inurl:"auth.html" intitle:"sonicwall"
+
 - name: contact_form
   vendor: supsystic
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/contact-form-plugin/
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/contact-form-plugin/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/contact-form-plugin/
 
 - name: xn8024r_firmware
   vendor: qsan
@@ -21192,6 +21319,11 @@
   type: product
   engines: []
 
+- name: wsr-2533dhpl2-bk
+  vendor: buffalo
+  type: product
+  engines: []
+
 - name: easy_social_icons
   vendor: cybernetikz
   type: product
@@ -21290,7 +21422,10 @@
 - name: duplicator
   vendor: awesomemotive
   type: product
-  engines: []
+  engines:
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/duplicator"
 
 - name: enrollment_system
   vendor: enrollment_system_project
@@ -21347,7 +21482,7 @@
   type: product
   engines: []
 
-- name: smartnode_sn200_firmware
+- name: smartnode_sn200
   vendor: patton
   type: product
   engines: []
@@ -21366,6 +21501,14 @@
   vendor: wpwax
   type: product
   engines: []
+
+- name: cph2_echarge
+  vendor: hardy-barth
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"salia plcc"
 
 - name: manageengine_admanager_plus
   vendor: zohocorp
@@ -21452,6 +21595,14 @@
   type: product
   engines: []
 
+- name: ur51
+  vendor: milesight
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:rt_title
+
 - name: x5000r_firmware
   vendor: totolink
   type: product
@@ -21491,6 +21642,20 @@
   vendor: pretty_url_project
   type: product
   engines: []
+
+- name: sma1000
+  vendor: sonicwall
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="appliance management console login"
+    - platform: google
+      queries:
+        - intitle:"appliance management console login"
+    - platform: shodan
+      queries:
+        - http.title:"appliance management console login"
 
 - name: simple_urls
   vendor: getlasso
@@ -21552,10 +21717,24 @@
   type: product
   engines: []
 
+- name: srx100
+  vendor: juniper
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"juniper web device manager"
+
 - name: blogengine.net
   vendor: blogengine
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - body="blogengine.net"
+    - platform: shodan
+      queries:
+        - http.html:"blogengine.net"
 
 - name: tablesome
   vendor: pauple
@@ -21576,6 +21755,22 @@
   vendor: telaen_project
   type: product
   engines: []
+
+- name: dns-320l_firmware
+  vendor: dlink
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="d_link-dns-sharecenter"
+
+- name: layerslider
+  vendor: layerslider
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/layerslider/
 
 - name: aiohttp
   vendor: aiohttp
@@ -21664,6 +21859,11 @@
 
 - name: wp_background_takeover_advertisements
   vendor: 99robots
+  type: product
+  engines: []
+
+- name: attribute_wizard
+  vendor: attribute_wizard_project
   type: product
   engines: []
 
@@ -21807,6 +22007,11 @@
   type: product
   engines: []
 
+- name: lgate-902
+  vendor: loytec
+  type: product
+  engines: []
+
 - name: secure_global_desktop
   vendor: oracle
   type: product
@@ -21840,7 +22045,16 @@
 - name: ninja_forms
   vendor: ninjaforma
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/ninja-forms/
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/ninja-forms/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/ninja-forms/
 
 - name: localize_my_post
   vendor: localize_my_post_project
@@ -21925,7 +22139,16 @@
 - name: dvr
   vendor: argussurveillance
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - title="web viewer for samsung dvr"
+    - platform: google
+      queries:
+        - intitle:"web viewer for samsung dvr"
+    - platform: shodan
+      queries:
+        - http.title:"web viewer for samsung dvr"
 
 - name: spring_data_commons
   vendor: pivotal_software
@@ -21935,7 +22158,13 @@
 - name: eventum
   vendor: eventum_project
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash=305412257
+    - platform: shodan
+      queries:
+        - http.favicon.hash:305412257
 
 - name: wechat_brodcast
   vendor: wechat_brodcast_project
@@ -22140,7 +22369,16 @@
 - name: pandora_fms
   vendor: artica
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - title="pandora fms"
+    - platform: google
+      queries:
+        - intitle:"pandora fms"
+    - platform: shodan
+      queries:
+        - http.title:"pandora fms"
 
 - name: if_surfalert
   vendor: if_surfalert_project
@@ -22580,12 +22818,27 @@
 - name: hospital_management_system
   vendor: phpgurukul
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - body="hospital management system"
+    - platform: shodan
+      queries:
+        - http.html:"hospital management system"
 
 - name: unified_threat_management
   vendor: sophos
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - title="securepoint utm"
+    - platform: google
+      queries:
+        - intitle:"securepoint utm"
+    - platform: shodan
+      queries:
+        - http.title:"securepoint utm"
 
 - name: nedi
   vendor: nedi
@@ -22802,6 +23055,14 @@
   type: product
   engines: []
 
+- name: wn575a4
+  vendor: wavlink
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"wi-fi app login"
+
 - name: flink
   vendor: apache
   type: product
@@ -22967,6 +23228,11 @@
   type: product
   engines: []
 
+- name: asa_5505
+  vendor: cisco
+  type: product
+  engines: []
+
 - name: gridx
   vendor: gridx_project
   type: product
@@ -22992,7 +23258,7 @@
   type: product
   engines: []
 
-- name: slc-130_firmware
+- name: slc-130
   vendor: seowonintech
   type: product
   engines: []
@@ -23025,7 +23291,10 @@
 - name: caseaware
   vendor: kmc_information_systems
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - title="caseaware"
 
 - name: ds-2cd2032-i_firmware
   vendor: hikvision
@@ -23177,7 +23446,7 @@
   type: product
   engines: []
 
-- name: wip3bvaf_firmware
+- name: wip3bvaf
   vendor: genieaccess
   type: product
   engines: []
@@ -23187,7 +23456,7 @@
   type: product
   engines: []
 
-- name: dir-600m_firmware
+- name: dir-600m
   vendor: dlink
   type: product
   engines: []
@@ -23455,7 +23724,10 @@
 - name: my_calendar
   vendor: my_calendar_project
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - '"wordpress" && body="wp-content/plugins/my-calendar"'
 
 - name: at-gs950\/8_firmware
   vendor: alliedtelesis
@@ -23862,6 +24134,14 @@
   type: product
   engines: []
 
+- name: syncserver_s650
+  vendor: microchip
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"symmetricom syncserver"
+
 - name: ti_woocommerce_wishlist
   vendor: templateinvaders
   type: product
@@ -23956,6 +24236,14 @@
   vendor: wpvivid
   type: product
   engines: []
+
+- name: wl-wn535k2
+  vendor: wavlink
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"wi-fi app login"
 
 - name: unyson
   vendor: brizy
@@ -24292,6 +24580,11 @@
   type: product
   engines: []
 
+- name: sila
+  vendor: razer
+  type: product
+  engines: []
+
 - name: admin_word_count_column
   vendor: admin_word_count_column_project
   type: product
@@ -24307,7 +24600,7 @@
   type: product
   engines: []
 
-- name: w15e_firmware
+- name: ac1200_v-w15ev2
   vendor: tenda
   type: product
   engines: []
@@ -24390,7 +24683,16 @@
 - name: openemr
   vendor: openemr
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash=1971268439
+    - platform: google
+      queries:
+        - intitle:"openemr"
+    - platform: shodan
+      queries:
+        - http.html:"openemr"
 
 - name: 11in1
   vendor: 11in1
@@ -24400,7 +24702,13 @@
 - name: download_monitor
   vendor: mikejolley
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/download-monitor/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/download-monitor/"
 
 - name: firebox_t15
   vendor: watchguard
