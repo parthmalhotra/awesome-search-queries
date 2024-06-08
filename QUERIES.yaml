@@ -12227,8 +12227,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12551,9 +12551,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
         - icon_hash="-1797138069"
         - title="login to cacti"
+        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13708,9 +13708,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
         - icon_hash="475145467"
         - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14785,8 +14785,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16518,8 +16518,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20034,6 +20034,99 @@
       queries:
         - http.html:"/wp-content/plugins/download-monitor/"
 
+- name: exim
+  vendor: mailoney
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:a:exim:exim"
+
+- name: mysql
+  vendor: dionaea
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"mysql"
+
+- name: e1_zoom
+  vendor: reolink
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="reolink"
+    - platform: google
+      queries:
+        - intitle:"reolink"
+    - platform: shodan
+      queries:
+        - http.title:"reolink"
+
+- name: uag2100
+  vendor: zyxel
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="zywall"
+    - platform: google
+      queries:
+        - intitle:"zywall"
+    - platform: shodan
+      queries:
+        - http.title:"zywall"
+
+- name: rabbitmq
+  vendor: vmware
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:a:vmware:rabbitmq"
+
+- name: bitrix24
+  vendor: bitrix
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/bitrix/"
+    - platform: shodan
+      queries:
+        - http.html:"/bitrix/"
+
+- name: bolt
+  vendor: boltcms
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:a:bolt:bolt"
+
+- name: fuel_cms
+  vendor: daylightstudio
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="fuel cms"
+    - platform: google
+      queries:
+        - intitle:"fuel cms"
+    - platform: shodan
+      queries:
+        - http.title:"fuel cms"
+
+- name: http
+  vendor: dionaea
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - '"python/3.10 aiohttp/3.8.3" && bad status'
+
 - name: data_protector
   vendor: hp
   type: product
@@ -20053,22 +20146,6 @@
   vendor: inglorion
   type: product
   engines: []
-
-- name: exim
-  vendor: mailoney
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - cpe:"cpe:2.3:a:exim:exim"
-
-- name: mysql
-  vendor: dionaea
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - product:"mysql"
 
 - name: ssh
   vendor: cowrie
@@ -21054,20 +21131,6 @@
   vendor: lantronix
   type: product
   engines: []
-
-- name: e1_zoom
-  vendor: reolink
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="reolink"
-    - platform: google
-      queries:
-        - intitle:"reolink"
-    - platform: shodan
-      queries:
-        - http.title:"reolink"
 
 - name: easy_social_feed
   vendor: easysocialfeed
@@ -23574,20 +23637,6 @@
   type: product
   engines: []
 
-- name: uag2100
-  vendor: zyxel
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="zywall"
-    - platform: google
-      queries:
-        - intitle:"zywall"
-    - platform: shodan
-      queries:
-        - http.title:"zywall"
-
 - name: nimble_streamer
   vendor: softvelum
   type: product
@@ -24808,14 +24857,6 @@
   type: product
   engines: []
 
-- name: rabbitmq
-  vendor: vmware
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - cpe:"cpe:2.3:a:vmware:rabbitmq"
-
 - name: gerapy
   vendor: gerapy
   type: product
@@ -24831,29 +24872,10 @@
   type: product
   engines: []
 
-- name: bitrix24
-  vendor: bitrix
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/bitrix/"
-    - platform: shodan
-      queries:
-        - http.html:"/bitrix/"
-
 - name: fiori
   vendor: sap
   type: product
   engines: []
-
-- name: bolt
-  vendor: boltcms
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - cpe:"cpe:2.3:a:bolt:bolt"
 
 - name: digital_rebar
   vendor: rackn
@@ -25020,20 +25042,6 @@
   type: product
   engines: []
 
-- name: fuel_cms
-  vendor: daylightstudio
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="fuel cms"
-    - platform: google
-      queries:
-        - intitle:"fuel cms"
-    - platform: shodan
-      queries:
-        - http.title:"fuel cms"
-
 - name: octoprint
   vendor: octoprint
   type: product
@@ -25158,14 +25166,6 @@
   vendor: dg
   type: product
   engines: []
-
-- name: http
-  vendor: dionaea
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - '"python/3.10 aiohttp/3.8.3" && bad status'
 
 - name: arcgis_engine
   vendor: esri
