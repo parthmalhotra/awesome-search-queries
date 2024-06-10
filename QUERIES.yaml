@@ -13254,8 +13254,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -16514,12 +16514,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
