@@ -12551,9 +12551,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
         - title="cacti"
         - icon_hash="-1797138069"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13708,9 +13708,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="1624375939"
         - icon_hash="475145467"
         - app="zimbra-邮件系统"
-        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16514,12 +16514,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20127,6 +20127,15 @@
       queries:
         - '"python/3.10 aiohttp/3.8.3" && bad status'
 
+- name: holmes
+  vendor: wipro
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="holmes orchestrator"
+        - title="wipro holmes orchestrator"
+
 - name: data_protector
   vendor: hp
   type: product
@@ -20611,15 +20620,6 @@
   vendor: bologer
   type: product
   engines: []
-
-- name: holmes
-  vendor: wipro
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="holmes orchestrator"
-        - title="wipro holmes orchestrator"
 
 - name: goto
   vendor: boostifythemes
@@ -21790,6 +21790,14 @@
   vendor: cms_tree_page_view_project
   type: product
   engines: []
+
+- name: prime_mover
+  vendor: codexonics
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/prime-mover"
 
 - name: churchcrm
   vendor: churchcrm
