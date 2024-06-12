@@ -12227,8 +12227,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12551,9 +12551,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="login to cacti"
         - title="cacti"
         - icon_hash="-1797138069"
-        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13254,8 +13254,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13708,8 +13708,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
         - icon_hash="475145467"
+        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
     - platform: shodan
       queries:
@@ -16514,8 +16514,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
@@ -20136,6 +20136,14 @@
         - title="holmes orchestrator"
         - title="wipro holmes orchestrator"
 
+- name: prime_mover
+  vendor: codexonics
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/prime-mover"
+
 - name: data_protector
   vendor: hp
   type: product
@@ -21790,14 +21798,6 @@
   vendor: cms_tree_page_view_project
   type: product
   engines: []
-
-- name: prime_mover
-  vendor: codexonics
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/prime-mover"
 
 - name: churchcrm
   vendor: churchcrm
