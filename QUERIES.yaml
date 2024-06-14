@@ -13254,8 +13254,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13708,8 +13708,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
         - icon_hash="475145467"
     - platform: shodan
       queries:
