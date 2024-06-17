@@ -12227,8 +12227,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13254,8 +13254,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -20144,6 +20144,42 @@
       queries:
         - body="/wp-content/plugins/prime-mover"
 
+- name: gradio
+  vendor: gradio_project
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"gradio"
+        - http.html:"__gradio_mode__"
+    - platform: fofa
+      queries:
+        - body="__gradio_mode__"
+
+- name: gradio
+  vendor: gradio
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"__gradio_mode__"
+
+- name: security_access_manager
+  vendor: ibm
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"ibm security access manager"
+
+- name: inotes
+  vendor: ibm
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"ibm inotes login"
+
 - name: data_protector
   vendor: hp
   type: product
@@ -21389,18 +21425,6 @@
   type: product
   engines: []
 
-- name: gradio
-  vendor: gradio_project
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"gradio"
-        - http.html:"__gradio_mode__"
-    - platform: fofa
-      queries:
-        - body="__gradio_mode__"
-
 - name: fv_flowplayer_video_player
   vendor: foliovision
   type: product
@@ -22055,14 +22079,6 @@
   vendor: telaen_project
   type: product
   engines: []
-
-- name: gradio
-  vendor: gradio
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"__gradio_mode__"
 
 - name: aiohttp
   vendor: aiohttp
@@ -25143,22 +25159,6 @@
   vendor: ibm
   type: product
   engines: []
-
-- name: security_access_manager
-  vendor: ibm
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"ibm security access manager"
-
-- name: inotes
-  vendor: ibm
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"ibm inotes login"
 
 - name: symantec_identity_manager
   vendor: broadcom
