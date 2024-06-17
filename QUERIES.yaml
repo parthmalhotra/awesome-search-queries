@@ -12551,9 +12551,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="login to cacti"
         - icon_hash="-1797138069"
         - title="cacti"
-        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13102,6 +13102,11 @@
     - platform: shodan
       queries:
         - product:"rhinosoft serv-u httpd"
+        - http.html:"serv-u"
+    - platform: fofa
+      queries:
+        - server="serv-u"
+        - body="serv-u"
 
 - name: fortiweb
   vendor: fortinet
@@ -13709,8 +13714,8 @@
     - platform: fofa
       queries:
         - app="zimbra-邮件系统"
-        - icon_hash="475145467"
         - icon_hash="1624375939"
+        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14785,8 +14790,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
