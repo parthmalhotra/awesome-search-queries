@@ -12555,9 +12555,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - icon_hash="-1797138069"
         - title="cacti"
         - title="login to cacti"
-        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13718,8 +13718,8 @@
     - platform: fofa
       queries:
         - app="zimbra-邮件系统"
-        - icon_hash="475145467"
         - icon_hash="1624375939"
+        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14794,8 +14794,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -20189,6 +20189,14 @@
       queries:
         - http.title:"ibm inotes login"
 
+- name: smart_s210_firmware
+  vendor: byzoro
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="smart管理平台"
+
 - name: data_protector
   vendor: hp
   type: product
@@ -22089,13 +22097,21 @@
   type: product
   engines: []
 
-- name: smart_s210_firmware
-  vendor: byzoro
+- name: cratedb
+  vendor: cratedb
   type: product
   engines:
     - platform: fofa
       queries:
-        - body="smart管理平台"
+        - title="cratedb"
+
+- name: xmall
+  vendor: exrick
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="xmall-后台管理系统"
 
 - name: aiohttp
   vendor: aiohttp
