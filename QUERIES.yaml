@@ -12227,8 +12227,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12555,9 +12555,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
-        - title="cacti"
         - icon_hash="-1797138069"
+        - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -16523,12 +16523,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20212,6 +20212,14 @@
     - platform: fofa
       queries:
         - app="xmall-后台管理系统"
+
+- name: nas326_firmware
+  vendor: zyxel
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="zyxel-nas326"
 
 - name: sudo
   vendor: sudo_project
@@ -24667,14 +24675,6 @@
   vendor: telaen_project
   type: product
   engines: []
-
-- name: nas326_firmware
-  vendor: zyxel
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - app="zyxel-nas326"
 
 - name: aiohttp
   vendor: aiohttp
