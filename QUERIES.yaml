@@ -12555,9 +12555,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="login to cacti"
         - title="cacti"
         - icon_hash="-1797138069"
-        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13717,9 +13717,9 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
-        - icon_hash="475145467"
         - icon_hash="1624375939"
+        - icon_hash="475145467"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16523,12 +16523,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -22624,11 +22624,6 @@
   type: product
   engines: []
 
-- name: purchase_order_management_system
-  vendor: purchase_order_management_system_project
-  type: product
-  engines: []
-
 - name: visual_form_builder
   vendor: vfbpro
   type: product
@@ -24169,6 +24164,14 @@
   type: product
   engines: []
 
+- name: 3dprint_lite
+  vendor: wp3dprinting
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/3dprint-lite/
+
 - name: minio_console
   vendor: min
   type: product
@@ -24441,6 +24444,11 @@
 
 - name: mycryptocheckout
   vendor: plainviewplugins
+  type: product
+  engines: []
+
+- name: purchase_order_management_system
+  vendor: purchase_order_management_system_project
   type: product
   engines: []
 
@@ -24934,11 +24942,6 @@
   type: product
   engines: []
 
-- name: multi_restaurant_table_reservation_system
-  vendor: multi_restaurant_table_reservation_system_project
-  type: product
-  engines: []
-
 - name: sharepoint_enterprise_server
   vendor: microsoft
   type: product
@@ -25096,11 +25099,6 @@
 
 - name: b2evolution
   vendor: b2evolution
-  type: product
-  engines: []
-
-- name: hotel_and_lodge_booking_management_system
-  vendor: hotel_and_lodge_booking_management_system_project
   type: product
   engines: []
 
