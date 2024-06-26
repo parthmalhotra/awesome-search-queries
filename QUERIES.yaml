@@ -12555,9 +12555,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
-        - title="cacti"
         - icon_hash="-1797138069"
+        - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -16523,8 +16523,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -20228,6 +20228,14 @@
     - platform: fofa
       queries:
         - body="apache allura"
+
+- name: 3dprint_lite
+  vendor: wp3dprinting
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/3dprint-lite/
 
 - name: sudo
   vendor: sudo_project
@@ -24163,14 +24171,6 @@
   vendor: dlink
   type: product
   engines: []
-
-- name: 3dprint_lite
-  vendor: wp3dprinting
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/3dprint-lite/
 
 - name: minio_console
   vendor: min
