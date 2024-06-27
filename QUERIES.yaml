@@ -12227,8 +12227,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12556,8 +12556,8 @@
     - platform: fofa
       queries:
         - icon_hash="-1797138069"
-        - title="login to cacti"
         - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13717,8 +13717,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
         - app="zimbra-邮件系统"
+        - icon_hash="475145467"
         - icon_hash="1624375939"
     - platform: shodan
       queries:
@@ -16523,8 +16523,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -20378,7 +20378,13 @@
 - name: ui
   vendor: provectus
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-1477045616"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"-1477045616"
 
 - name: firebox_t15
   vendor: watchguard
