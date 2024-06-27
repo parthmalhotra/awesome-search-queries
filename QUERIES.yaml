@@ -12227,8 +12227,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12555,9 +12555,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - icon_hash="-1797138069"
         - title="login to cacti"
         - title="cacti"
-        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13717,9 +13717,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
         - icon_hash="475145467"
         - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14794,8 +14794,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16527,8 +16527,8 @@
         - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20236,6 +20236,14 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/3dprint-lite/
+
+- name: jfinalcms
+  vendor: jfinalcms_project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="content=\"jrecms"
 
 - name: sudo
   vendor: sudo_project
@@ -24416,14 +24424,6 @@
   vendor: johnniejodelljr
   type: product
   engines: []
-
-- name: jfinalcms
-  vendor: jfinalcms_project
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="content=\"jrecms"
 
 - name: codekop
   vendor: codekop
