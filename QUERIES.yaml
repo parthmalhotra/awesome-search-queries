@@ -12227,8 +12227,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -16523,8 +16523,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
@@ -20256,6 +20256,26 @@
       queries:
         - http.favicon.hash:"-1477045616"
 
+- name: next.js
+  vendor: vercel
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/_next/static"
+    - platform: shodan
+      queries:
+        - cpe:"cpe:2.3:a:zeit:next.js"
+        - http.html:"/_next/static"
+
+- name: neodash
+  vendor: neo4j
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"neodash"
+
 - name: sudo
   vendor: sudo_project
   type: product
@@ -20646,30 +20666,10 @@
   type: product
   engines: []
 
-- name: next.js
-  vendor: vercel
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/_next/static"
-    - platform: shodan
-      queries:
-        - cpe:"cpe:2.3:a:zeit:next.js"
-        - http.html:"/_next/static"
-
 - name: ftp-deployment
   vendor: dg
   type: product
   engines: []
-
-- name: neodash
-  vendor: neo4j
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"neodash"
 
 - name: arcgis_engine
   vendor: esri
