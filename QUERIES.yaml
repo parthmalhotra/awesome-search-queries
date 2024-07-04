@@ -1704,9 +1704,11 @@
       queries:
         - app="zoho-manageengine-desktop"
         - title="manageengine desktop central 10"
+        - body="manageengine desktop central 10"
     - platform: shodan
       queries:
         - http.title:"manageengine desktop central 10"
+        - http.html:"manageengine desktop central 10"
     - platform: google
       queries:
         - intitle:"manageengine desktop central 10"
@@ -12555,8 +12557,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
         - icon_hash="-1797138069"
+        - title="cacti"
         - title="login to cacti"
     - platform: google
       queries:
@@ -13717,8 +13719,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
         - app="zimbra-邮件系统"
+        - icon_hash="475145467"
         - icon_hash="1624375939"
     - platform: shodan
       queries:
@@ -16523,8 +16525,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
@@ -20671,6 +20673,14 @@
   type: product
   engines: []
 
+- name: pinot
+  vendor: apache
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"apache pinot"
+
 - name: arcgis_engine
   vendor: esri
   type: product
@@ -24730,6 +24740,14 @@
   vendor: aiohttp
   type: product
   engines: []
+
+- name: DSE855
+  vendor: Deep Sea Electronics
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - deep sea electronics
 
 - name: canvas_learning_management_service
   vendor: instructure
