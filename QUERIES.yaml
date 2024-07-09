@@ -12557,9 +12557,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="login to cacti"
         - icon_hash="-1797138069"
         - title="cacti"
-        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13265,8 +13265,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13719,9 +13719,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
         - icon_hash="475145467"
         - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -20294,6 +20294,14 @@
       queries:
         - deep sea electronics
 
+- name: label_studio
+  vendor: humansignal
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-1649949475
+
 - name: sudo
   vendor: sudo_project
   type: product
@@ -24489,14 +24497,6 @@
   type: product
   engines: []
 
-- name: label_studio
-  vendor: humansignal
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.favicon.hash:-1649949475
-
 - name: slimstat_analytics
   vendor: wp-slimstat
   type: product
@@ -24749,6 +24749,11 @@
 
 - name: telaen
   vendor: telaen_project
+  type: product
+  engines: []
+
+- name: RE7000
+  vendor: Linksys
   type: product
   engines: []
 
