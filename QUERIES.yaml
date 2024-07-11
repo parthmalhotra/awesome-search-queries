@@ -4700,6 +4700,7 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:chamilo:chamilo_lms"
+        - 'x-powered-by: chamilo'
 
 - name: sd-wan_vmanage
   vendor: cisco
@@ -12557,8 +12558,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - icon_hash="-1797138069"
         - title="cacti"
+        - icon_hash="-1797138069"
         - title="login to cacti"
     - platform: google
       queries:
@@ -13719,9 +13720,9 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
-        - icon_hash="475145467"
         - icon_hash="1624375939"
+        - icon_hash="475145467"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16525,12 +16526,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20302,6 +20303,22 @@
       queries:
         - http.favicon.hash:-1649949475
 
+- name: edusoho
+  vendor: hagzhou-kuozhi-network-technology
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="powered by edusoho" || body="powered by <a href=\"http://www.edusoho.com/\" target=\"_blank\">edusoho" || (body="powered by edusoho" && body="var app")
+
+- name: Hash Form
+  vendor: HashThemes
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/hash-form/
+
 - name: ftp-deployment
   vendor: dg
   type: product
@@ -20687,14 +20704,6 @@
   type: product
   engines: []
 
-- name: edusoho
-  vendor: hagzhou-kuozhi-network-technology
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="powered by edusoho" || body="powered by <a href=\"http://www.edusoho.com/\" target=\"_blank\">edusoho" || (body="powered by edusoho" && body="var app")
-
 - name: "mf_gig_calendar"
   vendor: "mf_gig_calendar_project"
   type: product
@@ -20779,14 +20788,6 @@
   vendor: parsec-automation
   type: product
   engines: []
-
-- name: Hash Form
-  vendor: HashThemes
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/hash-form/
 
 - name: aiohttp
   vendor: aiohttp
