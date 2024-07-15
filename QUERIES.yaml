@@ -3102,8 +3102,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:1701804003
         - http.title:"servicenow"
+        - http.favicon.hash:"1701804003"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3111,7 +3111,7 @@
     - platform: fofa
       queries:
         - title="servicenow"
-        - icon_hash=1701804003
+        - icon_hash="1701804003"
 
 - name: bitbucket
   vendor: atlassian
@@ -12558,9 +12558,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
         - title="login to cacti"
         - icon_hash="-1797138069"
+        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13266,8 +13266,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -16531,8 +16531,8 @@
         - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20788,6 +20788,14 @@
   type: product
   engines: []
 
+- name: masterstudy_lms
+  vendor: stylemixthemes
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/masterstudy-lms-learning-management-system/"
+
 - name: RE7000
   vendor: Linksys
   type: product
@@ -24615,11 +24623,6 @@
 
 - name: notificationx
   vendor: wpdeveloper
-  type: product
-  engines: []
-
-- name: masterstudy_lms
-  vendor: stylemixthemes
   type: product
   engines: []
 
