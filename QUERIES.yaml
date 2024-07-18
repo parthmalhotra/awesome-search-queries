@@ -12230,8 +12230,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12558,8 +12558,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
         - title="cacti"
+        - title="login to cacti"
         - icon_hash="-1797138069"
     - platform: google
       queries:
@@ -13267,8 +13267,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13721,9 +13721,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
-        - app="zimbra-邮件系统"
         - icon_hash="475145467"
+        - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -23708,6 +23708,14 @@
   type: product
   engines: []
 
+- name: shokoserver
+  vendor: shokoanime
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="shoko web ui"
+
 - name: manageengine_admanager_plus
   vendor: zohocorp
   type: product
@@ -25330,6 +25338,11 @@
 
 - name: ssh
   vendor: cowrie
+  type: product
+  engines: []
+
+- name: easyspider
+  vendor: naibowang
   type: product
   engines: []
 
