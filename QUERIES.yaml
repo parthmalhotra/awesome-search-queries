@@ -12558,9 +12558,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
         - icon_hash="-1797138069"
         - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13267,8 +13267,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13721,8 +13721,8 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
         - icon_hash="1624375939"
+        - app="zimbra-邮件系统"
         - icon_hash="475145467"
     - platform: shodan
       queries:
@@ -14799,8 +14799,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16528,8 +16528,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
@@ -20831,6 +20831,14 @@
   type: product
   engines: []
 
+- name: bazarr
+  vendor: morpheus65535
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title=="bazarr" && icon_hash="-1983413099"
+
 - name: aiohttp
   vendor: aiohttp
   type: product
@@ -23259,7 +23267,16 @@
 - name: wpforo_forum
   vendor: gvectors
   type: product
-  engines: []
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wpforo/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/wpforo/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/wpforo/
 
 - name: device_management
   vendor: yealink
