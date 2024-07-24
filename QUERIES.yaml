@@ -3102,8 +3102,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1701804003"
         - http.title:"servicenow"
+        - http.favicon.hash:"1701804003"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -12558,9 +12558,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="login to cacti"
         - icon_hash="-1797138069"
         - title="cacti"
-        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13267,8 +13267,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13721,9 +13721,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
         - icon_hash="475145467"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14799,8 +14799,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16532,8 +16532,8 @@
         - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20361,6 +20361,28 @@
       queries:
         - title="shoko web ui"
 
+- name: bazarr
+  vendor: morpheus65535
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title=="bazarr" && icon_hash="-1983413099"
+
+- name: wpforo_forum
+  vendor: gvectors
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wpforo/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/wpforo/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/wpforo/
+
 - name: ftp-deployment
   vendor: dg
   type: product
@@ -20830,14 +20852,6 @@
   vendor: parsec-automation
   type: product
   engines: []
-
-- name: bazarr
-  vendor: morpheus65535
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title=="bazarr" && icon_hash="-1983413099"
 
 - name: aiohttp
   vendor: aiohttp
@@ -23263,20 +23277,6 @@
   vendor: asus
   type: product
   engines: []
-
-- name: wpforo_forum
-  vendor: gvectors
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/wpforo/
-    - platform: shodan
-      queries:
-        - http.html:/wp-content/plugins/wpforo/
-    - platform: fofa
-      queries:
-        - body=/wp-content/plugins/wpforo/
 
 - name: device_management
   vendor: yealink
