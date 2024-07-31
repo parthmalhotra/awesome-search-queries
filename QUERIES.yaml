@@ -4873,10 +4873,10 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.html:"craftcms"
-        - http.favicon.hash:"-47932290"
         - 'x-powered-by: craft cms'
+        - http.html:"craftcms"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12231,8 +12231,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12559,9 +12559,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - icon_hash="-1797138069"
-        - title="cacti"
         - title="login to cacti"
+        - title="cacti"
+        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13722,9 +13722,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
-        - app="zimbra-邮件系统"
         - icon_hash="1624375939"
+        - app="zimbra-邮件系统"
+        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16533,8 +16533,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -20441,6 +20441,33 @@
     - platform: publicwww
       queries:
         - /wp-content/plugins/payplus-payment-gateway
+
+- name: user-profile-builder
+  vendor: cozmoslabs
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/profile-builder
+
+- name: quicklancer
+  vendor: bylancer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="1099370896"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:1099370896
+
+- name: yearning
+  vendor: yearning
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="yearning"
 
 - name: sudo
   vendor: sudo_project
@@ -24597,14 +24624,6 @@
   type: product
   engines: []
 
-- name: user-profile-builder
-  vendor: cozmoslabs
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/profile-builder
-
 - name: tracksys
   vendor: parsec-automation
   type: product
@@ -24619,17 +24638,6 @@
   vendor: naibowang
   type: product
   engines: []
-
-- name: quicklancer
-  vendor: bylancer
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - icon_hash="1099370896"
-    - platform: shodan
-      queries:
-        - http.favicon.hash:1099370896
 
 - name: aiohttp
   vendor: aiohttp
@@ -25160,14 +25168,6 @@
   vendor: simplefilelist
   type: product
   engines: []
-
-- name: yearning
-  vendor: yearning
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - app="yearning"
 
 - name: simple_link_directory
   vendor: quantumcloud
