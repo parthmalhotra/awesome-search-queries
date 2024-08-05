@@ -4875,8 +4875,8 @@
       queries:
         - http.favicon.hash:"-47932290"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - 'x-powered-by: craft cms'
         - http.html:"craftcms"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12559,8 +12559,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
         - title="login to cacti"
+        - title="cacti"
         - icon_hash="-1797138069"
     - platform: google
       queries:
@@ -13268,8 +13268,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13725,8 +13725,8 @@
     - platform: fofa
       queries:
         - icon_hash="1624375939"
-        - app="zimbra-邮件系统"
         - icon_hash="475145467"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16535,8 +16535,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
