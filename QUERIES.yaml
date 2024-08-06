@@ -4873,10 +4873,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
+        - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
-        - 'x-powered-by: craft cms'
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -13725,8 +13725,8 @@
     - platform: fofa
       queries:
         - icon_hash="1624375939"
-        - icon_hash="475145467"
         - app="zimbra-邮件系统"
+        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
