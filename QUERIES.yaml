@@ -3102,8 +3102,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -4873,10 +4873,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"craftcms"
         - http.favicon.hash:"-47932290"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.html:"craftcms"
         - 'x-powered-by: craft cms'
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
         - craftcms
@@ -13724,9 +13724,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="1624375939"
         - icon_hash="475145467"
         - app="zimbra-邮件系统"
-        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16539,8 +16539,8 @@
         - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20915,9 +20915,12 @@
   engines: []
 
 - name: checkmk
-  vendor: tribe29
+  vendor: checkmk
   type: product
-  engines: []
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"check_mk"
 
 - name: ftp-deployment
   vendor: dg
@@ -24994,6 +24997,14 @@
   type: product
   engines: []
 
+- name: cz-loan-management
+  vendor: team-contriverz
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/cz-loan-management
+
 - name: easyspider
   vendor: naibowang
   type: product
@@ -25008,6 +25019,14 @@
   vendor: aiohttp
   type: product
   engines: []
+
+- name: cluster_control
+  vendor: severalnines
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="160707013" || icon_hash="-1815707560"
 
 - name: twittee_text_tweet
   vendor: johnniejodelljr
