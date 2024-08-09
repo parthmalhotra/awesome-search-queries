@@ -4873,10 +4873,10 @@
   engines:
     - platform: shodan
       queries:
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - 'x-powered-by: craft cms'
         - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
-        - 'x-powered-by: craft cms'
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12559,9 +12559,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - icon_hash="-1797138069"
-        - title="login to cacti"
         - title="cacti"
+        - title="login to cacti"
+        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -20479,6 +20479,30 @@
       queries:
         - title="totolink"
 
+- name: checkmk
+  vendor: checkmk
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"check_mk"
+
+- name: cz-loan-management
+  vendor: team-contriverz
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/cz-loan-management
+
+- name: cluster_control
+  vendor: severalnines
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="160707013" || icon_hash="-1815707560"
+
 - name: opensmtpd
   vendor: openbsd
   type: product
@@ -20913,14 +20937,6 @@
   vendor: f5
   type: product
   engines: []
-
-- name: checkmk
-  vendor: checkmk
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"check_mk"
 
 - name: ftp-deployment
   vendor: dg
@@ -24997,14 +25013,6 @@
   type: product
   engines: []
 
-- name: cz-loan-management
-  vendor: team-contriverz
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/cz-loan-management
-
 - name: easyspider
   vendor: naibowang
   type: product
@@ -25020,13 +25028,13 @@
   type: product
   engines: []
 
-- name: cluster_control
-  vendor: severalnines
+- name: devika
+  vendor: stitionai
   type: product
   engines:
     - platform: fofa
       queries:
-        - icon_hash="160707013" || icon_hash="-1815707560"
+        - icon_hash="-1429839495"
 
 - name: twittee_text_tweet
   vendor: johnniejodelljr
