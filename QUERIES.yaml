@@ -4880,10 +4880,10 @@
   engines:
     - platform: shodan
       queries:
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
         - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12567,8 +12567,8 @@
     - platform: fofa
       queries:
         - title="cacti"
-        - icon_hash="-1797138069"
         - title="login to cacti"
+        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13731,8 +13731,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
         - icon_hash="1624375939"
+        - icon_hash="475145467"
         - app="zimbra-邮件系统"
     - platform: shodan
       queries:
@@ -20518,6 +20518,20 @@
       queries:
         - icon_hash="-1429839495"
 
+- name: shenyu
+  vendor: apache
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"shenyu"
+    - platform: fofa
+      queries:
+        - title="shenyu"
+    - platform: google
+      queries:
+        - intitle:"shenyu"
+
 - name: opensmtpd
   vendor: openbsd
   type: product
@@ -21337,20 +21351,6 @@
   vendor: fatcatapps
   type: product
   engines: []
-
-- name: shenyu
-  vendor: apache
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"shenyu"
-    - platform: fofa
-      queries:
-        - title="shenyu"
-    - platform: google
-      queries:
-        - intitle:"shenyu"
 
 - name: helmet_store_showroom_site
   vendor: helmet_store_showroom_site_project
