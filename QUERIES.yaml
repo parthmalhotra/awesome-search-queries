@@ -4880,10 +4880,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
-        - http.html:"craftcms"
-        - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.html:"craftcms"
+        - http.favicon.hash:"-47932290"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12238,8 +12238,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12566,9 +12566,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - icon_hash="-1797138069"
         - title="cacti"
         - title="login to cacti"
+        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13731,9 +13731,9 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
         - icon_hash="475145467"
         - icon_hash="1624375939"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16542,8 +16542,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
@@ -20531,6 +20531,14 @@
     - platform: google
       queries:
         - intitle:"shenyu"
+
+- name: seriously-simple-podcasting
+  vendor: castos
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/seriously-simple-podcasting/
 
 - name: opensmtpd
   vendor: openbsd
@@ -25047,6 +25055,14 @@
   type: product
   engines: []
 
+- name: journyx-jtime
+  vendor: journyx
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-109972155"
+
 - name: aiohttp
   vendor: aiohttp
   type: product
@@ -25261,14 +25277,6 @@
   vendor: phpjabbers
   type: product
   engines: []
-
-- name: seriously-simple-podcasting
-  vendor: castos
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/seriously-simple-podcasting/
 
 - name: manageengine_admanager_plus
   vendor: zohocorp
