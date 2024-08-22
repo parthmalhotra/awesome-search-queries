@@ -3102,8 +3102,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -4880,9 +4880,9 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
         - http.favicon.hash:"-47932290"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
     - platform: publicwww
       queries:
@@ -12238,8 +12238,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12566,9 +12566,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="cacti"
         - icon_hash="-1797138069"
         - title="login to cacti"
-        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13275,8 +13275,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13732,8 +13732,8 @@
     - platform: fofa
       queries:
         - icon_hash="475145467"
-        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16546,8 +16546,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20547,6 +20547,22 @@
     - platform: fofa
       queries:
         - icon_hash="-109972155"
+
+- name: fastadmin
+  vendor: fastadmin
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-1036943727"
+
+- name: simple_editor
+  vendor: lg
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="159985907"
 
 - name: opensmtpd
   vendor: openbsd
@@ -25058,14 +25074,6 @@
   type: product
   engines: []
 
-- name: fastadmin
-  vendor: fastadmin
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - icon_hash="-1036943727"
-
 - name: RE7000
   vendor: Linksys
   type: product
@@ -25280,14 +25288,6 @@
   vendor: ourphp
   type: product
   engines: []
-
-- name: simple_editor
-  vendor: lg
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - icon_hash="159985907"
 
 - name: service_booking_script
   vendor: phpjabbers
