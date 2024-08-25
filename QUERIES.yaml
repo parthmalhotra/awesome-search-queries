@@ -4880,10 +4880,10 @@
   engines:
     - platform: shodan
       queries:
-        - 'x-powered-by: craft cms'
+        - http.favicon.hash:"-47932290"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
-        - http.favicon.hash:"-47932290"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12566,9 +12566,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="cacti"
         - title="login to cacti"
         - icon_hash="-1797138069"
-        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13275,8 +13275,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13731,9 +13731,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
         - icon_hash="475145467"
-        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14809,8 +14809,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16542,12 +16542,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20563,6 +20563,23 @@
     - platform: fofa
       queries:
         - icon_hash="159985907"
+
+- name: virtual traffic manager
+  vendor: ivanti
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:1862800928
+        - http.html:"apps/zxtm/login.cgi"
+
+- name: localai
+  vendor: mudler
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-976853304
 
 - name: opensmtpd
   vendor: openbsd
@@ -25083,23 +25100,6 @@
   vendor: aiohttp
   type: product
   engines: []
-
-- name: virtual traffic manager
-  vendor: ivanti
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.favicon.hash:1862800928
-        - http.html:"apps/zxtm/login.cgi"
-
-- name: localai
-  vendor: mudler
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.favicon.hash:-976853304
 
 - name: twittee_text_tweet
   vendor: johnniejodelljr
