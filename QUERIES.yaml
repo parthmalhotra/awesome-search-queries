@@ -4882,8 +4882,8 @@
     - platform: shodan
       queries:
         - 'x-powered-by: craft cms'
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.favicon.hash:"-47932290"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
     - platform: publicwww
       queries:
@@ -12567,8 +12567,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
         - title="login to cacti"
+        - title="cacti"
         - icon_hash="-1797138069"
     - platform: google
       queries:
@@ -13732,8 +13732,8 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
         - icon_hash="475145467"
+        - app="zimbra-邮件系统"
         - icon_hash="1624375939"
     - platform: shodan
       queries:
@@ -14810,8 +14810,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16543,8 +16543,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -20581,6 +20581,14 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-976853304
+
+- name: anything-llm
+  vendor: Mintplex Labs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"anythingllm"
 
 - name: opensmtpd
   vendor: openbsd
@@ -25101,14 +25109,6 @@
   vendor: aiohttp
   type: product
   engines: []
-
-- name: anything-llm
-  vendor: Mintplex Labs
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"anythingllm"
 
 - name: twittee_text_tweet
   vendor: johnniejodelljr
