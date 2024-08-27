@@ -3102,8 +3102,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -4881,9 +4881,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
         - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
     - platform: publicwww
       queries:
@@ -12239,8 +12239,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12567,9 +12567,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="cacti"
         - title="login to cacti"
         - icon_hash="-1797138069"
-        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13732,8 +13732,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
         - app="zimbra-邮件系统"
+        - icon_hash="475145467"
         - icon_hash="1624375939"
     - platform: shodan
       queries:
@@ -16543,8 +16543,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -25101,6 +25101,14 @@
   vendor: aiohttp
   type: product
   engines: []
+
+- name: anything-llm
+  vendor: Mintplex Labs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"anythingllm"
 
 - name: twittee_text_tweet
   vendor: johnniejodelljr
