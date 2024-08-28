@@ -4881,10 +4881,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"craftcms"
-        - http.favicon.hash:"-47932290"
         - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.favicon.hash:"-47932290"
+        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12239,8 +12239,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12568,8 +12568,8 @@
     - platform: fofa
       queries:
         - icon_hash="-1797138069"
-        - title="login to cacti"
         - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13276,8 +13276,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13732,9 +13732,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="1624375939"
         - icon_hash="475145467"
         - app="zimbra-邮件系统"
-        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14810,8 +14810,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16547,8 +16547,8 @@
         - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -25579,6 +25579,14 @@
   vendor: 11in1
   type: product
   engines: []
+
+- name: elgg
+  vendor: elgg
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="413602919"
 
 - name: readymade-unilevel-ecommerce
   vendor: i-netsolution
