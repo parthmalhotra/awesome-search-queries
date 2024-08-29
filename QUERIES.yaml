@@ -4881,10 +4881,10 @@
   engines:
     - platform: shodan
       queries:
-        - 'x-powered-by: craft cms'
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.favicon.hash:"-47932290"
+        - 'x-powered-by: craft cms'
         - http.html:"craftcms"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12567,9 +12567,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - icon_hash="-1797138069"
-        - title="cacti"
         - title="login to cacti"
+        - title="cacti"
+        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13732,9 +13732,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
-        - icon_hash="475145467"
         - app="zimbra-邮件系统"
+        - icon_hash="475145467"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16543,8 +16543,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -20589,6 +20589,14 @@
     - platform: shodan
       queries:
         - http.title:"anythingllm"
+
+- name: elgg
+  vendor: elgg
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="413602919"
 
 - name: opensmtpd
   vendor: openbsd
@@ -25580,13 +25588,13 @@
   type: product
   engines: []
 
-- name: elgg
-  vendor: elgg
+- name: mobile-security-framework
+  vendor: mobsf_project
   type: product
   engines:
     - platform: fofa
       queries:
-        - icon_hash="413602919"
+        - title="mobsf"
 
 - name: readymade-unilevel-ecommerce
   vendor: i-netsolution
