@@ -4881,10 +4881,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
         - 'x-powered-by: craft cms'
-        - http.html:"craftcms"
+        - http.favicon.hash:"-47932290"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12567,9 +12567,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
-        - title="cacti"
         - icon_hash="-1797138069"
+        - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13276,8 +13276,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13732,9 +13732,9 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
         - icon_hash="475145467"
         - icon_hash="1624375939"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16543,8 +16543,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -20598,6 +20598,14 @@
       queries:
         - icon_hash="413602919"
 
+- name: mobile-security-framework
+  vendor: mobsf_project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="mobsf"
+
 - name: opensmtpd
   vendor: openbsd
   type: product
@@ -22560,6 +22568,11 @@
 
 - name: lionwiki
   vendor: lionwiki
+  type: product
+  engines: []
+
+- name: geojson2kml
+  vendor: geojson2kml_project
   type: product
   engines: []
 
@@ -25108,15 +25121,47 @@
   type: product
   engines: []
 
+- name: processplus
+  vendor: perkinelmer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - '"process plus" && icon_hash="1772087922"'
+
 - name: RE7000
   vendor: Linksys
   type: product
   engines: []
 
+- name: vvvebjs
+  vendor: vvvebjs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="524332373"
+
 - name: aiohttp
   vendor: aiohttp
   type: product
   engines: []
+
+- name: crywolf
+  vendor: centralsquare
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - false alarm reduction website
+
+- name: NVR301-04S2-P4
+  vendor: Uniview
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="nvr301-04-p4"
 
 - name: twittee_text_tweet
   vendor: johnniejodelljr
@@ -25587,14 +25632,6 @@
   vendor: 11in1
   type: product
   engines: []
-
-- name: mobile-security-framework
-  vendor: mobsf_project
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="mobsf"
 
 - name: readymade-unilevel-ecommerce
   vendor: i-netsolution
