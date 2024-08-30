@@ -4881,10 +4881,10 @@
   engines:
     - platform: shodan
       queries:
-        - 'x-powered-by: craft cms'
-        - http.html:"craftcms"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.html:"craftcms"
         - http.favicon.hash:"-47932290"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12239,8 +12239,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12567,8 +12567,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
         - title="cacti"
+        - title="login to cacti"
         - icon_hash="-1797138069"
     - platform: google
       queries:
@@ -13276,8 +13276,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13732,9 +13732,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
-        - app="zimbra-邮件系统"
         - icon_hash="1624375939"
+        - app="zimbra-邮件系统"
+        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16543,8 +16543,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -20638,6 +20638,28 @@
       queries:
         - title="nvr301-04-p4"
 
+- name: strapi
+  vendor: strapi
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="strapi-headless-cms"
+
+- name: givewp
+  vendor: givewp
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/give/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/give/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/give/
+
 - name: opensmtpd
   vendor: openbsd
   type: product
@@ -20842,14 +20864,6 @@
   vendor: solarwinds
   type: product
   engines: []
-
-- name: strapi
-  vendor: strapi
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - app="strapi-headless-cms"
 
 - name: sitefinity_cms
   vendor: progress
@@ -24280,20 +24294,6 @@
   vendor: squirrelly
   type: product
   engines: []
-
-- name: givewp
-  vendor: givewp
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/give/
-    - platform: shodan
-      queries:
-        - http.html:/wp-content/plugins/give/
-    - platform: fofa
-      queries:
-        - body=/wp-content/plugins/give/
 
 - name: ignition
   vendor: facade
