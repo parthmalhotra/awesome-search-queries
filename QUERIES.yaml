@@ -4882,9 +4882,9 @@
     - platform: shodan
       queries:
         - 'x-powered-by: craft cms'
-        - http.favicon.hash:"-47932290"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12567,9 +12567,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - icon_hash="-1797138069"
-        - title="cacti"
         - title="login to cacti"
+        - title="cacti"
+        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13276,8 +13276,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13733,8 +13733,8 @@
     - platform: fofa
       queries:
         - icon_hash="475145467"
-        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16543,8 +16543,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -20606,6 +20606,38 @@
       queries:
         - title="mobsf"
 
+- name: processplus
+  vendor: perkinelmer
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - '"process plus" && icon_hash="1772087922"'
+
+- name: vvvebjs
+  vendor: vvvebjs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="524332373"
+
+- name: crywolf
+  vendor: centralsquare
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - false alarm reduction website
+
+- name: NVR301-04S2-P4
+  vendor: Uniview
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="nvr301-04-p4"
+
 - name: opensmtpd
   vendor: openbsd
   type: product
@@ -20814,7 +20846,10 @@
 - name: strapi
   vendor: strapi
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - app="strapi-headless-cms"
 
 - name: sitefinity_cms
   vendor: progress
@@ -24249,7 +24284,16 @@
 - name: givewp
   vendor: givewp
   type: product
-  engines: []
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/give/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/give/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/give/
 
 - name: ignition
   vendor: facade
@@ -25121,47 +25165,15 @@
   type: product
   engines: []
 
-- name: processplus
-  vendor: perkinelmer
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - '"process plus" && icon_hash="1772087922"'
-
 - name: RE7000
   vendor: Linksys
   type: product
   engines: []
 
-- name: vvvebjs
-  vendor: vvvebjs
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - icon_hash="524332373"
-
 - name: aiohttp
   vendor: aiohttp
   type: product
   engines: []
-
-- name: crywolf
-  vendor: centralsquare
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - false alarm reduction website
-
-- name: NVR301-04S2-P4
-  vendor: Uniview
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="nvr301-04-p4"
 
 - name: twittee_text_tweet
   vendor: johnniejodelljr
