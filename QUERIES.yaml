@@ -3102,8 +3102,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1701804003"
         - http.title:"servicenow"
+        - http.favicon.hash:"1701804003"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -4881,10 +4881,10 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.favicon.hash:"-47932290"
-        - http.html:"craftcms"
         - 'x-powered-by: craft cms'
+        - http.html:"craftcms"
+        - http.favicon.hash:"-47932290"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12239,8 +12239,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12567,9 +12567,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - icon_hash="-1797138069"
         - title="login to cacti"
         - title="cacti"
-        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13732,8 +13732,8 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
         - icon_hash="1624375939"
+        - app="zimbra-邮件系统"
         - icon_hash="475145467"
     - platform: shodan
       queries:
@@ -14810,8 +14810,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16543,12 +16543,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -25320,6 +25320,14 @@
   type: product
   engines: []
 
+- name: essential_grid
+  vendor: themepunch
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - essential-grid-plugin
+
 - name: membership_database
   vendor: membership_database_project
   type: product
@@ -25384,6 +25392,14 @@
   vendor: phpjabbers
   type: product
   engines: []
+
+- name: simple_realtime_server
+  vendor: ossrs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:1386054408
 
 - name: manageengine_admanager_plus
   vendor: zohocorp
@@ -25644,6 +25660,14 @@
   vendor: 11in1
   type: product
   engines: []
+
+- name: fastbee
+  vendor: fastbee
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - fastbee
 
 - name: readymade-unilevel-ecommerce
   vendor: i-netsolution
