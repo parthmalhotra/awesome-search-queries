@@ -4881,10 +4881,10 @@
   engines:
     - platform: shodan
       queries:
-        - 'x-powered-by: craft cms'
-        - http.html:"craftcms"
         - http.favicon.hash:"-47932290"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - 'x-powered-by: craft cms'
+        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12567,8 +12567,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - icon_hash="-1797138069"
         - title="login to cacti"
+        - icon_hash="-1797138069"
         - title="cacti"
     - platform: google
       queries:
@@ -13276,8 +13276,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13732,8 +13732,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
         - icon_hash="475145467"
     - platform: shodan
       queries:
@@ -14810,8 +14810,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16543,12 +16543,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20659,6 +20659,30 @@
     - platform: fofa
       queries:
         - body=/wp-content/plugins/give/
+
+- name: essential_grid
+  vendor: themepunch
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - essential-grid-plugin
+
+- name: simple_realtime_server
+  vendor: ossrs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:1386054408
+
+- name: fastbee
+  vendor: fastbee
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - fastbee
 
 - name: opensmtpd
   vendor: openbsd
@@ -25320,14 +25344,6 @@
   type: product
   engines: []
 
-- name: essential_grid
-  vendor: themepunch
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - essential-grid-plugin
-
 - name: membership_database
   vendor: membership_database_project
   type: product
@@ -25392,14 +25408,6 @@
   vendor: phpjabbers
   type: product
   engines: []
-
-- name: simple_realtime_server
-  vendor: ossrs
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.favicon.hash:1386054408
 
 - name: manageengine_admanager_plus
   vendor: zohocorp
@@ -25660,14 +25668,6 @@
   vendor: 11in1
   type: product
   engines: []
-
-- name: fastbee
-  vendor: fastbee
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - fastbee
 
 - name: readymade-unilevel-ecommerce
   vendor: i-netsolution
