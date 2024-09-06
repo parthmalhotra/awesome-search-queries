@@ -4882,8 +4882,8 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.html:"craftcms"
         - 'x-powered-by: craft cms'
+        - http.html:"craftcms"
         - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
@@ -12212,9 +12212,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.favicon.hash:"892542951"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12239,8 +12239,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12568,8 +12568,8 @@
     - platform: fofa
       queries:
         - title="login to cacti"
-        - title="cacti"
         - icon_hash="-1797138069"
+        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13732,9 +13732,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
         - icon_hash="475145467"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16543,8 +16543,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -20751,6 +20751,14 @@
   vendor: domphp
   type: product
   engines: []
+
+- name: wp_amasin_-_the_amazon_affiliate_shop
+  vendor: websupporter
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wp-amasin-the-amazon-affiliate-shop/
 
 - name: trixbox
   vendor: netfortris
