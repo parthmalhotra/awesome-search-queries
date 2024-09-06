@@ -4881,10 +4881,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"craftcms"
-        - http.favicon.hash:"-47932290"
-        - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.html:"craftcms"
+        - 'x-powered-by: craft cms'
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12212,9 +12212,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
+        - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
-        - http.favicon.hash:"892542951"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12567,8 +12567,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
         - title="login to cacti"
+        - title="cacti"
         - icon_hash="-1797138069"
     - platform: google
       queries:
@@ -13732,9 +13732,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
         - icon_hash="1624375939"
         - app="zimbra-邮件系统"
+        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16547,8 +16547,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20688,6 +20688,30 @@
       queries:
         - fastbee
 
+- name: mobsf
+  vendor: mobsf
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - mobsf
+
+- name: emlog
+  vendor: emlog
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="emlog"
+
+- name: idsecure
+  vendor: controlid
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="idsecure"
+
 - name: spring_framework
   vendor: vmware
   type: product
@@ -22688,14 +22712,6 @@
   type: product
   engines: []
 
-- name: mobsf
-  vendor: mobsf
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - mobsf
-
 - name: tracksys
   vendor: parsec-automation
   type: product
@@ -24251,14 +24267,6 @@
   type: product
   engines: []
 
-- name: emlog
-  vendor: emlog
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="emlog"
-
 - name: connections_reloaded
   vendor: ajaydsouza
   type: product
@@ -24273,14 +24281,6 @@
   vendor: joommasters
   type: product
   engines: []
-
-- name: idsecure
-  vendor: controlid
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="idsecure"
 
 - name: playtube
   vendor: playtube
