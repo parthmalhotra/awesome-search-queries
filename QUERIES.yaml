@@ -4881,10 +4881,10 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - 'x-powered-by: craft cms'
         - http.html:"craftcms"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.favicon.hash:"-47932290"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12212,9 +12212,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.title:"zabbix-server"
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.favicon.hash:"892542951"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.title:"zabbix-server"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12567,9 +12567,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
-        - icon_hash="-1797138069"
         - title="cacti"
+        - icon_hash="-1797138069"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13276,8 +13276,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13732,9 +13732,9 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
-        - icon_hash="475145467"
         - icon_hash="1624375939"
+        - icon_hash="475145467"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14810,8 +14810,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -20712,6 +20712,14 @@
       queries:
         - body="idsecure"
 
+- name: wp_amasin_-_the_amazon_affiliate_shop
+  vendor: websupporter
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/wp-amasin-the-amazon-affiliate-shop/
+
 - name: spring_framework
   vendor: vmware
   type: product
@@ -20729,6 +20737,11 @@
 
 - name: dompdf
   vendor: dompdf
+  type: product
+  engines: []
+
+- name: lastfm-rotation_plugin
+  vendor: last.fm_rotation_plugin_project
   type: product
   engines: []
 
@@ -20751,14 +20764,6 @@
   vendor: domphp
   type: product
   engines: []
-
-- name: wp_amasin_-_the_amazon_affiliate_shop
-  vendor: websupporter
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/wp-amasin-the-amazon-affiliate-shop/
 
 - name: trixbox
   vendor: netfortris
@@ -20800,6 +20805,14 @@
   type: product
   engines: []
 
+- name: tom-m8te_plugin
+  vendor: tom_m8te_plugin_project
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/tom-m8te/
+
 - name: frontend_uploader
   vendor: frontend_uploader_project
   type: product
@@ -20812,6 +20825,11 @@
 
 - name: "swipehq-payment-gateway-woocommerce"
   vendor: cybercompany
+  type: product
+  engines: []
+
+- name: wp-cross-rss
+  vendor: cross-rss_plugin_project
   type: product
   engines: []
 
