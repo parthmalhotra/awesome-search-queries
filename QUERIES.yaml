@@ -3102,8 +3102,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -4881,10 +4881,10 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.favicon.hash:"-47932290"
-        - http.html:"craftcms"
         - 'x-powered-by: craft cms'
+        - http.favicon.hash:"-47932290"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12212,9 +12212,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
-        - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
+        - http.favicon.hash:"892542951"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12567,9 +12567,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
-        - title="cacti"
         - icon_hash="-1797138069"
+        - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13276,8 +13276,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13732,9 +13732,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
         - icon_hash="1624375939"
         - app="zimbra-邮件系统"
+        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14810,8 +14810,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -20728,6 +20728,44 @@
       queries:
         - /wp-content/plugins/tom-m8te/
 
+- name: smartsearchwp
+  vendor: webdigit
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/smartsearchwp"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/smartsearchwp
+
+- name: truebooker
+  vendor: themetechmount
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/truebooker-appointment-booking
+
+- name: sensei-lms
+  vendor: automattic
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/sensei-lms"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/sensei-lms
+
+- name: viral-signup
+  vendor: viral-signup
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/viral-signup
+
 - name: spring_framework
   vendor: vmware
   type: product
@@ -22723,17 +22761,6 @@
   type: product
   engines: []
 
-- name: smartsearchwp
-  vendor: webdigit
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/smartsearchwp"
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/smartsearchwp
-
 - name: easyspider
   vendor: naibowang
   type: product
@@ -22744,25 +22771,6 @@
   type: product
   engines: []
 
-- name: truebooker
-  vendor: themetechmount
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/truebooker-appointment-booking
-
-- name: sensei-lms
-  vendor: automattic
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/sensei-lms"
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/sensei-lms
-
 - name: aiohttp
   vendor: aiohttp
   type: product
@@ -22772,14 +22780,6 @@
   vendor: parsec-automation
   type: product
   engines: []
-
-- name: viral-signup
-  vendor: viral-signup
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/viral-signup
 
 - name: com_abbrev
   vendor: chris_simon
