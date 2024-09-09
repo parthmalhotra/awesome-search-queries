@@ -4883,8 +4883,8 @@
       queries:
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.favicon.hash:"-47932290"
-        - 'x-powered-by: craft cms'
         - http.html:"craftcms"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12212,8 +12212,8 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.favicon.hash:"892542951"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
     - platform: google
       queries:
@@ -13276,8 +13276,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13732,9 +13732,9 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
-        - icon_hash="1624375939"
         - icon_hash="475145467"
+        - icon_hash="1624375939"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14810,8 +14810,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16547,8 +16547,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -22723,6 +22723,17 @@
   type: product
   engines: []
 
+- name: smartsearchwp
+  vendor: webdigit
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/smartsearchwp"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/smartsearchwp
+
 - name: easyspider
   vendor: naibowang
   type: product
@@ -22733,6 +22744,25 @@
   type: product
   engines: []
 
+- name: truebooker
+  vendor: themetechmount
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/truebooker-appointment-booking
+
+- name: sensei-lms
+  vendor: automattic
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/sensei-lms"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/sensei-lms
+
 - name: aiohttp
   vendor: aiohttp
   type: product
@@ -22742,6 +22772,14 @@
   vendor: parsec-automation
   type: product
   engines: []
+
+- name: viral-signup
+  vendor: viral-signup
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/viral-signup
 
 - name: com_abbrev
   vendor: chris_simon
