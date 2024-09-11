@@ -3102,8 +3102,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -4888,9 +4888,9 @@
   engines:
     - platform: shodan
       queries:
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
         - http.favicon.hash:"-47932290"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
     - platform: publicwww
       queries:
@@ -12219,8 +12219,8 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
     - platform: google
       queries:
@@ -12246,8 +12246,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -12574,9 +12574,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
-        - icon_hash="-1797138069"
         - title="cacti"
+        - icon_hash="-1797138069"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13739,9 +13739,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="475145467"
         - icon_hash="1624375939"
         - app="zimbra-邮件系统"
-        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14817,8 +14817,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16554,8 +16554,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -20773,6 +20773,22 @@
       queries:
         - /wp-content/plugins/viral-signup
 
+- name: opti-marketing
+  vendor: opti-marketing
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/opti-marketing
+
+- name: qualitor
+  vendor: qualitor
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - qualitor
+
 - name: spring_framework
   vendor: vmware
   type: product
@@ -22768,14 +22784,6 @@
   type: product
   engines: []
 
-- name: opti-marketing
-  vendor: opti-marketing
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/opti-marketing
-
 - name: easyspider
   vendor: naibowang
   type: product
@@ -22795,14 +22803,6 @@
   vendor: parsec-automation
   type: product
   engines: []
-
-- name: qualitor
-  vendor: qualitor
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - qualitor
 
 - name: com_abbrev
   vendor: chris_simon
