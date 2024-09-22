@@ -3617,9 +3617,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
+        - body="solarview compact"
         - icon_hash="-244067125"
         - body="solarview compact" && title="top"
-        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -5072,9 +5072,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"craftcms"
         - http.favicon.hash:"-47932290"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.html:"craftcms"
         - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
@@ -12790,10 +12790,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="pma_servername" && body="4.8.4"
         - body="server_databases.php"
-        - body="phpmyadmin"
         - title="phpmyadmin"
+        - body="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13129,9 +13129,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
-        - title="login to cacti"
         - icon_hash="-1797138069"
+        - title="login to cacti"
+        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -17210,8 +17210,8 @@
         - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
