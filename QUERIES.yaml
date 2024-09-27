@@ -5073,9 +5073,9 @@
     - platform: shodan
       queries:
         - 'x-powered-by: craft cms'
-        - http.favicon.hash:"-47932290"
-        - http.html:"craftcms"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.html:"craftcms"
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12763,9 +12763,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.favicon.hash:"892542951"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12790,9 +12790,9 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
         - title="phpmyadmin"
         - body="server_databases.php"
+        - body="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
@@ -13131,9 +13131,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
-        - title="login to cacti"
         - icon_hash="-1797138069"
+        - title="login to cacti"
+        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -14329,8 +14329,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
         - icon_hash="1624375939"
+        - icon_hash="475145467"
         - app="zimbra-邮件系统"
     - platform: shodan
       queries:
@@ -14480,8 +14480,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -17208,12 +17208,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -26666,6 +26666,14 @@
       queries:
         - app="泛微-emobile"
 
+- name: Apache HTTP Server
+  vendor: Apache Software Foundation
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - intitle:"apache http server" inurl:"/server-status"
+
 - name: memcached
   vendor: memcached
   type: product
@@ -27515,14 +27523,6 @@
   vendor: naibowang
   type: product
   engines: []
-
-- name: Apache HTTP Server
-  vendor: Apache Software Foundation
-  type: product
-  engines:
-    - platform: google
-      queries:
-        - intitle:"apache http server" inurl:"/server-status"
 
 - name: tracksys
   vendor: parsec-automation
