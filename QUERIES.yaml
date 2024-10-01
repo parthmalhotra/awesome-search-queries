@@ -3187,8 +3187,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3617,9 +3617,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact" && title="top"
         - icon_hash="-244067125"
         - body="solarview compact"
+        - body="solarview compact" && title="top"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -12790,10 +12790,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="server_databases.php"
-        - body="pma_servername" && body="4.8.4"
         - body="phpmyadmin"
         - title="phpmyadmin"
+        - body="server_databases.php"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
