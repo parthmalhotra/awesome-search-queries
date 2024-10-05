@@ -3187,8 +3187,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3617,9 +3617,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - icon_hash="-244067125"
         - body="solarview compact"
         - body="solarview compact" && title="top"
+        - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -5072,10 +5072,10 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-47932290"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
         - 'x-powered-by: craft cms'
-        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12763,8 +12763,8 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
     - platform: google
       queries:
@@ -12790,9 +12790,9 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
-        - body="pma_servername" && body="4.8.4"
         - body="server_databases.php"
+        - body="pma_servername" && body="4.8.4"
+        - body="phpmyadmin"
         - title="phpmyadmin"
     - platform: hunter
       queries:
@@ -13131,9 +13131,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="login to cacti"
         - title="cacti"
         - icon_hash="-1797138069"
-        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13843,8 +13843,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13894,8 +13894,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ultimate-member"
         - http.html:/wp-content/plugins/ultimate-member/
+        - http.html:"/wp-content/plugins/ultimate-member"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14329,8 +14329,8 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
         - icon_hash="475145467"
+        - app="zimbra-邮件系统"
         - icon_hash="1624375939"
     - platform: shodan
       queries:
@@ -14480,8 +14480,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -17214,8 +17214,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -26704,6 +26704,14 @@
       queries:
         - pgadmin4
 
+- name: BerqWP
+  vendor: BerqWP
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/searchpro
+
 - name: memcached
   vendor: memcached
   type: product
@@ -27543,14 +27551,6 @@
   vendor: Linksys
   type: product
   engines: []
-
-- name: BerqWP
-  vendor: BerqWP
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/searchpro
 
 - name: aiohttp
   vendor: aiohttp
