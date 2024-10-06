@@ -5072,9 +5072,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"craftcms"
         - 'x-powered-by: craft cms'
         - http.favicon.hash:"-47932290"
-        - http.html:"craftcms"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
@@ -12763,8 +12763,8 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
+        - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
@@ -12790,9 +12790,9 @@
   engines:
     - platform: fofa
       queries:
-        - body="server_databases.php"
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
+        - body="server_databases.php"
         - body="phpmyadmin"
     - platform: hunter
       queries:
@@ -13845,8 +13845,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -14331,9 +14331,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="475145467"
         - app="zimbra-邮件系统"
         - icon_hash="1624375939"
-        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -17212,12 +17212,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
