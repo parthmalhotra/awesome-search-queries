@@ -3187,8 +3187,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3617,9 +3617,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact" && title="top"
-        - body="solarview compact"
         - icon_hash="-244067125"
+        - body="solarview compact"
+        - body="solarview compact" && title="top"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -5072,10 +5072,10 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-47932290"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
         - 'x-powered-by: craft cms'
-        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -13845,8 +13845,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13896,8 +13896,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/ultimate-member/
         - http.html:"/wp-content/plugins/ultimate-member"
+        - http.html:/wp-content/plugins/ultimate-member/
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14007,8 +14007,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14332,8 +14332,8 @@
     - platform: fofa
       queries:
         - icon_hash="475145467"
-        - app="zimbra-邮件系统"
         - icon_hash="1624375939"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -17216,8 +17216,8 @@
         - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -19082,9 +19082,15 @@
     - platform: shodan
       queries:
         - http.html:"airwatch"
+        - http.html:"ssp loginscreen"
+        - http.html:"self-service portal"
+        - http.favicon.hash:"321909464"
     - platform: fofa
       queries:
         - body="airwatch"
+        - body="ssp loginscreen"
+        - body="self-service portal"
+        - icon_hash="321909464"
 
 - name: wagtail
   vendor: torchbox
@@ -20935,11 +20941,15 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"gradio"
         - http.html:"__gradio_mode__"
+        - http.title:"gradio"
     - platform: fofa
       queries:
         - body="__gradio_mode__"
+        - title="gradio"
+    - platform: google
+      queries:
+        - intitle:"gradio"
 
 - name: gradio
   vendor: gradio
@@ -21409,16 +21419,19 @@
   engines:
     - platform: fofa
       queries:
-        - body="welcome to your strapi app"
-        - title="welcome to your strapi app"
         - app="strapi-headless-cms"
+        - title="welcome to your strapi app"
+        - body="welcome to your strapi app"
+        - title="strapi"
     - platform: shodan
       queries:
         - http.html:"welcome to your strapi app"
         - http.title:"welcome to your strapi app"
+        - http.title:"strapi"
     - platform: google
       queries:
         - intitle:"welcome to your strapi app"
+        - intitle:"strapi"
 
 - name: givewp
   vendor: givewp
@@ -26076,6 +26089,10 @@
     - platform: shodan
       queries:
         - http.title:"microsoft azure app service - welcome"
+        - http.html:"your azure function app is up and running"
+    - platform: fofa
+      queries:
+        - body="your azure function app is up and running"
 
 - name: pelco_videoxpert
   vendor: schneider-electric
@@ -26787,6 +26804,14 @@
   vendor: openbsd
   type: product
   engines: []
+
+- name: wcf
+  vendor: windows
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"service"
 
 - name: arcgis_engine
   vendor: esri
@@ -27625,6 +27650,11 @@
 
 - name: tracksys
   vendor: parsec-automation
+  type: product
+  engines: []
+
+- name: chuanhuchatgpt
+  vendor: gaizhenbiao
   type: product
   engines: []
 
@@ -29108,6 +29138,20 @@
   type: product
   engines: []
 
+- name: store_locator
+  vendor: agilelogix
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/agile-store-locator"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/agile-store-locator/
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/agile-store-locator/"
+
 - name: mycryptocheckout
   vendor: plainviewplugins
   type: product
@@ -29977,6 +30021,17 @@
   vendor: pascom
   type: product
   engines: []
+
+- name: monitor
+  vendor: op5
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="itrs"
+    - platform: shodan
+      queries:
+        - http.title:"itrs"
 
 - name: phastpress
   vendor: kiboit
