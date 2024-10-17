@@ -3617,9 +3617,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact"
         - icon_hash="-244067125"
         - body="solarview compact" && title="top"
+        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -5074,8 +5074,8 @@
       queries:
         - 'x-powered-by: craft cms'
         - http.html:"craftcms"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.favicon.hash:"-47932290"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12790,10 +12790,10 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
         - body="phpmyadmin"
-        - body="server_databases.php"
         - body="pma_servername" && body="4.8.4"
+        - body="server_databases.php"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13131,9 +13131,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - icon_hash="-1797138069"
         - title="login to cacti"
         - title="cacti"
-        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -14482,8 +14482,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="163538942"
         - title="cdata arc"
+        - icon_hash="163538942"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -17214,8 +17214,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
