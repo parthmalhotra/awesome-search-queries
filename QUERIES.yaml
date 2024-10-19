@@ -3617,8 +3617,8 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact"
         - body="solarview compact" && title="top"
+        - body="solarview compact"
         - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
@@ -5072,9 +5072,9 @@
   engines:
     - platform: shodan
       queries:
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
         - http.favicon.hash:"-47932290"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
@@ -12763,9 +12763,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12790,10 +12790,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="server_databases.php"
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - body="server_databases.php"
         - body="phpmyadmin"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13131,9 +13131,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="cacti"
         - icon_hash="-1797138069"
         - title="login to cacti"
-        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13177,8 +13177,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms"
         - http.html:"/wp-content/plugins/ninja-forms/"
+        - http.html:"/wp-content/plugins/ninja-forms"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13564,12 +13564,12 @@
       queries:
         - http.title:"keycloak"
         - http.html:"keycloak"
-        - http.favicon.hash:-1105083093
+        - http.favicon.hash:"-1105083093"
     - platform: fofa
       queries:
-        - title="keycloak"
+        - icon_hash="-1105083093"
         - body="keycloak"
-        - icon_hash=-1105083093
+        - title="keycloak"
     - platform: google
       queries:
         - intitle:"keycloak"
@@ -13845,8 +13845,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -14331,8 +14331,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
         - icon_hash="475145467"
+        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
     - platform: shodan
       queries:
@@ -15430,8 +15430,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -17214,12 +17214,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -27233,6 +27233,11 @@
 
 - name: easyspider
   vendor: naibowang
+  type: product
+  engines: []
+
+- name: fxserver
+  vendor: fxserver
   type: product
   engines: []
 
