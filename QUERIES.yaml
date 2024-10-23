@@ -3187,8 +3187,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1701804003"
         - http.title:"servicenow"
+        - http.favicon.hash:"1701804003"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3617,8 +3617,8 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact"
         - body="solarview compact" && title="top"
+        - body="solarview compact"
         - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
@@ -5072,10 +5072,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"craftcms"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.favicon.hash:"-47932290"
         - 'x-powered-by: craft cms'
+        - http.html:"craftcms"
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12791,10 +12791,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
         - body="server_databases.php"
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
+        - body="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13132,9 +13132,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="cacti"
         - title="login to cacti"
         - icon_hash="-1797138069"
-        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13178,8 +13178,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms/"
         - http.html:"/wp-content/plugins/ninja-forms"
+        - http.html:"/wp-content/plugins/ninja-forms/"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13563,9 +13563,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-1105083093"
-        - http.html:"keycloak"
         - http.title:"keycloak"
+        - http.html:"keycloak"
+        - http.favicon.hash:"-1105083093"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13846,8 +13846,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -14332,9 +14332,9 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
-        - icon_hash="475145467"
         - icon_hash="1624375939"
+        - icon_hash="475145467"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -15431,8 +15431,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -17215,8 +17215,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
@@ -26845,6 +26845,93 @@
       queries:
         - http.favicon.hash:1499876150
 
+- name: gutenkit
+  vendor: wpmet
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/gutenkit-blocks-addon"
+
+- name: vendure
+  vendor: vendure-ecommerce
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - vendure
+
+- name: ectouch
+  vendor: ectouch
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="127711143"
+
+- name: food_delivery_script
+  vendor: phpjabbers
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"phpjabbers"
+
+- name: yacht_listing_script
+  vendor: phpjabbers
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="phpjabbers"
+    - platform: shodan
+      queries:
+        - http.html:"phpjabbers"
+
+- name: callback_widget
+  vendor: phpjabbers
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="phpjabbers"
+    - platform: shodan
+      queries:
+        - http.html:"phpjabbers"
+
+- name: fundraising_script
+  vendor: phpjabbers
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="phpjabbers"
+    - platform: shodan
+      queries:
+        - http.html:"phpjabbers"
+
+- name: ticket_support_script
+  vendor: phpjabbers
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="phpjabbers"
+    - platform: shodan
+      queries:
+        - http.html:"phpjabbers"
+
+- name: make_an_offer_widget
+  vendor: phpjabbers
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="phpjabbers"
+    - platform: shodan
+      queries:
+        - http.html:"phpjabbers"
+
 - name: spring_framework
   vendor: vmware
   type: product
@@ -27210,14 +27297,6 @@
   type: product
   engines: []
 
-- name: gutenkit
-  vendor: wpmet
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="wp-content/plugins/gutenkit-blocks-addon"
-
 - name: RE7000
   vendor: Linksys
   type: product
@@ -27247,14 +27326,6 @@
   vendor: naibowang
   type: product
   engines: []
-
-- name: vendure
-  vendor: vendure-ecommerce
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - vendure
 
 - name: fxserver
   vendor: fxserver
@@ -30111,14 +30182,6 @@
   type: product
   engines: []
 
-- name: ectouch
-  vendor: ectouch
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - icon_hash="127711143"
-
 - name: watu_quiz
   vendor: kibokolabs
   type: product
@@ -30154,14 +30217,6 @@
   type: product
   engines: []
 
-- name: food_delivery_script
-  vendor: phpjabbers
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"phpjabbers"
-
 - name: online_security_guards_hiring_system
   vendor: online_security_guards_hiring_system_project
   type: product
@@ -30187,32 +30242,10 @@
   type: product
   engines: []
 
-- name: yacht_listing_script
-  vendor: phpjabbers
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="phpjabbers"
-    - platform: shodan
-      queries:
-        - http.html:"phpjabbers"
-
 - name: php_forum_script
   vendor: phpjabbers
   type: product
   engines: []
-
-- name: callback_widget
-  vendor: phpjabbers
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="phpjabbers"
-    - platform: shodan
-      queries:
-        - http.html:"phpjabbers"
 
 - name: moodating
   vendor: moosocial
@@ -30254,17 +30287,6 @@
   type: product
   engines: []
 
-- name: fundraising_script
-  vendor: phpjabbers
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="phpjabbers"
-    - platform: shodan
-      queries:
-        - http.html:"phpjabbers"
-
 - name: simple_online_piggery_management_system
   vendor: simple_online_piggery_management_system_project
   type: product
@@ -30284,17 +30306,6 @@
   vendor: appium
   type: product
   engines: []
-
-- name: ticket_support_script
-  vendor: phpjabbers
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="phpjabbers"
-    - platform: shodan
-      queries:
-        - http.html:"phpjabbers"
 
 - name: bumsys
   vendor: bumsys_project
@@ -30335,17 +30346,6 @@
   vendor: technocrackers
   type: product
   engines: []
-
-- name: make_an_offer_widget
-  vendor: phpjabbers
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="phpjabbers"
-    - platform: shodan
-      queries:
-        - http.html:"phpjabbers"
 
 - name: ecommerce_cms
   vendor: spa-cart
