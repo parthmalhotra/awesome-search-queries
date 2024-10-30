@@ -3187,8 +3187,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3618,8 +3618,8 @@
     - platform: fofa
       queries:
         - icon_hash="-244067125"
-        - body="solarview compact"
         - body="solarview compact" && title="top"
+        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -5074,10 +5074,10 @@
   engines:
     - platform: shodan
       queries:
-        - 'x-powered-by: craft cms'
-        - http.html:"craftcms"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - 'x-powered-by: craft cms'
         - http.favicon.hash:"-47932290"
+        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12793,10 +12793,10 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
-        - body="phpmyadmin"
         - body="server_databases.php"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
+        - body="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13134,9 +13134,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
         - icon_hash="-1797138069"
         - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13565,8 +13565,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"keycloak"
         - http.title:"keycloak"
+        - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
     - platform: fofa
       queries:
@@ -13804,8 +13804,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"106844876"
         - http.title:"revive adserver"
+        - http.favicon.hash:"106844876"
     - platform: fofa
       queries:
         - title="revive adserver"
@@ -13848,8 +13848,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13899,8 +13899,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ultimate-member"
         - http.html:/wp-content/plugins/ultimate-member/
+        - http.html:"/wp-content/plugins/ultimate-member"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14010,8 +14010,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14334,9 +14334,9 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
         - icon_hash="1624375939"
         - icon_hash="475145467"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
