@@ -3617,9 +3617,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
+        - icon_hash="-244067125"
         - body="solarview compact"
         - body="solarview compact" && title="top"
-        - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3992,9 +3992,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
+        - title="nagios xi"
         - icon_hash="1460499495"
         - app="nagios-xi"
-        - title="nagios xi"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5077,10 +5077,10 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.favicon.hash:"-47932290"
         - 'x-powered-by: craft cms'
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12769,9 +12769,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.favicon.hash:"892542951"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12797,9 +12797,9 @@
     - platform: fofa
       queries:
         - body="server_databases.php"
-        - title="phpmyadmin"
-        - body="pma_servername" && body="4.8.4"
         - body="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13137,9 +13137,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
-        - title="cacti"
         - icon_hash="-1797138069"
+        - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13183,8 +13183,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms"
         - http.html:"/wp-content/plugins/ninja-forms/"
+        - http.html:"/wp-content/plugins/ninja-forms"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13568,9 +13568,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"keycloak"
-        - http.favicon.hash:"-1105083093"
         - http.html:"keycloak"
+        - http.favicon.hash:"-1105083093"
+        - http.title:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13807,8 +13807,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"revive adserver"
         - http.favicon.hash:"106844876"
+        - http.title:"revive adserver"
     - platform: fofa
       queries:
         - title="revive adserver"
@@ -13851,8 +13851,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -14337,9 +14337,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
         - icon_hash="1624375939"
         - app="zimbra-邮件系统"
+        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
