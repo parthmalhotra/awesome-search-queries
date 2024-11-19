@@ -1942,9 +1942,11 @@
     - platform: shodan
       queries:
         - http.html:"wavlink"
+        - http.html:"wn530hg4"
     - platform: fofa
       queries:
         - body="wavlink"
+        - body="wn530hg4"
 
 - name: teampass
   vendor: teampass
@@ -3192,8 +3194,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3622,9 +3624,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - icon_hash="-244067125"
         - body="solarview compact" && title="top"
         - body="solarview compact"
+        - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -5082,9 +5084,9 @@
   engines:
     - platform: shodan
       queries:
+        - 'x-powered-by: craft cms'
         - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
-        - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
@@ -12774,9 +12776,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12801,10 +12803,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="pma_servername" && body="4.8.4"
-        - body="server_databases.php"
         - title="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
         - body="phpmyadmin"
+        - body="server_databases.php"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13142,9 +13144,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
-        - title="login to cacti"
         - icon_hash="-1797138069"
+        - title="login to cacti"
+        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13188,8 +13190,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms/"
         - http.html:"/wp-content/plugins/ninja-forms"
+        - http.html:"/wp-content/plugins/ninja-forms/"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13573,9 +13575,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
         - http.title:"keycloak"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13856,8 +13858,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13907,8 +13909,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/ultimate-member/
         - http.html:"/wp-content/plugins/ultimate-member"
+        - http.html:/wp-content/plugins/ultimate-member/
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14018,8 +14020,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14493,8 +14495,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15441,8 +15443,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -27010,6 +27012,10 @@
     - platform: fofa
       queries:
         - body="ac1200" && body="wavlink"
+        - body="wn531g3"
+    - platform: shodan
+      queries:
+        - http.html:"wn531g3"
 
 - name: atomcms
   vendor: thedigitalcraft
@@ -29625,6 +29631,17 @@
   vendor: netgear
   type: product
   engines: []
+
+- name: wl-wn533a8_firmware
+  vendor: wavlink
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wn533a8"
+    - platform: shodan
+      queries:
+        - http.html:"wn533a8"
 
 - name: bangresto
   vendor: bangresto_project
