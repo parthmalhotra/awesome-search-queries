@@ -3624,9 +3624,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact"
-        - body="solarview compact" && title="top"
         - icon_hash="-244067125"
+        - body="solarview compact" && title="top"
+        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3999,9 +3999,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
+        - app="nagios-xi"
         - icon_hash="1460499495"
         - title="nagios xi"
-        - app="nagios-xi"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5086,8 +5086,8 @@
       queries:
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
-        - 'x-powered-by: craft cms'
         - http.favicon.hash:"-47932290"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12776,8 +12776,8 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
+        - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
@@ -12803,10 +12803,10 @@
   engines:
     - platform: fofa
       queries:
+        - body="server_databases.php"
         - body="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
-        - body="server_databases.php"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13145,8 +13145,8 @@
     - platform: fofa
       queries:
         - icon_hash="-1797138069"
-        - title="login to cacti"
         - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13190,8 +13190,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms/"
         - http.html:"/wp-content/plugins/ninja-forms"
+        - http.html:"/wp-content/plugins/ninja-forms/"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13576,8 +13576,8 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"-1105083093"
-        - http.title:"keycloak"
         - http.html:"keycloak"
+        - http.title:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13814,8 +13814,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"revive adserver"
         - http.favicon.hash:"106844876"
+        - http.title:"revive adserver"
     - platform: fofa
       queries:
         - title="revive adserver"
@@ -14020,8 +14020,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -17231,8 +17231,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
