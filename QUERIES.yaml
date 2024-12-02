@@ -3625,8 +3625,8 @@
     - platform: fofa
       queries:
         - body="solarview compact"
-        - body="solarview compact" && title="top"
         - icon_hash="-244067125"
+        - body="solarview compact" && title="top"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -4000,8 +4000,8 @@
     - platform: fofa
       queries:
         - icon_hash="1460499495"
-        - title="nagios xi"
         - app="nagios-xi"
+        - title="nagios xi"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5084,10 +5084,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - 'x-powered-by: craft cms'
         - http.html:"craftcms"
+        - http.favicon.hash:"-47932290"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12776,8 +12776,8 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
+        - http.favicon.hash:"892542951"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
@@ -12803,10 +12803,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="server_databases.php"
-        - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
         - body="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
+        - body="server_databases.php"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13144,8 +13144,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
         - title="login to cacti"
+        - title="cacti"
         - icon_hash="-1797138069"
     - platform: google
       queries:
@@ -13576,8 +13576,8 @@
     - platform: shodan
       queries:
         - http.title:"keycloak"
-        - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13909,8 +13909,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/ultimate-member/
         - http.html:"/wp-content/plugins/ultimate-member"
+        - http.html:/wp-content/plugins/ultimate-member/
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14344,9 +14344,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="1624375939"
         - icon_hash="475145467"
         - app="zimbra-邮件系统"
-        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14495,8 +14495,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="163538942"
         - title="cdata arc"
+        - icon_hash="163538942"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15448,8 +15448,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -27071,6 +27071,22 @@
       queries:
         - body="wp-content/plugins/pdf-generator-addon-for-elementor-page-builder/"
 
+- name: wp-marketing-automations
+  vendor: funnelkit
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/wp-marketing-automations/"
+
+- name: nios
+  vendor: infoblox
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"infoblox"
+
 - name: spring_framework
   vendor: vmware
   type: product
@@ -27461,6 +27477,14 @@
   type: product
   engines: []
 
+- name: wp_query_console
+  vendor: lubus
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/wp-query-console/"
+
 - name: chuanhuchatgpt
   vendor: gaizhenbiao
   type: product
@@ -27471,13 +27495,13 @@
   type: product
   engines: []
 
-- name: wp-marketing-automations
-  vendor: funnelkit
+- name: yet_another_related_posts_plugin
+  vendor: yarpp
   type: product
   engines:
     - platform: fofa
       queries:
-        - body="wp-content/plugins/wp-marketing-automations/"
+        - body="wp-content/plugins/yet-another-related-posts-plugin/"
 
 - name: easyspider
   vendor: naibowang
@@ -31648,14 +31672,6 @@
   vendor: forcepoint
   type: product
   engines: []
-
-- name: nios
-  vendor: infoblox
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"infoblox"
 
 - name: edgeos
   vendor: ui
