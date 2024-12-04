@@ -2059,6 +2059,7 @@
         - http.title:"apache tomcat"
         - cpe:"cpe:2.3:a:apache:tomcat"
         - http.html:"jk status manager"
+        - product:"tomcat"
     - platform: fofa
       queries:
         - body="apache tomcat"
@@ -3624,9 +3625,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact"
-        - body="solarview compact" && title="top"
         - icon_hash="-244067125"
+        - body="solarview compact" && title="top"
+        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3999,8 +4000,8 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - title="nagios xi"
         - icon_hash="1460499495"
+        - title="nagios xi"
         - app="nagios-xi"
     - platform: google
       queries:
@@ -5084,10 +5085,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"craftcms"
-        - http.favicon.hash:"-47932290"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
+        - http.html:"craftcms"
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12780,9 +12781,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12807,10 +12808,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
-        - title="phpmyadmin"
         - body="server_databases.php"
         - body="pma_servername" && body="4.8.4"
+        - body="phpmyadmin"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13148,8 +13149,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - icon_hash="-1797138069"
         - title="login to cacti"
+        - icon_hash="-1797138069"
         - title="cacti"
     - platform: google
       queries:
@@ -13194,8 +13195,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms"
         - http.html:"/wp-content/plugins/ninja-forms/"
+        - http.html:"/wp-content/plugins/ninja-forms"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13579,9 +13580,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"keycloak"
-        - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
+        - http.html:"keycloak"
+        - http.title:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -14348,9 +14349,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="1624375939"
         - icon_hash="475145467"
         - app="zimbra-邮件系统"
-        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14499,8 +14500,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="163538942"
         - title="cdata arc"
+        - icon_hash="163538942"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -17236,12 +17237,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -27123,6 +27124,17 @@
       queries:
         - body="/wp-content/plugins/wpcf7-redirect"
 
+- name: really_simple_security
+  vendor: really-simple-plugins
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/really-simple-ssl"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/really-simple-ssl"
+
 - name: spring_framework
   vendor: vmware
   type: product
@@ -27517,17 +27529,6 @@
   vendor: gaizhenbiao
   type: product
   engines: []
-
-- name: really_simple_security
-  vendor: really-simple-plugins
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/really-simple-ssl"
-    - platform: shodan
-      queries:
-        - http.html:"/wp-content/plugins/really-simple-ssl"
 
 - name: asis
   vendor: asis
@@ -29548,6 +29549,17 @@
   vendor: piano_led_visualizer_project
   type: product
   engines: []
+
+- name: webmail
+  vendor: axigen
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="axigen"
+    - platform: shodan
+      queries:
+        - http.title:"axigen"
 
 - name: limit_login_attempts
   vendor: limit_login_attempts_project
