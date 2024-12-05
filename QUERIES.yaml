@@ -3195,8 +3195,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3625,8 +3625,8 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - icon_hash="-244067125"
         - body="solarview compact" && title="top"
+        - icon_hash="-244067125"
         - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
@@ -4000,9 +4000,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - icon_hash="1460499495"
         - title="nagios xi"
         - app="nagios-xi"
+        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5086,9 +5086,9 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - 'x-powered-by: craft cms'
-        - http.html:"craftcms"
         - http.favicon.hash:"-47932290"
+        - http.html:"craftcms"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12781,8 +12781,8 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.title:"zabbix-server"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.favicon.hash:"892542951"
     - platform: google
       queries:
@@ -12810,8 +12810,8 @@
       queries:
         - body="server_databases.php"
         - body="pma_servername" && body="4.8.4"
-        - body="phpmyadmin"
         - title="phpmyadmin"
+        - body="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13149,9 +13149,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
-        - icon_hash="-1797138069"
         - title="cacti"
+        - icon_hash="-1797138069"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13195,8 +13195,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms/"
         - http.html:"/wp-content/plugins/ninja-forms"
+        - http.html:"/wp-content/plugins/ninja-forms/"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13580,9 +13580,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-1105083093"
         - http.html:"keycloak"
         - http.title:"keycloak"
+        - http.favicon.hash:"-1105083093"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -14025,8 +14025,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14349,9 +14349,9 @@
   engines:
     - platform: fofa
       queries:
+        - app="zimbra-邮件系统"
         - icon_hash="1624375939"
         - icon_hash="475145467"
-        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -15453,8 +15453,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -27135,6 +27135,17 @@
       queries:
         - http.html:"/wp-content/plugins/really-simple-ssl"
 
+- name: webmail
+  vendor: axigen
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="axigen"
+    - platform: shodan
+      queries:
+        - http.title:"axigen"
+
 - name: spring_framework
   vendor: vmware
   type: product
@@ -29549,17 +29560,6 @@
   vendor: piano_led_visualizer_project
   type: product
   engines: []
-
-- name: webmail
-  vendor: axigen
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="axigen"
-    - platform: shodan
-      queries:
-        - http.title:"axigen"
 
 - name: limit_login_attempts
   vendor: limit_login_attempts_project
