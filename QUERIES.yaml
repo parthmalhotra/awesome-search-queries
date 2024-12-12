@@ -2068,6 +2068,7 @@
     - platform: google
       queries:
         - intitle:"apache tomcat"
+        - site:*/examples/jsp/snp/snoop.jsp
 
 - name: e1_zoom_firmware
   vendor: reolink
@@ -3195,8 +3196,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3625,8 +3626,8 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact"
         - body="solarview compact" && title="top"
+        - body="solarview compact"
         - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
@@ -3706,11 +3707,11 @@
     - platform: shodan
       queries:
         - http.html:"apache superset"
-        - http.favicon.hash:1582430156
+        - http.favicon.hash:"1582430156"
     - platform: fofa
       queries:
         - body="apache superset"
-        - icon_hash=1582430156
+        - icon_hash="1582430156"
 
 - name: masacms
   vendor: masacms
@@ -5085,10 +5086,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.html:"craftcms"
         - 'x-powered-by: craft cms'
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.favicon.hash:"-47932290"
+        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12652,10 +12653,10 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
-        - product:"jenkins"
         - http.favicon.hash:"81586312"
+        - product:"jenkins"
         - x-jenkins
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12781,9 +12782,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.title:"zabbix-server"
-        - http.favicon.hash:"892542951"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.favicon.hash:"892542951"
+        - http.title:"zabbix-server"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12809,9 +12810,9 @@
     - platform: fofa
       queries:
         - body="server_databases.php"
-        - title="phpmyadmin"
         - body="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13149,9 +13150,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
-        - icon_hash="-1797138069"
         - title="login to cacti"
+        - icon_hash="-1797138069"
+        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13580,9 +13581,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"keycloak"
         - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
+        - http.title:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13819,8 +13820,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"106844876"
         - http.title:"revive adserver"
+        - http.favicon.hash:"106844876"
     - platform: fofa
       queries:
         - title="revive adserver"
@@ -14349,9 +14350,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="475145467"
         - app="zimbra-邮件系统"
         - icon_hash="1624375939"
-        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14500,8 +14501,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15006,10 +15007,12 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:1380908726
+        - http.favicon.hash:"-250963920"
+        - http.favicon.hash:"1380908726"
     - platform: fofa
       queries:
-        - icon_hash=1380908726
+        - icon_hash="-250963920"
+        - icon_hash="1380908726"
         - title="jeecg-boot"
 
 - name: hotel_booking_lite
@@ -15453,8 +15456,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -17237,8 +17240,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
@@ -25684,6 +25687,9 @@
     - platform: shodan
       queries:
         - http.title:"gitbook"
+    - platform: fofa
+      queries:
+        - app="introduction-gitbook"
 
 - name: cvsweb
   vendor: freebsd
@@ -27569,6 +27575,17 @@
   type: product
   engines: []
 
+- name: tablepress
+  vendor: wordpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/tablepress"
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/tablepress"
+
 - name: tracksys
   vendor: parsec-automation
   type: product
@@ -27578,6 +27595,14 @@
   vendor: aiohttp
   type: product
   engines: []
+
+- name: wp-umbrella
+  vendor: wp-umbrella
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-health"
 
 - name: chuanhuchatgpt
   vendor: gaizhenbiao
@@ -27592,7 +27617,10 @@
 - name: asis
   vendor: asis
   type: product
-  engines: []
+  engines:
+    - platform: google
+      queries:
+        - asis | aplikasi sistem sekolah
 
 - name: easyspider
   vendor: naibowang
