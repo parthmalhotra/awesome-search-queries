@@ -3626,9 +3626,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact" && title="top"
-        - body="solarview compact"
         - icon_hash="-244067125"
+        - body="solarview compact"
+        - body="solarview compact" && title="top"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -4001,8 +4001,8 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - icon_hash="1460499495"
         - title="nagios xi"
+        - icon_hash="1460499495"
         - app="nagios-xi"
     - platform: google
       queries:
@@ -5086,9 +5086,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-47932290"
         - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
     - platform: publicwww
       queries:
@@ -12653,10 +12653,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"81586312"
         - product:"jenkins"
-        - x-jenkins
         - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - x-jenkins
+        - http.favicon.hash:"81586312"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12782,9 +12782,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
+        - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.favicon.hash:"892542951"
-        - http.title:"zabbix-server"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12809,10 +12809,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="server_databases.php"
+        - title="phpmyadmin"
         - body="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
-        - title="phpmyadmin"
+        - body="server_databases.php"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13150,9 +13150,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
         - icon_hash="-1797138069"
         - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13196,8 +13196,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms"
         - http.html:"/wp-content/plugins/ninja-forms/"
+        - http.html:"/wp-content/plugins/ninja-forms"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13581,9 +13581,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
         - http.title:"keycloak"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13864,8 +13864,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13915,8 +13915,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/ultimate-member/
         - http.html:"/wp-content/plugins/ultimate-member"
+        - http.html:/wp-content/plugins/ultimate-member/
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14351,8 +14351,8 @@
     - platform: fofa
       queries:
         - icon_hash="475145467"
-        - app="zimbra-邮件系统"
         - icon_hash="1624375939"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -15456,8 +15456,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -17240,12 +17240,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -27195,6 +27195,33 @@
       queries:
         - app="aishu-anyshare"
 
+- name: tablepress
+  vendor: wordpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/tablepress"
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/tablepress"
+
+- name: wp-umbrella
+  vendor: wp-umbrella
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-health"
+
+- name: asis
+  vendor: asis
+  type: product
+  engines:
+    - platform: google
+      queries:
+        - asis | aplikasi sistem sekolah
+
 - name: spring_framework
   vendor: vmware
   type: product
@@ -27575,17 +27602,6 @@
   type: product
   engines: []
 
-- name: tablepress
-  vendor: wordpress
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/tablepress"
-    - platform: google
-      queries:
-        - inurl:"/wp-content/plugins/tablepress"
-
 - name: tracksys
   vendor: parsec-automation
   type: product
@@ -27596,14 +27612,6 @@
   type: product
   engines: []
 
-- name: wp-umbrella
-  vendor: wp-umbrella
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/wp-health"
-
 - name: chuanhuchatgpt
   vendor: gaizhenbiao
   type: product
@@ -27613,14 +27621,6 @@
   vendor: mindstien
   type: product
   engines: []
-
-- name: asis
-  vendor: asis
-  type: product
-  engines:
-    - platform: google
-      queries:
-        - asis | aplikasi sistem sekolah
 
 - name: easyspider
   vendor: naibowang
