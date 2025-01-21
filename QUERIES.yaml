@@ -3196,8 +3196,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1701804003"
         - http.title:"servicenow"
+        - http.favicon.hash:"1701804003"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3706,8 +3706,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"apache superset"
         - http.favicon.hash:"1582430156"
+        - http.html:"apache superset"
     - platform: fofa
       queries:
         - body="apache superset"
@@ -4001,8 +4001,8 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - app="nagios-xi"
         - title="nagios xi"
+        - app="nagios-xi"
         - icon_hash="1460499495"
     - platform: google
       queries:
@@ -5090,10 +5090,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
         - http.html:"craftcms"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12657,10 +12657,10 @@
   engines:
     - platform: shodan
       queries:
-        - x-jenkins
         - http.favicon.hash:"81586312"
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - x-jenkins
         - product:"jenkins"
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12786,8 +12786,8 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
+        - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
@@ -12813,10 +12813,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
         - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
         - body="server_databases.php"
+        - body="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13201,8 +13201,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms/"
         - http.html:"/wp-content/plugins/ninja-forms"
+        - http.html:"/wp-content/plugins/ninja-forms/"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13593,9 +13593,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"keycloak"
-        - http.favicon.hash:"-1105083093"
         - http.title:"keycloak"
+        - http.favicon.hash:"-1105083093"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13836,8 +13836,8 @@
         - http.title:"revive adserver"
     - platform: fofa
       queries:
-        - icon_hash="106844876"
         - title="revive adserver"
+        - icon_hash="106844876"
     - platform: google
       queries:
         - intitle:"revive adserver"
@@ -13876,8 +13876,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -14038,8 +14038,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14513,8 +14513,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="163538942"
         - title="cdata arc"
+        - icon_hash="163538942"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -17252,8 +17252,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
@@ -27384,6 +27384,17 @@
       queries:
         - http.html:"/wp-content/plugins/wp-file-upload/"
 
+- name: pfblockerng
+  vendor: pfsense
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - pfblockerng
+    - platform: shodan
+      queries:
+        - pfblockerng
+
 - name: ftp-deployment
   vendor: dg
   type: product
@@ -30379,6 +30390,14 @@
   type: product
   engines: []
 
+- name: simplehelp
+  vendor: simple-help
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"simplehelp"
+
 - name: easyspider
   vendor: naibowang
   type: product
@@ -31223,17 +31242,6 @@
   vendor: wpsmartcontracts
   type: product
   engines: []
-
-- name: pfblockerng
-  vendor: pfsense
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - pfblockerng
-    - platform: shodan
-      queries:
-        - pfblockerng
 
 - name: 12_player
   vendor: dvdfab
