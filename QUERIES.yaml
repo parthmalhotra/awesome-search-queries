@@ -3196,8 +3196,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3626,8 +3626,8 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - icon_hash="-244067125"
         - body="solarview compact"
+        - icon_hash="-244067125"
         - body="solarview compact" && title="top"
 
 - name: skysa_app_bar_integration_plugin
@@ -4001,9 +4001,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - app="nagios-xi"
         - title="nagios xi"
         - icon_hash="1460499495"
+        - app="nagios-xi"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5092,8 +5092,8 @@
       queries:
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.favicon.hash:"-47932290"
-        - http.html:"craftcms"
         - 'x-powered-by: craft cms'
+        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12657,10 +12657,10 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
         - product:"jenkins"
         - x-jenkins
         - http.favicon.hash:"81586312"
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12786,9 +12786,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
+        - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.favicon.hash:"892542951"
-        - http.title:"zabbix-server"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12813,10 +12813,10 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
-        - body="pma_servername" && body="4.8.4"
         - body="phpmyadmin"
         - body="server_databases.php"
+        - title="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13155,9 +13155,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - icon_hash="-1797138069"
         - title="cacti"
         - title="login to cacti"
-        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13201,8 +13201,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms/"
         - http.html:"/wp-content/plugins/ninja-forms"
+        - http.html:"/wp-content/plugins/ninja-forms/"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13594,8 +13594,8 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"-1105083093"
-        - http.title:"keycloak"
         - http.html:"keycloak"
+        - http.title:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -14038,8 +14038,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14362,8 +14362,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
         - icon_hash="475145467"
+        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
     - platform: shodan
       queries:
