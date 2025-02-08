@@ -5090,10 +5090,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
-        - http.html:"craftcms"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
+        - http.favicon.hash:"-47932290"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12657,10 +12657,10 @@
   engines:
     - platform: shodan
       queries:
-        - product:"jenkins"
         - x-jenkins
-        - http.favicon.hash:"81586312"
         - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - product:"jenkins"
+        - http.favicon.hash:"81586312"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12815,8 +12815,8 @@
       queries:
         - body="server_databases.php"
         - body="pma_servername" && body="4.8.4"
-        - title="phpmyadmin"
         - body="phpmyadmin"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13155,8 +13155,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
         - icon_hash="-1797138069"
+        - title="cacti"
         - title="login to cacti"
     - platform: google
       queries:
@@ -13593,8 +13593,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"keycloak"
         - http.favicon.hash:"-1105083093"
+        - http.title:"keycloak"
         - http.html:"keycloak"
     - platform: fofa
       queries:
@@ -13832,8 +13832,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"revive adserver"
         - http.favicon.hash:"106844876"
+        - http.title:"revive adserver"
     - platform: fofa
       queries:
         - icon_hash="106844876"
@@ -14513,8 +14513,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15019,8 +15019,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1380908726"
         - http.favicon.hash:"-250963920"
+        - http.favicon.hash:"1380908726"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -17256,8 +17256,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
