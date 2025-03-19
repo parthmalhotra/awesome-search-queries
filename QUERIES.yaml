@@ -3075,8 +3075,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugar setup wizard"
+        - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugarcrm"
     - platform: google
       queries:
@@ -3086,8 +3086,8 @@
     - platform: fofa
       queries:
         - title="sugarcrm"
-        - title="sugar setup wizard"
         - body="sugarcrm inc. all rights reserved"
+        - title="sugar setup wizard"
 
 - name: redash
   vendor: redash
@@ -3196,8 +3196,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1701804003"
         - http.title:"servicenow"
+        - http.favicon.hash:"1701804003"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3626,9 +3626,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
+        - body="solarview compact" && title="top"
         - body="solarview compact"
         - icon_hash="-244067125"
-        - body="solarview compact" && title="top"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -4002,8 +4002,8 @@
     - platform: fofa
       queries:
         - icon_hash="1460499495"
-        - app="nagios-xi"
         - title="nagios xi"
+        - app="nagios-xi"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5090,10 +5090,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
-        - 'x-powered-by: craft cms'
-        - http.html:"craftcms"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.favicon.hash:"-47932290"
+        - http.html:"craftcms"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12658,9 +12658,9 @@
   engines:
     - platform: shodan
       queries:
+        - product:"jenkins"
         - x-jenkins
         - cpe:"cpe:2.3:a:jenkins:jenkins"
-        - product:"jenkins"
         - http.favicon.hash:"81586312"
     - platform: fofa
       queries:
@@ -12814,10 +12814,10 @@
   engines:
     - platform: fofa
       queries:
+        - body="phpmyadmin"
+        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
         - body="server_databases.php"
-        - title="phpmyadmin"
-        - body="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13594,9 +13594,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"keycloak"
         - http.title:"keycloak"
         - http.favicon.hash:"-1105083093"
-        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -14039,8 +14039,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14363,9 +14363,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="1624375939"
         - icon_hash="475145467"
         - app="zimbra-邮件系统"
-        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14514,8 +14514,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="163538942"
         - title="cdata arc"
+        - icon_hash="163538942"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -17259,8 +17259,8 @@
         - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -18804,9 +18804,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"projectsend setup"
         - http.html:"provided by projectsend"
         - http.html:"projectsend"
+        - http.html:"projectsend setup"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -27622,6 +27622,49 @@
       queries:
         - http.title:'home - default site'
 
+- name: tradedoubler-affiliate-tracker
+  vendor: WordPress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/tradedoubler-affiliate-tracker/"
+
+- name: builder
+  vendor: themify
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/themify-builder/"
+
+- name: woocommerce-product-addon
+  vendor: WordPress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/woocommerce-product-addon/"
+
+- name: easy_forms_for_mailchimp
+  vendor: yikesinc
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/yikes-inc-easy-mailchimp-extender/"
+
+- name: post-timeline
+  vendor: agilelogix
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/post-timeline/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/post-timeline/"
+
 - name: xz
   vendor: tukaani
   type: product
@@ -28236,22 +28279,6 @@
   vendor: ivanti
   type: product
   engines: []
-
-- name: tradedoubler-affiliate-tracker
-  vendor: WordPress
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="wp-content/plugins/tradedoubler-affiliate-tracker/"
-
-- name: builder
-  vendor: themify
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="wp-content/plugins/themify-builder/"
 
 - name: tp-link-archer-a20-v3-router
   vendor: tp-link
@@ -28938,14 +28965,6 @@
   type: product
   engines: []
 
-- name: woocommerce-product-addon
-  vendor: WordPress
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="wp-content/plugins/woocommerce-product-addon/"
-
 - name: wbce_cms
   vendor: wbce
   type: product
@@ -28996,14 +29015,6 @@
   type: product
   engines: []
 
-- name: easy_forms_for_mailchimp
-  vendor: yikesinc
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="wp-content/plugins/yikes-inc-easy-mailchimp-extender/"
-
 - name: image_optimizer
   vendor: 10web
   type: product
@@ -29043,17 +29054,6 @@
   vendor: phpjabbers
   type: product
   engines: []
-
-- name: post-timeline
-  vendor: agilelogix
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="wp-content/plugins/post-timeline/"
-    - platform: shodan
-      queries:
-        - http.html:"wp-content/plugins/post-timeline/"
 
 - name: codekop
   vendor: codekop
