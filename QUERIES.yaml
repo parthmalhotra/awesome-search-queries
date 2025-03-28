@@ -3077,8 +3077,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"sugar setup wizard"
         - http.html:"sugarcrm inc. all rights reserved"
+        - http.title:"sugar setup wizard"
         - http.title:"sugarcrm"
     - platform: google
       queries:
@@ -3087,8 +3087,8 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - body="sugarcrm inc. all rights reserved"
         - title="sugarcrm"
+        - body="sugarcrm inc. all rights reserved"
         - title="sugar setup wizard"
 
 - name: redash
@@ -3628,9 +3628,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
+        - icon_hash="-244067125"
         - body="solarview compact" && title="top"
         - body="solarview compact"
-        - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -5093,9 +5093,9 @@
     - platform: shodan
       queries:
         - 'x-powered-by: craft cms'
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
         - http.favicon.hash:"-47932290"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12660,10 +12660,10 @@
   engines:
     - platform: shodan
       queries:
-        - product:"jenkins"
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
-        - http.favicon.hash:"81586312"
         - x-jenkins
+        - http.favicon.hash:"81586312"
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - product:"jenkins"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12789,8 +12789,8 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.title:"zabbix-server"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.favicon.hash:"892542951"
     - platform: google
       queries:
@@ -12816,10 +12816,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
+        - body="server_databases.php"
         - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
-        - body="server_databases.php"
+        - body="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13835,8 +13835,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"revive adserver"
         - http.favicon.hash:"106844876"
+        - http.title:"revive adserver"
     - platform: fofa
       queries:
         - icon_hash="106844876"
@@ -13879,8 +13879,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13930,8 +13930,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ultimate-member"
         - http.html:/wp-content/plugins/ultimate-member/
+        - http.html:"/wp-content/plugins/ultimate-member"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14365,9 +14365,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
-        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
+        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14516,8 +14516,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15022,8 +15022,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-250963920"
         - http.favicon.hash:"1380908726"
+        - http.favicon.hash:"-250963920"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -15234,9 +15234,16 @@
     - platform: shodan
       queries:
         - http.html:"crushftp"
+        - http.favicon.hash:"-1022206565"
+        - http.title:"crushftp webinterface"
     - platform: fofa
       queries:
+        - icon_hash="-1022206565"
         - body="crushftp"
+        - title="crushftp webinterface"
+    - platform: google
+      queries:
+        - intitle:"crushftp webinterface"
 
 - name: ur5x_firmware
   vendor: milesight
@@ -17259,8 +17266,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
@@ -18808,9 +18815,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"provided by projectsend"
         - http.html:"projectsend"
         - http.html:"projectsend setup"
+        - http.html:"provided by projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
