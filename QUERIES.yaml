@@ -3077,9 +3077,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugar setup wizard"
         - http.title:"sugarcrm"
+        - http.html:"sugarcrm inc. all rights reserved"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3628,8 +3628,8 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - icon_hash="-244067125"
         - body="solarview compact" && title="top"
+        - icon_hash="-244067125"
         - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
@@ -4004,8 +4004,8 @@
     - platform: fofa
       queries:
         - icon_hash="1460499495"
-        - app="nagios-xi"
         - title="nagios xi"
+        - app="nagios-xi"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5094,8 +5094,8 @@
       queries:
         - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.html:"craftcms"
         - http.favicon.hash:"-47932290"
+        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12660,9 +12660,9 @@
   engines:
     - platform: shodan
       queries:
-        - x-jenkins
-        - http.favicon.hash:"81586312"
         - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - http.favicon.hash:"81586312"
+        - x-jenkins
         - product:"jenkins"
     - platform: fofa
       queries:
@@ -12790,8 +12790,8 @@
     - platform: shodan
       queries:
         - http.title:"zabbix-server"
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.favicon.hash:"892542951"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12816,8 +12816,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="server_databases.php"
         - body="pma_servername" && body="4.8.4"
+        - body="server_databases.php"
         - title="phpmyadmin"
         - body="phpmyadmin"
     - platform: hunter
@@ -13158,9 +13158,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="cacti"
         - title="login to cacti"
         - icon_hash="-1797138069"
-        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13596,9 +13596,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"keycloak"
-        - http.title:"keycloak"
         - http.favicon.hash:"-1105083093"
+        - http.title:"keycloak"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13835,8 +13835,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"106844876"
         - http.title:"revive adserver"
+        - http.favicon.hash:"106844876"
     - platform: fofa
       queries:
         - icon_hash="106844876"
@@ -13879,8 +13879,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -14365,9 +14365,9 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
-        - icon_hash="1624375939"
         - icon_hash="475145467"
+        - icon_hash="1624375939"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14516,8 +14516,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="163538942"
         - title="cdata arc"
+        - icon_hash="163538942"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -17266,8 +17266,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
@@ -18815,8 +18815,8 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"projectsend"
         - http.html:"projectsend setup"
+        - http.html:"projectsend"
         - http.html:"provided by projectsend"
     - platform: fofa
       queries:
