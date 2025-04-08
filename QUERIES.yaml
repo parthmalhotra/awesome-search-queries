@@ -3078,8 +3078,8 @@
     - platform: shodan
       queries:
         - http.title:"sugarcrm"
-        - http.title:"sugar setup wizard"
         - http.html:"sugarcrm inc. all rights reserved"
+        - http.title:"sugar setup wizard"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3088,8 +3088,8 @@
     - platform: fofa
       queries:
         - title="sugarcrm"
-        - title="sugar setup wizard"
         - body="sugarcrm inc. all rights reserved"
+        - title="sugar setup wizard"
 
 - name: redash
   vendor: redash
@@ -3198,8 +3198,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3628,9 +3628,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact"
-        - icon_hash="-244067125"
         - body="solarview compact" && title="top"
+        - icon_hash="-244067125"
+        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -4003,9 +4003,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - icon_hash="1460499495"
-        - title="nagios xi"
         - app="nagios-xi"
+        - title="nagios xi"
+        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5094,8 +5094,8 @@
       queries:
         - http.favicon.hash:"-47932290"
         - 'x-powered-by: craft cms'
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12661,8 +12661,8 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:jenkins:jenkins"
-        - x-jenkins
         - http.favicon.hash:"81586312"
+        - x-jenkins
         - product:"jenkins"
     - platform: fofa
       queries:
@@ -12816,10 +12816,10 @@
   engines:
     - platform: fofa
       queries:
+        - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
         - body="phpmyadmin"
         - body="server_databases.php"
-        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13596,9 +13596,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-1105083093"
-        - http.html:"keycloak"
         - http.title:"keycloak"
+        - http.html:"keycloak"
+        - http.favicon.hash:"-1105083093"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -15022,8 +15022,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1380908726"
         - http.favicon.hash:"-250963920"
+        - http.favicon.hash:"1380908726"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -15238,9 +15238,9 @@
         - http.title:"crushftp webinterface"
     - platform: fofa
       queries:
+        - body="crushftp"
         - title="crushftp webinterface"
         - icon_hash="-1022206565"
-        - body="crushftp"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
@@ -17266,8 +17266,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -18815,9 +18815,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"provided by projectsend"
         - http.html:"projectsend"
         - http.html:"projectsend setup"
+        - http.html:"provided by projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -27735,6 +27735,20 @@
       queries:
         - http.title:"aj-report"
 
+- name: download_manager
+  vendor: w3eden
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/download-manager/"
+    - platform: google
+      queries:
+        - inurl:"/wp-content/plugins/download-manager/"
+    - platform: shodan
+      queries:
+        - http.html:"wp-content/plugins/download-manager/"
+
 - name: xz
   vendor: tukaani
   type: product
@@ -31294,20 +31308,6 @@
   vendor: alltube_project
   type: product
   engines: []
-
-- name: download_manager
-  vendor: w3eden
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="wp-content/plugins/download-manager/"
-    - platform: google
-      queries:
-        - inurl:"/wp-content/plugins/download-manager/"
-    - platform: shodan
-      queries:
-        - http.html:"wp-content/plugins/download-manager/"
 
 - name: master_elements
   vendor: devbunch
