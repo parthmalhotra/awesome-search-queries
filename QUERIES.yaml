@@ -3078,8 +3078,8 @@
     - platform: shodan
       queries:
         - http.html:"sugarcrm inc. all rights reserved"
-        - http.title:"sugar setup wizard"
         - http.title:"sugarcrm"
+        - http.title:"sugar setup wizard"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3087,9 +3087,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
+        - title="sugarcrm"
         - title="sugar setup wizard"
         - body="sugarcrm inc. all rights reserved"
-        - title="sugarcrm"
 
 - name: redash
   vendor: redash
@@ -3198,8 +3198,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1701804003"
         - http.title:"servicenow"
+        - http.favicon.hash:"1701804003"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3629,8 +3629,8 @@
     - platform: fofa
       queries:
         - body="solarview compact"
-        - icon_hash="-244067125"
         - body="solarview compact" && title="top"
+        - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -4003,9 +4003,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - app="nagios-xi"
         - icon_hash="1460499495"
         - title="nagios xi"
+        - app="nagios-xi"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5092,10 +5092,10 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
-        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12660,10 +12660,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"81586312"
         - product:"jenkins"
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - http.favicon.hash:"81586312"
         - x-jenkins
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12789,9 +12789,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
+        - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
-        - http.title:"zabbix-server"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12816,9 +12816,9 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
         - title="phpmyadmin"
         - body="server_databases.php"
+        - body="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
@@ -13158,8 +13158,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
         - title="login to cacti"
+        - title="cacti"
         - icon_hash="-1797138069"
     - platform: google
       queries:
@@ -13596,9 +13596,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"keycloak"
         - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
+        - http.title:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13879,8 +13879,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -14041,8 +14041,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - icon_hash="702863115"
         - body="moosocial installation"
+        - icon_hash="702863115"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -15022,8 +15022,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1380908726"
         - http.favicon.hash:"-250963920"
+        - http.favicon.hash:"1380908726"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -15238,9 +15238,9 @@
         - http.title:"crushftp webinterface"
     - platform: fofa
       queries:
-        - icon_hash="-1022206565"
-        - body="crushftp"
         - title="crushftp webinterface"
+        - body="crushftp"
+        - icon_hash="-1022206565"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
@@ -17270,8 +17270,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -18815,9 +18815,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"projectsend"
-        - http.html:"provided by projectsend"
         - http.html:"projectsend setup"
+        - http.html:"provided by projectsend"
+        - http.html:"projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
