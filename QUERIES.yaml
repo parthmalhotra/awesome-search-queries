@@ -3078,8 +3078,8 @@
     - platform: shodan
       queries:
         - http.html:"sugarcrm inc. all rights reserved"
-        - http.title:"sugar setup wizard"
         - http.title:"sugarcrm"
+        - http.title:"sugar setup wizard"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3087,9 +3087,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - title="sugar setup wizard"
         - title="sugarcrm"
         - body="sugarcrm inc. all rights reserved"
+        - title="sugar setup wizard"
 
 - name: redash
   vendor: redash
@@ -3628,9 +3628,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - icon_hash="-244067125"
         - body="solarview compact"
         - body="solarview compact" && title="top"
+        - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3708,8 +3708,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1582430156"
         - http.html:"apache superset"
+        - http.favicon.hash:"1582430156"
     - platform: fofa
       queries:
         - body="apache superset"
@@ -4004,8 +4004,8 @@
     - platform: fofa
       queries:
         - title="nagios xi"
-        - icon_hash="1460499495"
         - app="nagios-xi"
+        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -12660,9 +12660,9 @@
   engines:
     - platform: shodan
       queries:
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
         - x-jenkins
         - product:"jenkins"
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
         - http.favicon.hash:"81586312"
     - platform: fofa
       queries:
@@ -12816,10 +12816,10 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
-        - body="server_databases.php"
-        - body="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - body="phpmyadmin"
+        - body="server_databases.php"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13596,9 +13596,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"keycloak"
         - http.title:"keycloak"
         - http.favicon.hash:"-1105083093"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13930,8 +13930,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ultimate-member"
         - http.html:/wp-content/plugins/ultimate-member/
+        - http.html:"/wp-content/plugins/ultimate-member"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14041,8 +14041,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14365,9 +14365,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="475145467"
         - icon_hash="1624375939"
         - app="zimbra-邮件系统"
-        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -15022,8 +15022,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1380908726"
         - http.favicon.hash:"-250963920"
+        - http.favicon.hash:"1380908726"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -29009,6 +29009,14 @@
   type: product
   engines: []
 
+- name: sante_pacs_server
+  vendor: santesoft
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:1185161484
+
 - name: ejs
   vendor: ejs
   type: product
@@ -32348,6 +32356,14 @@
   vendor: watchguard
   type: product
   engines: []
+
+- name: fortiswitch
+  vendor: fortinet
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="fortiswitch"
 
 - name: activeadmin
   vendor: activeadmin
