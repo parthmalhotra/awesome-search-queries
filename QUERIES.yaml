@@ -1477,6 +1477,7 @@
     - platform: zoomeye
       queries:
         - app:"pyload"
+        - app="pyload"
     - platform: google
       queries:
         - intitle:"login - pyload"
@@ -2828,6 +2829,7 @@
     - platform: zoomeye
       queries:
         - +app:"sap netweaver application server httpd
+        - app="sap netweaver application server httpd
     - platform: shodan
       queries:
         - http.favicon.hash:-266008933
@@ -3077,8 +3079,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugar setup wizard"
+        - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugarcrm"
     - platform: google
       queries:
@@ -3087,9 +3089,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
+        - body="sugarcrm inc. all rights reserved"
         - title="sugarcrm"
         - title="sugar setup wizard"
-        - body="sugarcrm inc. all rights reserved"
 
 - name: redash
   vendor: redash
@@ -3198,8 +3200,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -5092,10 +5094,10 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"craftcms"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
         - http.favicon.hash:"-47932290"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12661,9 +12663,9 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:jenkins:jenkins"
-        - product:"jenkins"
         - x-jenkins
         - http.favicon.hash:"81586312"
+        - product:"jenkins"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12789,9 +12791,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12816,10 +12818,10 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
         - body="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
         - body="server_databases.php"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13158,9 +13160,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
         - icon_hash="-1797138069"
         - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13597,8 +13599,8 @@
     - platform: shodan
       queries:
         - http.html:"keycloak"
-        - http.favicon.hash:"-1105083093"
         - http.title:"keycloak"
+        - http.favicon.hash:"-1105083093"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13879,8 +13881,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13930,8 +13932,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/ultimate-member/
         - http.html:"/wp-content/plugins/ultimate-member"
+        - http.html:/wp-content/plugins/ultimate-member/
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -13939,6 +13941,7 @@
     - platform: zoomeye
       queries:
         - app:"wordpress ultimate member plugin"
+        - app="wordpress ultimate member plugin"
 
 - name: ditty
   vendor: metaphorcreations
@@ -14041,8 +14044,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14366,8 +14369,8 @@
     - platform: fofa
       queries:
         - icon_hash="1624375939"
-        - icon_hash="475145467"
         - app="zimbra-邮件系统"
+        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14516,8 +14519,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15022,8 +15025,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-250963920"
         - http.favicon.hash:"1380908726"
+        - http.favicon.hash:"-250963920"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -15238,9 +15241,9 @@
         - http.title:"crushftp webinterface"
     - platform: fofa
       queries:
-        - body="crushftp"
         - title="crushftp webinterface"
         - icon_hash="-1022206565"
+        - body="crushftp"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
@@ -15421,6 +15424,7 @@
     - platform: zoomeye
       queries:
         - app:"fortra goanywhere-mft"
+        - app="fortra goanywhere-mft"
 
 - name: majordomo
   vendor: mjdm
@@ -15478,8 +15482,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -15877,6 +15881,7 @@
     - platform: zoomeye
       queries:
         - app:"screenconnect remote management software"
+        - app="screenconnect remote management software"
 
 - name: apollo vx20
   vendor: wyrestorm
@@ -17270,8 +17275,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -17840,6 +17845,7 @@
     - platform: zoomeye
       queries:
         - app:"hytec inter hwl-2511-ss"
+        - app="hytec inter hwl-2511-ss"
 
 - name: mura_cms
   vendor: murasoftware
@@ -18815,9 +18821,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
+        - http.html:"projectsend setup"
         - http.html:"projectsend"
         - http.html:"provided by projectsend"
-        - http.html:"projectsend setup"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -22102,6 +22108,7 @@
     - platform: zoomeye
       queries:
         - app:"ollama llm"
+        - app="ollama"
 
 - name: dir-845l
   vendor: dlink
@@ -26496,6 +26503,7 @@
     - platform: zoomeye
       queries:
         - app:"通达oa"
+        - app="通达oa"
 
 - name: office_anywhere_2017
   vendor: tongda2000
