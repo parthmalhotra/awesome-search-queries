@@ -3089,9 +3089,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - title="sugar setup wizard"
-        - title="sugarcrm"
         - body="sugarcrm inc. all rights reserved"
+        - title="sugarcrm"
+        - title="sugar setup wizard"
 
 - name: redash
   vendor: redash
@@ -3200,8 +3200,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3630,9 +3630,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
+        - body="solarview compact"
         - icon_hash="-244067125"
         - body="solarview compact" && title="top"
-        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3710,8 +3710,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"apache superset"
         - http.favicon.hash:"1582430156"
+        - http.html:"apache superset"
     - platform: fofa
       queries:
         - body="apache superset"
@@ -4005,9 +4005,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
+        - icon_hash="1460499495"
         - app="nagios-xi"
         - title="nagios xi"
-        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5095,9 +5095,9 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"-47932290"
-        - http.html:"craftcms"
-        - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - 'x-powered-by: craft cms'
+        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12662,10 +12662,10 @@
   engines:
     - platform: shodan
       queries:
-        - product:"jenkins"
         - http.favicon.hash:"81586312"
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
         - x-jenkins
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - product:"jenkins"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12791,9 +12791,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
-        - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
+        - http.title:"zabbix-server"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12818,10 +12818,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="pma_servername" && body="4.8.4"
-        - body="server_databases.php"
         - title="phpmyadmin"
         - body="phpmyadmin"
+        - body="server_databases.php"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13160,8 +13160,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
         - title="login to cacti"
+        - title="cacti"
         - icon_hash="-1797138069"
     - platform: google
       queries:
@@ -13599,8 +13599,8 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"-1105083093"
-        - http.html:"keycloak"
         - http.title:"keycloak"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13837,8 +13837,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"revive adserver"
         - http.favicon.hash:"106844876"
+        - http.title:"revive adserver"
     - platform: fofa
       queries:
         - icon_hash="106844876"
@@ -13881,8 +13881,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13973,6 +13973,7 @@
     - platform: zoomeye
       queries:
         - title:'jumpserver'
+        - app="jumpserver bastion host"
 
 - name: d-copia253mf_plus_firmware
   vendor: kyocera
@@ -14026,6 +14027,7 @@
     - platform: zoomeye
       queries:
         - title:"verta ai"
+        - title="verta ai"
     - platform: fofa
       queries:
         - title="verta ai"
@@ -14044,8 +14046,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - icon_hash="702863115"
         - body="moosocial installation"
+        - icon_hash="702863115"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14509,6 +14511,7 @@
     - platform: zoomeye
       queries:
         - /wpms/asset
+        - app="大华智慧园区综合管理平台"
     - platform: fofa
       queries:
         - body="/wpms/asset"
@@ -15025,8 +15028,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-250963920"
         - http.favicon.hash:"1380908726"
+        - http.favicon.hash:"-250963920"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -15241,9 +15244,9 @@
         - http.title:"crushftp webinterface"
     - platform: fofa
       queries:
-        - title="crushftp webinterface"
-        - body="crushftp"
         - icon_hash="-1022206565"
+        - body="crushftp"
+        - title="crushftp webinterface"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
@@ -15482,8 +15485,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -15822,6 +15825,7 @@
     - platform: zoomeye
       queries:
         - title:"高清智能录播系统"
+        - title="高清智能录播系统"
     - platform: shodan
       queries:
         - http.title:"高清智能录播系统"
@@ -17271,12 +17275,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -18657,6 +18661,7 @@
     - platform: zoomeye
       queries:
         - title:'metasploit'
+        - app="metasploit"
 
 - name: phoronix_test_suite
   vendor: phoronix-media
@@ -18821,9 +18826,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"projectsend"
-        - http.html:"provided by projectsend"
         - http.html:"projectsend setup"
+        - http.html:"provided by projectsend"
+        - http.html:"projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -19643,6 +19648,7 @@
     - platform: zoomeye
       queries:
         - title:"greenbone security assistant"
+        - title="greenbone security assistant"
     - platform: fofa
       queries:
         - title="greenbone security assistant"
@@ -22985,6 +22991,7 @@
     - platform: zoomeye
       queries:
         - title:"jupyter notebook"
+        - app="jupyter notebook"
 
 - name: powermedia_xms
   vendor: dialogic
@@ -23871,6 +23878,7 @@
     - platform: zoomeye
       queries:
         - title:'小米路由器'
+        - app="小米路由器"
 
 - name: emc_idrac_service_module
   vendor: dell
@@ -25755,6 +25763,7 @@
     - platform: zoomeye
       queries:
         - title:cvsweb
+        - title="cvsweb"
 
 - name: dash_core
   vendor: dash
@@ -31381,6 +31390,14 @@
   vendor: garage_management_system_project
   type: product
   engines: []
+
+- name: proxmox_mail_gateway
+  vendor: proxmox
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"proxmox = {"
 
 - name: unyson
   vendor: brizy
