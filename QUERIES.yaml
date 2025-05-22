@@ -3084,8 +3084,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"sugar setup wizard"
         - http.title:"sugarcrm"
+        - http.title:"sugar setup wizard"
         - http.html:"sugarcrm inc. all rights reserved"
     - platform: google
       queries:
@@ -3094,9 +3094,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - body="sugarcrm inc. all rights reserved"
         - title="sugar setup wizard"
         - title="sugarcrm"
+        - body="sugarcrm inc. all rights reserved"
 
 - name: redash
   vendor: redash
@@ -3635,9 +3635,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
+        - body="solarview compact" && title="top"
         - body="solarview compact"
         - icon_hash="-244067125"
-        - body="solarview compact" && title="top"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3715,8 +3715,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1582430156"
         - http.html:"apache superset"
+        - http.favicon.hash:"1582430156"
     - platform: fofa
       queries:
         - body="apache superset"
@@ -4014,8 +4014,8 @@
     - platform: fofa
       queries:
         - app="nagios-xi"
-        - icon_hash="1460499495"
         - title="nagios xi"
+        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5102,10 +5102,10 @@
   engines:
     - platform: shodan
       queries:
-        - 'x-powered-by: craft cms'
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12676,10 +12676,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"81586312"
+        - product:"jenkins"
         - cpe:"cpe:2.3:a:jenkins:jenkins"
         - x-jenkins
-        - product:"jenkins"
+        - http.favicon.hash:"81586312"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12805,9 +12805,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.title:"zabbix-server"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12832,8 +12832,8 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
         - title="phpmyadmin"
+        - body="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
         - body="server_databases.php"
     - platform: hunter
@@ -13174,9 +13174,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
         - title="login to cacti"
         - icon_hash="-1797138069"
+        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13220,8 +13220,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms/"
         - http.html:"/wp-content/plugins/ninja-forms"
+        - http.html:"/wp-content/plugins/ninja-forms/"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13612,8 +13612,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
+        - http.html:"keycloak"
         - http.title:"keycloak"
     - platform: fofa
       queries:
@@ -13946,8 +13946,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/ultimate-member/
         - http.html:"/wp-content/plugins/ultimate-member"
+        - http.html:/wp-content/plugins/ultimate-member/
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14385,8 +14385,8 @@
     - platform: fofa
       queries:
         - app="zimbra-邮件系统"
-        - icon_hash="1624375939"
         - icon_hash="475145467"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -15042,8 +15042,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-250963920"
         - http.favicon.hash:"1380908726"
+        - http.favicon.hash:"-250963920"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -16479,10 +16479,10 @@
     - platform: shodan
       queries:
         - http.title:"prtg"
-        - http.favicon.hash:-655683626
+        - http.favicon.hash:"-655683626"
     - platform: fofa
       queries:
-        - icon_hash=-655683626
+        - icon_hash="-655683626"
         - title="prtg"
     - platform: google
       queries:
@@ -16558,12 +16558,15 @@
     - platform: shodan
       queries:
         - http.title:"opmanager plus"
+        - http.title:"opmanager"
     - platform: fofa
       queries:
         - title="opmanager plus"
+        - title="opmanager"
     - platform: google
       queries:
         - intitle:"opmanager plus"
+        - intitle:"opmanager"
 
 - name: google_adsense
   vendor: google_adsense_project
@@ -27883,6 +27886,33 @@
       queries:
         - '"excanvas.js" && "lang == \"zh-cn\"" && "detectlang" && server=="dws"'
 
+- name: kod-explorer
+  vendor: kalcaddle
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="powered-by-kodexplorer"
+
+- name: aruba-instant-access-point
+  vendor: aruba
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="jscripts/third_party/raphael-treemap.min.js" || body="jscripts/third_party/highcharts.src.js"
+    - platform: shodan
+      queries:
+        - http.title:"aruba"
+
+- name: concerto
+  vendor: versa-networks
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-534530225
+
 - name: arcgis_engine
   vendor: esri
   type: product
@@ -28592,14 +28622,6 @@
   vendor: lumis
   type: product
   engines: []
-
-- name: kod-explorer
-  vendor: kalcaddle
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - app="powered-by-kodexplorer"
 
 - name: "simple_giveaways"
   vendor: ibenic
@@ -29356,17 +29378,6 @@
   type: product
   engines: []
 
-- name: aruba-instant-access-point
-  vendor: aruba
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="jscripts/third_party/raphael-treemap.min.js" || body="jscripts/third_party/highcharts.src.js"
-    - platform: shodan
-      queries:
-        - http.title:"aruba"
-
 - name: halo\+_camera_firmware
   vendor: binatoneglobal
   type: product
@@ -29782,6 +29793,14 @@
   type: product
   engines: []
 
+- name: mapsvg
+  vendor: mapsvg
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/mapsvg/"
+
 - name: panda_pods_repeater_field
   vendor: panda_pods_repeater_field_project
   type: product
@@ -29796,6 +29815,14 @@
   vendor: keystonejs
   type: product
   engines: []
+
+- name: youzify
+  vendor: kainelabs
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/youzify"
 
 - name: easyappointments
   vendor: easyappointments
@@ -30547,6 +30574,25 @@
   type: product
   engines: []
 
+- name: usermin
+  vendor: webmin
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="usermin"
+    - platform: shodan
+      queries:
+        - http.title:"usermin"
+
+- name: Vigor300B
+  vendor: DrayTek
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - '"excanvas.js" && "lang == \"zh-cn\"" && "detectlang" && server=="dws"'
+
 - name: wvc54gca
   vendor: cisco
   type: product
@@ -30841,6 +30887,14 @@
   vendor: sgi
   type: product
   engines: []
+
+- name: archer-ax21
+  vendor: tp-link
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="tp-link"
 
 - name: moodating
   vendor: moosocial
@@ -31805,7 +31859,13 @@
 - name: youphptube_encoder
   vendor: youphptube
   type: product
-  engines: []
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-276846707"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:"-276846707"
 
 - name: adaptive_images
   vendor: nevma
@@ -32651,14 +32711,6 @@
   vendor: i-netsolution
   type: product
   engines: []
-
-- name: concerto
-  vendor: versa-networks
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.favicon.hash:-534530225
 
 - name: sudo
   vendor: sudo_project
