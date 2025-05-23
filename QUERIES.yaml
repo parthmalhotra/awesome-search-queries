@@ -3084,9 +3084,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"sugarcrm"
         - http.title:"sugar setup wizard"
         - http.html:"sugarcrm inc. all rights reserved"
+        - http.title:"sugarcrm"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3094,9 +3094,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - body="sugarcrm inc. all rights reserved"
-        - title="sugarcrm"
         - title="sugar setup wizard"
+        - title="sugarcrm"
+        - body="sugarcrm inc. all rights reserved"
 
 - name: redash
   vendor: redash
@@ -3205,8 +3205,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3635,9 +3635,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
+        - body="solarview compact" && title="top"
         - icon_hash="-244067125"
         - body="solarview compact"
-        - body="solarview compact" && title="top"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3715,8 +3715,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"apache superset"
         - http.favicon.hash:"1582430156"
+        - http.html:"apache superset"
     - platform: fofa
       queries:
         - body="apache superset"
@@ -4013,8 +4013,8 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - icon_hash="1460499495"
         - title="nagios xi"
+        - icon_hash="1460499495"
         - app="nagios-xi"
     - platform: google
       queries:
@@ -5102,10 +5102,10 @@
   engines:
     - platform: shodan
       queries:
-        - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.favicon.hash:"-47932290"
+        - 'x-powered-by: craft cms'
         - http.html:"craftcms"
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12678,8 +12678,8 @@
       queries:
         - x-jenkins
         - cpe:"cpe:2.3:a:jenkins:jenkins"
-        - product:"jenkins"
         - http.favicon.hash:"81586312"
+        - product:"jenkins"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12805,9 +12805,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12833,9 +12833,9 @@
     - platform: fofa
       queries:
         - body="phpmyadmin"
-        - body="server_databases.php"
         - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - body="server_databases.php"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13220,8 +13220,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms"
         - http.html:"/wp-content/plugins/ninja-forms/"
+        - http.html:"/wp-content/plugins/ninja-forms"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13612,9 +13612,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
         - http.title:"keycloak"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -14384,9 +14384,9 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
         - icon_hash="1624375939"
         - icon_hash="475145467"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14536,8 +14536,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15042,8 +15042,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1380908726"
         - http.favicon.hash:"-250963920"
+        - http.favicon.hash:"1380908726"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -15499,8 +15499,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -17296,8 +17296,8 @@
         - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -18844,8 +18844,8 @@
     - platform: shodan
       queries:
         - http.html:"provided by projectsend"
-        - http.html:"projectsend"
         - http.html:"projectsend setup"
+        - http.html:"projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -20807,12 +20807,14 @@
     - platform: fofa
       queries:
         - title="pandora fms"
+        - body="pandora fms - installation wizard"
     - platform: google
       queries:
         - intitle:"pandora fms"
     - platform: shodan
       queries:
         - http.title:"pandora fms"
+        - http.html:"pandora fms - installation wizard"
 
 - name: hospital_management_system
   vendor: phpgurukul
@@ -28392,6 +28394,14 @@
   type: product
   engines: []
 
+- name: openmrs
+  vendor: openmrs
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"openmrs"
+
 - name: velotismart_wifi_firmware
   vendor: velotismart_project
   type: product
@@ -31077,6 +31087,14 @@
   type: product
   engines: []
 
+- name: ai_engine
+  vendor: meowapps
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/ai-engine/
+
 - name: rudder-server
   vendor: rudderstack
   type: product
@@ -31936,6 +31954,14 @@
   vendor: jenkins
   type: product
   engines: []
+
+- name: kace_systems_management
+  vendor: quest
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"k1000 logo"
 
 - name: rv320_firmware
   vendor: cisco
