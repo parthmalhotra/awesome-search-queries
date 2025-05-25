@@ -3085,8 +3085,8 @@
     - platform: shodan
       queries:
         - http.html:"sugarcrm inc. all rights reserved"
-        - http.title:"sugarcrm"
         - http.title:"sugar setup wizard"
+        - http.title:"sugarcrm"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3094,9 +3094,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - title="sugarcrm"
-        - title="sugar setup wizard"
         - body="sugarcrm inc. all rights reserved"
+        - title="sugar setup wizard"
+        - title="sugarcrm"
 
 - name: redash
   vendor: redash
@@ -4013,8 +4013,8 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - app="nagios-xi"
         - title="nagios xi"
+        - app="nagios-xi"
         - icon_hash="1460499495"
     - platform: google
       queries:
@@ -5102,10 +5102,10 @@
   engines:
     - platform: shodan
       queries:
+        - 'x-powered-by: craft cms'
+        - http.html:"craftcms"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.favicon.hash:"-47932290"
-        - http.html:"craftcms"
-        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12677,8 +12677,8 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:jenkins:jenkins"
-        - product:"jenkins"
         - x-jenkins
+        - product:"jenkins"
         - http.favicon.hash:"81586312"
     - platform: fofa
       queries:
@@ -12806,9 +12806,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.title:"zabbix-server"
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.favicon.hash:"892542951"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.title:"zabbix-server"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12834,8 +12834,8 @@
     - platform: fofa
       queries:
         - body="phpmyadmin"
-        - title="phpmyadmin"
         - body="server_databases.php"
+        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
@@ -13221,8 +13221,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms"
         - http.html:"/wp-content/plugins/ninja-forms/"
+        - http.html:"/wp-content/plugins/ninja-forms"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13613,9 +13613,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-1105083093"
-        - http.html:"keycloak"
         - http.title:"keycloak"
+        - http.html:"keycloak"
+        - http.favicon.hash:"-1105083093"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13852,8 +13852,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"106844876"
         - http.title:"revive adserver"
+        - http.favicon.hash:"106844876"
     - platform: fofa
       queries:
         - icon_hash="106844876"
@@ -13896,8 +13896,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -14385,9 +14385,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="1624375939"
         - icon_hash="475145467"
         - app="zimbra-邮件系统"
-        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14537,8 +14537,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15259,9 +15259,9 @@
         - http.title:"crushftp webinterface"
     - platform: fofa
       queries:
-        - body="crushftp"
         - title="crushftp webinterface"
         - icon_hash="-1022206565"
+        - body="crushftp"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
@@ -16483,8 +16483,8 @@
         - http.favicon.hash:"-655683626"
     - platform: fofa
       queries:
-        - icon_hash="-655683626"
         - title="prtg"
+        - icon_hash="-655683626"
     - platform: google
       queries:
         - intitle:"prtg"
@@ -17293,8 +17293,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -18844,8 +18844,8 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"provided by projectsend"
         - http.html:"projectsend setup"
+        - http.html:"provided by projectsend"
         - http.html:"projectsend"
     - platform: fofa
       queries:
