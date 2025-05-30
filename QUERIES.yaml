@@ -3084,9 +3084,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"sugarcrm"
         - http.title:"sugar setup wizard"
         - http.html:"sugarcrm inc. all rights reserved"
-        - http.title:"sugarcrm"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3094,8 +3094,8 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - body="sugarcrm inc. all rights reserved"
         - title="sugarcrm"
+        - body="sugarcrm inc. all rights reserved"
         - title="sugar setup wizard"
 
 - name: redash
@@ -3205,8 +3205,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1701804003"
         - http.title:"servicenow"
+        - http.favicon.hash:"1701804003"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3635,9 +3635,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
+        - icon_hash="-244067125"
         - body="solarview compact"
         - body="solarview compact" && title="top"
-        - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3715,8 +3715,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"apache superset"
         - http.favicon.hash:"1582430156"
+        - http.html:"apache superset"
     - platform: fofa
       queries:
         - body="apache superset"
@@ -4013,9 +4013,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
+        - app="nagios-xi"
         - icon_hash="1460499495"
         - title="nagios xi"
-        - app="nagios-xi"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5102,10 +5102,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
-        - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - 'x-powered-by: craft cms'
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12676,10 +12676,10 @@
   engines:
     - platform: shodan
       queries:
-        - product:"jenkins"
         - x-jenkins
-        - http.favicon.hash:"81586312"
+        - product:"jenkins"
         - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - http.favicon.hash:"81586312"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12807,8 +12807,8 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"892542951"
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.title:"zabbix-server"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12833,10 +12833,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - body="phpmyadmin"
         - body="server_databases.php"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13221,8 +13221,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms"
         - http.html:"/wp-content/plugins/ninja-forms/"
+        - http.html:"/wp-content/plugins/ninja-forms"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13613,9 +13613,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"keycloak"
         - http.title:"keycloak"
         - http.favicon.hash:"-1105083093"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13852,8 +13852,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"106844876"
         - http.title:"revive adserver"
+        - http.favicon.hash:"106844876"
     - platform: fofa
       queries:
         - icon_hash="106844876"
@@ -13947,8 +13947,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/ultimate-member/
         - http.html:"/wp-content/plugins/ultimate-member"
+        - http.html:/wp-content/plugins/ultimate-member/
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14030,6 +14030,9 @@
     - platform: google
       queries:
         - inurl:"/tshirtecommerce/"
+    - platform: fofa
+      queries:
+        - body="prestashop" && body="tshirtecommerce"
 
 - name: modeldb
   vendor: vertaai
@@ -14061,8 +14064,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14385,9 +14388,9 @@
   engines:
     - platform: fofa
       queries:
-        - app="zimbra-邮件系统"
-        - icon_hash="475145467"
         - icon_hash="1624375939"
+        - icon_hash="475145467"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14927,8 +14930,8 @@
         - /wp-content/plugins/learnpress
     - platform: shodan
       queries:
-        - http.html:"wp-content/plugins/learnpress"
         - http.html:"/wp-content/plugins/learnpress"
+        - http.html:"wp-content/plugins/learnpress"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/learnpress"
@@ -15045,8 +15048,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-250963920"
         - http.favicon.hash:"1380908726"
+        - http.favicon.hash:"-250963920"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -15502,8 +15505,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -17295,12 +17298,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -18846,9 +18849,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"provided by projectsend"
         - http.html:"projectsend setup"
         - http.html:"projectsend"
+        - http.html:"provided by projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -28012,6 +28015,25 @@
       queries:
         - body="/wp-content/plugins/instawp-connect/"
 
+- name: multiple_shipping_addresses_for_woocommerce
+  vendor: themehigh
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/multiple-shipping-address-woocommerce"
+
+- name: tip200
+  vendor: intelbras
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/cgi-bin/cgiserver.exx"
+    - platform: shodan
+      queries:
+        - http.html:"/cgi-bin/cgiserver.exx"
+
 - name: arcgis_engine
   vendor: esri
   type: product
@@ -29767,14 +29789,6 @@
   type: product
   engines: []
 
-- name: multiple_shipping_addresses_for_woocommerce
-  vendor: themehigh
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="wp-content/plugins/multiple-shipping-address-woocommerce"
-
 - name: shareaholic
   vendor: shareaholic
   type: product
@@ -31524,17 +31538,6 @@
   vendor: xinuos
   type: product
   engines: []
-
-- name: tip200
-  vendor: intelbras
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/cgi-bin/cgiserver.exx"
-    - platform: shodan
-      queries:
-        - http.html:"/cgi-bin/cgiserver.exx"
 
 - name: exacqvision_enterprise_manager
   vendor: johnsoncontrols
