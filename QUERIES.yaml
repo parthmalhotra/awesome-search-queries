@@ -3084,8 +3084,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugar setup wizard"
+        - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugarcrm"
     - platform: google
       queries:
@@ -3205,8 +3205,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3635,9 +3635,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact" && title="top"
-        - icon_hash="-244067125"
         - body="solarview compact"
+        - icon_hash="-244067125"
+        - body="solarview compact" && title="top"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3715,8 +3715,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"apache superset"
         - http.favicon.hash:"1582430156"
+        - http.html:"apache superset"
     - platform: fofa
       queries:
         - body="apache superset"
@@ -4013,9 +4013,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - app="nagios-xi"
         - title="nagios xi"
         - icon_hash="1460499495"
+        - app="nagios-xi"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5104,10 +5104,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
-        - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.favicon.hash:"-47932290"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12678,9 +12678,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"81586312"
         - cpe:"cpe:2.3:a:jenkins:jenkins"
         - product:"jenkins"
-        - http.favicon.hash:"81586312"
         - x-jenkins
     - platform: fofa
       queries:
@@ -12808,8 +12808,8 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
     - platform: google
       queries:
@@ -12835,9 +12835,9 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
-        - body="pma_servername" && body="4.8.4"
         - body="server_databases.php"
+        - body="pma_servername" && body="4.8.4"
+        - body="phpmyadmin"
         - title="phpmyadmin"
     - platform: hunter
       queries:
@@ -13178,8 +13178,8 @@
     - platform: fofa
       queries:
         - title="cacti"
-        - title="login to cacti"
         - icon_hash="-1797138069"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13616,8 +13616,8 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"-1105083093"
-        - http.html:"keycloak"
         - http.title:"keycloak"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13898,8 +13898,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -14066,8 +14066,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - icon_hash="702863115"
         - body="moosocial installation"
+        - icon_hash="702863115"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14390,9 +14390,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
         - icon_hash="475145467"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14542,8 +14542,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15051,8 +15051,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-250963920"
         - http.favicon.hash:"1380908726"
+        - http.favicon.hash:"-250963920"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -15268,8 +15268,8 @@
     - platform: fofa
       queries:
         - title="crushftp webinterface"
-        - body="crushftp"
         - icon_hash="-1022206565"
+        - body="crushftp"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
@@ -18862,8 +18862,8 @@
     - platform: shodan
       queries:
         - http.html:"projectsend setup"
-        - http.html:"provided by projectsend"
         - http.html:"projectsend"
+        - http.html:"provided by projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -28052,6 +28052,98 @@
       queries:
         - http.html:"/cgi-bin/cgiserver.exx"
 
+- name: usualtoolcms
+  vendor: usualtool
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="usualtool"
+
+- name: ips_community_suite
+  vendor: invision
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="invision community"
+    - platform: shodan
+      queries:
+        - http.html:"invision community"
+
+- name: hunk_companion
+  vendor: themehunk
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/hunk-companion/"
+
+- name: magicinfo_9_server
+  vendor: samsung
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - 'server: magicinfo premium server'
+
+- name: chartify
+  vendor: ays-pro
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/chart-builder/
+
+- name: prestashop
+  vendor: tshirtecommerce
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="prestashop" && body="tshirtecommerce"
+
+- name: tip300
+  vendor: intelbras
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="intelbras"
+    - platform: shodan
+      queries:
+        - http.title:"intelbras"
+
+- name: wp_hotel_booking
+  vendor: thimpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="wp-content/plugins/wp-hotel-booking"
+
+- name: easy_wp_smtp
+  vendor: wp-ecommerce
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/easy-wp-smtp/
+    - platform: shodan
+      queries:
+        - http.html:/wp-content/plugins/easy-wp-smtp/
+    - platform: fofa
+      queries:
+        - body=/wp-content/plugins/easy-wp-smtp/
+
+- name: adning_advertising
+  vendor: tunasite
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="served by adning"
+
 - name: arcgis_engine
   vendor: esri
   type: product
@@ -30672,29 +30764,10 @@
   type: product
   engines: []
 
-- name: usualtoolcms
-  vendor: usualtool
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="usualtool"
-
 - name: RE7000
   vendor: Linksys
   type: product
   engines: []
-
-- name: ips_community_suite
-  vendor: invision
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="invision community"
-    - platform: shodan
-      queries:
-        - http.html:"invision community"
 
 - name: easyspider
   vendor: naibowang
@@ -30705,14 +30778,6 @@
   vendor: mindstien
   type: product
   engines: []
-
-- name: hunk_companion
-  vendor: themehunk
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/hunk-companion/"
 
 - name: tp-link-archer-a20-v3-router
   vendor: tp-link
@@ -30728,22 +30793,6 @@
   vendor: reputeinfosystems
   type: product
   engines: []
-
-- name: magicinfo_9_server
-  vendor: samsung
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - 'server: magicinfo premium server'
-
-- name: chartify
-  vendor: ays-pro
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/chart-builder/
 
 - name: wvc54gca
   vendor: cisco
@@ -31169,14 +31218,6 @@
   vendor: readtomyshoe_project
   type: product
   engines: []
-
-- name: prestashop
-  vendor: tshirtecommerce
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="prestashop" && body="tshirtecommerce"
 
 - name: wp_live_chat_shoutbox
   vendor: wp_live_chat_shoutbox_project
@@ -31808,29 +31849,10 @@
   type: product
   engines: []
 
-- name: tip300
-  vendor: intelbras
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="intelbras"
-    - platform: shodan
-      queries:
-        - http.title:"intelbras"
-
 - name: puppet_enterprise
   vendor: puppet
   type: product
   engines: []
-
-- name: wp_hotel_booking
-  vendor: thimpress
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="wp-content/plugins/wp-hotel-booking"
 
 - name: sharepoint_enterprise_server
   vendor: microsoft
@@ -31902,20 +31924,6 @@
   type: product
   engines: []
 
-- name: easy_wp_smtp
-  vendor: wp-ecommerce
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/easy-wp-smtp/
-    - platform: shodan
-      queries:
-        - http.html:/wp-content/plugins/easy-wp-smtp/
-    - platform: fofa
-      queries:
-        - body=/wp-content/plugins/easy-wp-smtp/
-
 - name: lionwiki
   vendor: lionwiki
   type: product
@@ -31965,14 +31973,6 @@
   vendor: gridx_project
   type: product
   engines: []
-
-- name: adning_advertising
-  vendor: tunasite
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="served by adning"
 
 - name: acf_to_rest_api
   vendor: acf_to_rest_api_project
