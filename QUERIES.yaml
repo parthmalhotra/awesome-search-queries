@@ -3094,9 +3094,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - title="sugar setup wizard"
-        - body="sugarcrm inc. all rights reserved"
         - title="sugarcrm"
+        - body="sugarcrm inc. all rights reserved"
+        - title="sugar setup wizard"
 
 - name: redash
   vendor: redash
@@ -3635,9 +3635,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact"
-        - icon_hash="-244067125"
         - body="solarview compact" && title="top"
+        - icon_hash="-244067125"
+        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -4013,9 +4013,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - icon_hash="1460499495"
         - app="nagios-xi"
         - title="nagios xi"
+        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5104,9 +5104,9 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
+        - http.favicon.hash:"-47932290"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
@@ -12808,9 +12808,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
+        - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
-        - http.favicon.hash:"892542951"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12835,10 +12835,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
-        - body="pma_servername" && body="4.8.4"
         - body="server_databases.php"
+        - body="phpmyadmin"
         - title="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13177,9 +13177,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - icon_hash="-1797138069"
         - title="cacti"
         - title="login to cacti"
+        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13615,9 +13615,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"keycloak"
         - http.favicon.hash:"-1105083093"
         - http.html:"keycloak"
+        - http.title:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13898,8 +13898,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13949,8 +13949,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ultimate-member"
         - http.html:/wp-content/plugins/ultimate-member/
+        - http.html:"/wp-content/plugins/ultimate-member"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14066,8 +14066,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - icon_hash="702863115"
         - body="moosocial installation"
+        - icon_hash="702863115"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14390,9 +14390,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="475145467"
         - app="zimbra-邮件系统"
         - icon_hash="1624375939"
-        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -16500,8 +16500,8 @@
         - http.favicon.hash:"-655683626"
     - platform: fofa
       queries:
-        - title="prtg"
         - icon_hash="-655683626"
+        - title="prtg"
     - platform: google
       queries:
         - intitle:"prtg"
@@ -18861,9 +18861,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"projectsend setup"
         - http.html:"provided by projectsend"
         - http.html:"projectsend"
+        - http.html:"projectsend setup"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -28156,6 +28156,25 @@
       queries:
         - title="totolink"
 
+- name: capabilities
+  vendor: publishpress
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/capability-manager-enhanced"
+
+- name: ax8
+  vendor: flir
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - app="flir-ax8"
+    - platform: shodan
+      queries:
+        - http.title:"flir"
+
 - name: arcgis_engine
   vendor: esri
   type: product
@@ -29121,14 +29140,6 @@
   type: product
   engines: []
 
-- name: capabilities
-  vendor: publishpress
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/capability-manager-enhanced"
-
 - name: contact_form_7_skins
   vendor: cf7skins
   type: product
@@ -29988,17 +29999,6 @@
   vendor: simplefilelist
   type: product
   engines: []
-
-- name: ax8
-  vendor: flir
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - app="flir-ax8"
-    - platform: shodan
-      queries:
-        - http.title:"flir"
 
 - name: welcart_e-commerce
   vendor: collne
