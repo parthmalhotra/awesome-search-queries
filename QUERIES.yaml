@@ -3094,9 +3094,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - title="sugarcrm"
-        - title="sugar setup wizard"
         - body="sugarcrm inc. all rights reserved"
+        - title="sugar setup wizard"
+        - title="sugarcrm"
 
 - name: redash
   vendor: redash
@@ -3205,8 +3205,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1701804003"
         - http.title:"servicenow"
+        - http.favicon.hash:"1701804003"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3635,9 +3635,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
+        - icon_hash="-244067125"
         - body="solarview compact" && title="top"
         - body="solarview compact"
-        - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3715,8 +3715,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1582430156"
         - http.html:"apache superset"
+        - http.favicon.hash:"1582430156"
     - platform: fofa
       queries:
         - body="apache superset"
@@ -4014,8 +4014,8 @@
     - platform: fofa
       queries:
         - app="nagios-xi"
-        - title="nagios xi"
         - icon_hash="1460499495"
+        - title="nagios xi"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5104,10 +5104,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"craftcms"
-        - 'x-powered-by: craft cms'
-        - http.favicon.hash:"-47932290"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.html:"craftcms"
+        - http.favicon.hash:"-47932290"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12808,9 +12808,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12836,9 +12836,9 @@
     - platform: fofa
       queries:
         - body="pma_servername" && body="4.8.4"
+        - body="server_databases.php"
         - title="phpmyadmin"
         - body="phpmyadmin"
-        - body="server_databases.php"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13854,8 +13854,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"revive adserver"
         - http.favicon.hash:"106844876"
+        - http.title:"revive adserver"
     - platform: fofa
       queries:
         - icon_hash="106844876"
@@ -13898,8 +13898,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13949,8 +13949,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/ultimate-member/
         - http.html:"/wp-content/plugins/ultimate-member"
+        - http.html:/wp-content/plugins/ultimate-member/
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14390,9 +14390,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="1624375939"
         - icon_hash="475145467"
         - app="zimbra-邮件系统"
-        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -15051,8 +15051,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1380908726"
         - http.favicon.hash:"-250963920"
+        - http.favicon.hash:"1380908726"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -15268,8 +15268,8 @@
     - platform: fofa
       queries:
         - icon_hash="-1022206565"
-        - body="crushftp"
         - title="crushftp webinterface"
+        - body="crushftp"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
@@ -17310,8 +17310,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -28191,6 +28191,28 @@
       queries:
         - intitle:"nextcloudpi"
 
+- name: nplug
+  vendor: intelbras
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="nplug"
+    - platform: shodan
+      queries:
+        - http.html:"nplug"
+
+- name: wrn150
+  vendor: intelbras
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="wrn150"
+    - platform: shodan
+      queries:
+        - http.html:"wrn150"
+
 - name: arcgis_engine
   vendor: esri
   type: product
@@ -28811,17 +28833,6 @@
   type: product
   engines: []
 
-- name: nplug
-  vendor: intelbras
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="nplug"
-    - platform: shodan
-      queries:
-        - http.html:"nplug"
-
 - name: wp_payeezy_pay
   vendor: payeezy
   type: product
@@ -29140,7 +29151,16 @@
 - name: tl-wr840n_firmware
   vendor: tp-link
   type: product
-  engines: []
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"tl-wr840n"
+    - platform: fofa
+      queries:
+        - title="tl-wr840n"
+    - platform: google
+      queries:
+        - intitle:"tl-wr840n"
 
 - name: securimage-wp-fixed
   vendor: securimage-wp-fixed_project
@@ -30822,6 +30842,14 @@
   type: product
   engines: []
 
+- name: mw5360_firmware
+  vendor: netis-systems
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"netis router"
+
 - name: RE7000
   vendor: Linksys
   type: product
@@ -30971,17 +30999,6 @@
   vendor: ulterius
   type: product
   engines: []
-
-- name: wrn150
-  vendor: intelbras
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="wrn150"
-    - platform: shodan
-      queries:
-        - http.html:"wrn150"
 
 - name: stop_user_enumeration
   vendor: fullworks
