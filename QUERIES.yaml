@@ -3084,9 +3084,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugar setup wizard"
         - http.title:"sugarcrm"
+        - http.html:"sugarcrm inc. all rights reserved"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3095,8 +3095,8 @@
     - platform: fofa
       queries:
         - title="sugarcrm"
-        - body="sugarcrm inc. all rights reserved"
         - title="sugar setup wizard"
+        - body="sugarcrm inc. all rights reserved"
 
 - name: redash
   vendor: redash
@@ -3205,8 +3205,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3636,8 +3636,8 @@
     - platform: fofa
       queries:
         - body="solarview compact" && title="top"
-        - icon_hash="-244067125"
         - body="solarview compact"
+        - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -5105,9 +5105,9 @@
     - platform: shodan
       queries:
         - http.html:"craftcms"
+        - 'x-powered-by: craft cms'
         - http.favicon.hash:"-47932290"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12678,10 +12678,10 @@
   engines:
     - platform: shodan
       queries:
-        - x-jenkins
-        - http.favicon.hash:"81586312"
         - product:"jenkins"
         - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - http.favicon.hash:"81586312"
+        - x-jenkins
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12808,8 +12808,8 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
+        - http.favicon.hash:"892542951"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
@@ -12835,10 +12835,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="server_databases.php"
-        - body="phpmyadmin"
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - title="phpmyadmin"
+        - body="phpmyadmin"
+        - body="server_databases.php"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13178,8 +13178,8 @@
     - platform: fofa
       queries:
         - title="cacti"
-        - title="login to cacti"
         - icon_hash="-1797138069"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13615,9 +13615,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"keycloak"
         - http.favicon.hash:"-1105083093"
         - http.html:"keycloak"
-        - http.title:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13898,8 +13898,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -14066,8 +14066,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14933,8 +14933,8 @@
         - /wp-content/plugins/learnpress
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/learnpress"
         - http.html:"wp-content/plugins/learnpress"
+        - http.html:"/wp-content/plugins/learnpress"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/learnpress"
@@ -15051,8 +15051,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-250963920"
         - http.favicon.hash:"1380908726"
+        - http.favicon.hash:"-250963920"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -15268,8 +15268,8 @@
     - platform: fofa
       queries:
         - icon_hash="-1022206565"
-        - title="crushftp webinterface"
         - body="crushftp"
+        - title="crushftp webinterface"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
@@ -15508,8 +15508,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16500,8 +16500,8 @@
         - http.favicon.hash:"-655683626"
     - platform: fofa
       queries:
-        - icon_hash="-655683626"
         - title="prtg"
+        - icon_hash="-655683626"
     - platform: google
       queries:
         - intitle:"prtg"
@@ -18862,8 +18862,8 @@
     - platform: shodan
       queries:
         - http.html:"provided by projectsend"
-        - http.html:"projectsend"
         - http.html:"projectsend setup"
+        - http.html:"projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -28175,6 +28175,22 @@
       queries:
         - http.title:"flir"
 
+- name: nextcloudpi
+  vendor: nextcloud
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="nextcloudpi"
+        - title="nextcloudpi panel"
+    - platform: shodan
+      queries:
+        - http.title:"nextcloudpi panel"
+        - http.title:"nextcloudpi"
+    - platform: google
+      queries:
+        - intitle:"nextcloudpi"
+
 - name: arcgis_engine
   vendor: esri
   type: product
@@ -28794,6 +28810,17 @@
   vendor: cisco
   type: product
   engines: []
+
+- name: nplug
+  vendor: intelbras
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="nplug"
+    - platform: shodan
+      queries:
+        - http.html:"nplug"
 
 - name: wp_payeezy_pay
   vendor: payeezy
@@ -30944,6 +30971,17 @@
   vendor: ulterius
   type: product
   engines: []
+
+- name: wrn150
+  vendor: intelbras
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="wrn150"
+    - platform: shodan
+      queries:
+        - http.html:"wrn150"
 
 - name: stop_user_enumeration
   vendor: fullworks
