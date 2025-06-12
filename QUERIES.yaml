@@ -3084,9 +3084,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"sugar setup wizard"
         - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugarcrm"
-        - http.title:"sugar setup wizard"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3094,9 +3094,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - body="sugarcrm inc. all rights reserved"
         - title="sugarcrm"
         - title="sugar setup wizard"
+        - body="sugarcrm inc. all rights reserved"
 
 - name: redash
   vendor: redash
@@ -3205,8 +3205,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3638,9 +3638,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
+        - icon_hash="-244067125"
         - body="solarview compact" && title="top"
         - body="solarview compact"
-        - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -4016,9 +4016,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
+        - icon_hash="1460499495"
         - title="nagios xi"
         - app="nagios-xi"
-        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5108,9 +5108,9 @@
     - platform: shodan
       queries:
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.html:"craftcms"
         - http.favicon.hash:"-47932290"
         - 'x-powered-by: craft cms'
+        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12683,8 +12683,8 @@
       queries:
         - http.favicon.hash:"81586312"
         - x-jenkins
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
         - product:"jenkins"
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12811,9 +12811,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.favicon.hash:"892542951"
-        - http.title:"zabbix-server"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.title:"zabbix-server"
+        - http.favicon.hash:"892542951"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12838,10 +12838,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="server_databases.php"
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
         - body="phpmyadmin"
+        - body="server_databases.php"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13181,9 +13181,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="login to cacti"
         - title="cacti"
         - icon_hash="-1797138069"
-        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13619,9 +13619,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"keycloak"
         - http.favicon.hash:"-1105083093"
         - http.html:"keycloak"
+        - http.title:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -14394,9 +14394,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
-        - app="zimbra-邮件系统"
         - icon_hash="475145467"
+        - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14546,8 +14546,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="163538942"
         - title="cdata arc"
+        - icon_hash="163538942"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -14937,8 +14937,8 @@
         - /wp-content/plugins/learnpress
     - platform: shodan
       queries:
-        - http.html:"wp-content/plugins/learnpress"
         - http.html:"/wp-content/plugins/learnpress"
+        - http.html:"wp-content/plugins/learnpress"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/learnpress"
@@ -15271,8 +15271,8 @@
         - http.title:"crushftp webinterface"
     - platform: fofa
       queries:
-        - title="crushftp webinterface"
         - body="crushftp"
+        - title="crushftp webinterface"
         - icon_hash="-1022206565"
     - platform: google
       queries:
@@ -15512,8 +15512,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16504,8 +16504,8 @@
         - http.favicon.hash:"-655683626"
     - platform: fofa
       queries:
-        - title="prtg"
         - icon_hash="-655683626"
+        - title="prtg"
     - platform: google
       queries:
         - intitle:"prtg"
@@ -17318,8 +17318,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -25200,6 +25200,12 @@
     - platform: shodan
       queries:
         - http.title:"eureka"
+    - platform: fofa
+      queries:
+        - title="eureka"
+    - platform: google
+      queries:
+        - intitle:"eureka"
 
 - name: wiki.js
   vendor: requarks
@@ -28267,6 +28273,54 @@
       queries:
         - /wp-content/plugins/srs-simple-hits-counter/
 
+- name: central_wifimanager
+  vendor: dlink
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"d-link central wifimanager"
+    - platform: fofa
+      queries:
+        - body="d-link central wifimanager"
+
+- name: ruckus_vriot
+  vendor: commscope
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"riot controller"
+
+- name: wpgraphql
+  vendor: wpengine
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-graphql/"
+
+- name: net_viewer
+  vendor: kyocera
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - product:"kyocera printer panel"
+
+- name: manageengine_exchange_reporter_plus
+  vendor: zohocorp
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="manageengine - exchange reporter plus"
+        - icon_hash="230963457"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:230963457
+        - http.title:"manageengine - exchange reporter plus"
+
 - name: ssh
   vendor: ssh
   type: product
@@ -28321,6 +28375,17 @@
   vendor: klogserver
   type: product
   engines: []
+
+- name: apc-network-management-card
+  vendor: schneider-electric
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="apc | log on"
+    - platform: shodan
+      queries:
+        - http.title:"apc | log on"
 
 - name: hipath
   vendor: unify
@@ -28787,17 +28852,6 @@
   type: product
   engines: []
 
-- name: central_wifimanager
-  vendor: dlink
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"d-link central wifimanager"
-    - platform: fofa
-      queries:
-        - body="d-link central wifimanager"
-
 - name: node-srv
   vendor: node-srv_project
   type: product
@@ -29117,14 +29171,6 @@
   vendor: acf_to_rest_api_project
   type: product
   engines: []
-
-- name: ruckus_vriot
-  vendor: commscope
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"riot controller"
 
 - name: xstream
   vendor: xstream_project
@@ -30300,14 +30346,6 @@
   vendor: zzzcms
   type: product
   engines: []
-
-- name: wpgraphql
-  vendor: wpengine
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/wp-graphql/"
 
 - name: grandnode
   vendor: grandnode
@@ -32269,14 +32307,6 @@
   type: product
   engines: []
 
-- name: net_viewer
-  vendor: kyocera
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - product:"kyocera printer panel"
-
 - name: personal_dictionary
   vendor: ays-pro
   type: product
@@ -33076,19 +33106,6 @@
   vendor: zohocorp
   type: product
   engines: []
-
-- name: manageengine_exchange_reporter_plus
-  vendor: zohocorp
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="manageengine - exchange reporter plus"
-        - icon_hash="230963457"
-    - platform: shodan
-      queries:
-        - http.favicon.hash:230963457
-        - http.title:"manageengine - exchange reporter plus"
 
 - name: arcgis_engine
   vendor: esri
