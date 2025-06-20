@@ -3084,9 +3084,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"sugarcrm"
-        - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugar setup wizard"
+        - http.html:"sugarcrm inc. all rights reserved"
+        - http.title:"sugarcrm"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3205,8 +3205,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3642,8 +3642,8 @@
     - platform: fofa
       queries:
         - body="solarview compact"
-        - icon_hash="-244067125"
         - body="solarview compact" && title="top"
+        - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -4020,8 +4020,8 @@
     - platform: fofa
       queries:
         - title="nagios xi"
-        - icon_hash="1460499495"
         - app="nagios-xi"
+        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -4639,12 +4639,15 @@
         - product:"activemq openwire transport"
         - cpe:"cpe:2.3:a:apache:activemq"
         - http.title:"apache activemq"
+        - http.title:"activemq artemis console"
     - platform: fofa
       queries:
+        - title="activemq artemis console"
         - title="apache activemq"
     - platform: google
       queries:
         - intitle:"apache activemq"
+        - intitle:"activemq artemis console"
 
 - name: cassandra
   vendor: apache
@@ -5111,9 +5114,9 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"-47932290"
-        - 'x-powered-by: craft cms'
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -12684,11 +12687,11 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"81586312"
         - x-jenkins
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
         - http.title:"jenkins"
         - product:"jenkins"
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - http.favicon.hash:"81586312"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12819,9 +12822,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
+        - http.favicon.hash:"892542951"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.title:"zabbix-server"
-        - http.favicon.hash:"892542951"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12846,9 +12849,9 @@
   engines:
     - platform: fofa
       queries:
-        - body="server_databases.php"
-        - title="phpmyadmin"
         - body="phpmyadmin"
+        - title="phpmyadmin"
+        - body="server_databases.php"
         - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
@@ -13189,9 +13192,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
+        - title="cacti"
         - icon_hash="-1797138069"
         - title="login to cacti"
-        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13235,8 +13238,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms/"
         - http.html:"/wp-content/plugins/ninja-forms"
+        - http.html:"/wp-content/plugins/ninja-forms/"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13627,9 +13630,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-1105083093"
         - http.title:"keycloak"
         - http.html:"keycloak"
+        - http.favicon.hash:"-1105083093"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -14078,8 +14081,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - icon_hash="702863115"
         - body="moosocial installation"
+        - icon_hash="702863115"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14402,9 +14405,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="1624375939"
         - app="zimbra-邮件系统"
         - icon_hash="475145467"
-        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -15280,8 +15283,8 @@
     - platform: fofa
       queries:
         - body="crushftp"
-        - title="crushftp webinterface"
         - icon_hash="-1022206565"
+        - title="crushftp webinterface"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
@@ -15520,8 +15523,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -17326,8 +17329,8 @@
         - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -33163,6 +33166,21 @@
   vendor: hpe
   type: product
   engines: []
+
+- name: self_service_reset_password_management
+  vendor: tools4ever
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-916902413"
+        - 'set-cookie: .ssrpmformsauth=;'
+        - icon_hash="-948009664"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-948009664
+        - http.favicon.hash:-916902413
+        - 'set-cookie: .ssrpmformsauth=;'
 
 - name: gerapy
   vendor: gerapy
