@@ -3085,8 +3085,8 @@
     - platform: shodan
       queries:
         - http.title:"sugar setup wizard"
-        - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugarcrm"
+        - http.html:"sugarcrm inc. all rights reserved"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3094,9 +3094,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - body="sugarcrm inc. all rights reserved"
-        - title="sugar setup wizard"
         - title="sugarcrm"
+        - title="sugar setup wizard"
+        - body="sugarcrm inc. all rights reserved"
 
 - name: redash
   vendor: redash
@@ -3721,8 +3721,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1582430156"
         - http.html:"apache superset"
+        - http.favicon.hash:"1582430156"
     - platform: fofa
       queries:
         - body="apache superset"
@@ -4019,9 +4019,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
+        - icon_hash="1460499495"
         - title="nagios xi"
         - app="nagios-xi"
-        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5113,10 +5113,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
-        - http.html:"craftcms"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.html:"craftcms"
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12687,11 +12687,11 @@
   engines:
     - platform: shodan
       queries:
-        - x-jenkins
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
         - http.title:"jenkins"
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
         - product:"jenkins"
         - http.favicon.hash:"81586312"
+        - x-jenkins
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12823,8 +12823,8 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"892542951"
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.title:"zabbix-server"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12849,10 +12849,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
         - title="phpmyadmin"
         - body="server_databases.php"
         - body="pma_servername" && body="4.8.4"
+        - body="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13192,9 +13192,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="cacti"
         - icon_hash="-1797138069"
         - title="login to cacti"
+        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13630,9 +13630,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-1105083093"
         - http.title:"keycloak"
         - http.html:"keycloak"
-        - http.favicon.hash:"-1105083093"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -14405,9 +14405,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
-        - app="zimbra-邮件系统"
         - icon_hash="475145467"
+        - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -15282,8 +15282,8 @@
         - http.title:"crushftp webinterface"
     - platform: fofa
       queries:
-        - body="crushftp"
         - icon_hash="-1022206565"
+        - body="crushftp"
         - title="crushftp webinterface"
     - platform: google
       queries:
@@ -16515,8 +16515,8 @@
         - http.favicon.hash:"-655683626"
     - platform: fofa
       queries:
-        - title="prtg"
         - icon_hash="-655683626"
+        - title="prtg"
     - platform: google
       queries:
         - intitle:"prtg"
@@ -28462,6 +28462,21 @@
       queries:
         - http.title:"nuuo"
 
+- name: self_service_reset_password_management
+  vendor: tools4ever
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-916902413"
+        - 'set-cookie: .ssrpmformsauth=;'
+        - icon_hash="-948009664"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-948009664
+        - http.favicon.hash:-916902413
+        - 'set-cookie: .ssrpmformsauth=;'
+
 - name: ssh
   vendor: ssh
   type: product
@@ -28786,6 +28801,14 @@
   vendor: dasannetworks
   type: product
   engines: []
+
+- name: wp-gdpr-compliance
+  vendor: van-ons
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - wp-content/plugins/wp-gdpr-compliance/
 
 - name: github
   vendor: jenkins
@@ -33166,21 +33189,6 @@
   vendor: hpe
   type: product
   engines: []
-
-- name: self_service_reset_password_management
-  vendor: tools4ever
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - icon_hash="-916902413"
-        - 'set-cookie: .ssrpmformsauth=;'
-        - icon_hash="-948009664"
-    - platform: shodan
-      queries:
-        - http.favicon.hash:-948009664
-        - http.favicon.hash:-916902413
-        - 'set-cookie: .ssrpmformsauth=;'
 
 - name: gerapy
   vendor: gerapy
