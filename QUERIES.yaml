@@ -3084,8 +3084,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"sugar setup wizard"
         - http.title:"sugarcrm"
+        - http.title:"sugar setup wizard"
         - http.html:"sugarcrm inc. all rights reserved"
     - platform: google
       queries:
@@ -3094,9 +3094,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - title="sugarcrm"
         - body="sugarcrm inc. all rights reserved"
         - title="sugar setup wizard"
+        - title="sugarcrm"
 
 - name: redash
   vendor: redash
@@ -3205,8 +3205,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3721,8 +3721,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"apache superset"
         - http.favicon.hash:"1582430156"
+        - http.html:"apache superset"
     - platform: fofa
       queries:
         - body="apache superset"
@@ -4019,9 +4019,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
+        - title="nagios xi"
         - app="nagios-xi"
         - icon_hash="1460499495"
-        - title="nagios xi"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5113,10 +5113,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
         - 'x-powered-by: craft cms'
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -12687,11 +12687,11 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"jenkins"
-        - x-jenkins
-        - product:"jenkins"
-        - http.favicon.hash:"81586312"
         - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - http.favicon.hash:"81586312"
+        - product:"jenkins"
+        - x-jenkins
+        - http.title:"jenkins"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12849,10 +12849,10 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
-        - body="phpmyadmin"
-        - body="server_databases.php"
         - body="pma_servername" && body="4.8.4"
+        - body="server_databases.php"
+        - body="phpmyadmin"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13630,9 +13630,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
         - http.title:"keycloak"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13913,8 +13913,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13964,8 +13964,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ultimate-member"
         - http.html:/wp-content/plugins/ultimate-member/
+        - http.html:"/wp-content/plugins/ultimate-member"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14081,8 +14081,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14406,8 +14406,8 @@
     - platform: fofa
       queries:
         - icon_hash="1624375939"
-        - app="zimbra-邮件系统"
         - icon_hash="475145467"
+        - app="zimbra-邮件系统"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14948,8 +14948,8 @@
         - /wp-content/plugins/learnpress
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/learnpress"
         - http.html:"wp-content/plugins/learnpress"
+        - http.html:"/wp-content/plugins/learnpress"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/learnpress"
@@ -15283,8 +15283,8 @@
     - platform: fofa
       queries:
         - body="crushftp"
-        - title="crushftp webinterface"
         - icon_hash="-1022206565"
+        - title="crushftp webinterface"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
@@ -16515,8 +16515,8 @@
         - http.favicon.hash:"-655683626"
     - platform: fofa
       queries:
-        - icon_hash="-655683626"
         - title="prtg"
+        - icon_hash="-655683626"
     - platform: google
       queries:
         - intitle:"prtg"
@@ -18054,13 +18054,18 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-137577333"
         - http.title:"users - misp"
+        - http.title:"errors - misp"
     - platform: fofa
       queries:
+        - title="errors - misp"
         - title="users - misp"
+        - icon_hash="-137577333"
     - platform: google
       queries:
         - intitle:"users - misp"
+        - intitle:"errors - misp"
 
 - name: tableau_server
   vendor: tableausoftware
@@ -18877,8 +18882,8 @@
     - platform: shodan
       queries:
         - http.html:"projectsend"
-        - http.html:"projectsend setup"
         - http.html:"provided by projectsend"
+        - http.html:"projectsend setup"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -22962,6 +22967,11 @@
     - platform: shodan
       queries:
         - http.html:"micollab end user portal"
+        - http.favicon.hash:"-1922044295"
+    - platform: fofa
+      queries:
+        - '"micollab end user portal" && title=="redirecting..."'
+        - icon_hash="-1922044295"
 
 - name: footprints_service_core
   vendor: bmc
@@ -25946,7 +25956,12 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"1358855492"
         - http.title:"privatebin"
+    - platform: fofa
+      queries:
+        - title="privatebin"
+        - icon_hash="1358855492"
 
 - name: openhab_web_interface
   vendor: openhab
@@ -26460,7 +26475,11 @@
         - intext:"beyondtrust" "redistribution prohibited"
     - platform: shodan
       queries:
+        - http.favicon.hash:"-694003434"
         - http.html:"beyondtrust"
+    - platform: fofa
+      queries:
+        - icon_hash="-694003434"
 
 - name: dixell_xweb-500
   vendor: emerson
@@ -28485,6 +28504,23 @@
       queries:
         - wp-content/plugins/wp-gdpr-compliance/
 
+- name: panel
+  vendor: pterodactyl
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="846001371"
+        - 'set-cookie: pterodactyl_session='
+        - title="pterodactyl"
+        - icon_hash="-456405319"
+    - platform: shodan
+      queries:
+        - 'set-cookie: pterodactyl_session='
+        - http.title:"pterodactyl"
+        - http.favicon.hash:846001371
+        - http.favicon.hash:-456405319
+
 - name: ssh
   vendor: ssh
   type: product
@@ -30104,23 +30140,6 @@
   vendor: wp01ru
   type: product
   engines: []
-
-- name: panel
-  vendor: pterodactyl
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - icon_hash="846001371"
-        - 'set-cookie: pterodactyl_session='
-        - title="pterodactyl"
-        - icon_hash="-456405319"
-    - platform: shodan
-      queries:
-        - 'set-cookie: pterodactyl_session='
-        - http.title:"pterodactyl"
-        - http.favicon.hash:846001371
-        - http.favicon.hash:-456405319
 
 - name: p.dga4001n_firmware
   vendor: adb
@@ -33301,6 +33320,21 @@
   vendor: esri
   type: product
   engines: []
+
+- name: cryptshare
+  vendor: pointsharp
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="-672476364"
+        - icon_hash="-1059646869"
+        - 'set-cookie: cs-ui-session='
+    - platform: shodan
+      queries:
+        - 'set-cookie: cs-ui-session='
+        - http.favicon.hash:-672476364
+        - http.favicon.hash:-1059646869
 
 - name: Next.js
   vendor: vercel
