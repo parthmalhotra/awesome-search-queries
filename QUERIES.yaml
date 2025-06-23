@@ -3085,8 +3085,8 @@
     - platform: shodan
       queries:
         - http.title:"sugar setup wizard"
-        - http.title:"sugarcrm"
         - http.html:"sugarcrm inc. all rights reserved"
+        - http.title:"sugarcrm"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3095,8 +3095,8 @@
     - platform: fofa
       queries:
         - title="sugarcrm"
-        - title="sugar setup wizard"
         - body="sugarcrm inc. all rights reserved"
+        - title="sugar setup wizard"
 
 - name: redash
   vendor: redash
@@ -3205,8 +3205,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1701804003"
         - http.title:"servicenow"
+        - http.favicon.hash:"1701804003"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3721,8 +3721,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1582430156"
         - http.html:"apache superset"
+        - http.favicon.hash:"1582430156"
     - platform: fofa
       queries:
         - body="apache superset"
@@ -4019,8 +4019,8 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - icon_hash="1460499495"
         - app="nagios-xi"
+        - icon_hash="1460499495"
         - title="nagios xi"
     - platform: google
       queries:
@@ -5113,10 +5113,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
         - 'x-powered-by: craft cms'
+        - http.favicon.hash:"-47932290"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
         - craftcms
@@ -12687,10 +12687,10 @@
   engines:
     - platform: shodan
       queries:
-        - x-jenkins
         - product:"jenkins"
         - cpe:"cpe:2.3:a:jenkins:jenkins"
         - http.favicon.hash:"81586312"
+        - x-jenkins
         - http.title:"jenkins"
     - platform: fofa
       queries:
@@ -12822,9 +12822,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:zabbix:zabbix"
-        - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
+        - http.title:"zabbix-server"
+        - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12849,10 +12849,10 @@
   engines:
     - platform: fofa
       queries:
-        - title="phpmyadmin"
-        - body="server_databases.php"
         - body="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
+        - body="server_databases.php"
+        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13630,9 +13630,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
         - http.title:"keycloak"
-        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13913,8 +13913,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -13964,8 +13964,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/ultimate-member/
         - http.html:"/wp-content/plugins/ultimate-member"
+        - http.html:/wp-content/plugins/ultimate-member/
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14081,8 +14081,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - icon_hash="702863115"
         - body="moosocial installation"
+        - icon_hash="702863115"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14405,8 +14405,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
         - app="zimbra-邮件系统"
+        - icon_hash="475145467"
         - icon_hash="1624375939"
     - platform: shodan
       queries:
@@ -14557,8 +14557,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15282,9 +15282,9 @@
         - http.title:"crushftp webinterface"
     - platform: fofa
       queries:
-        - title="crushftp webinterface"
-        - icon_hash="-1022206565"
         - body="crushftp"
+        - icon_hash="-1022206565"
+        - title="crushftp webinterface"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
@@ -17325,12 +17325,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -18060,8 +18060,8 @@
     - platform: fofa
       queries:
         - title="users - misp"
-        - title="errors - misp"
         - icon_hash="-137577333"
+        - title="errors - misp"
     - platform: google
       queries:
         - intitle:"users - misp"
@@ -18882,8 +18882,8 @@
     - platform: shodan
       queries:
         - http.html:"projectsend"
-        - http.html:"projectsend setup"
         - http.html:"provided by projectsend"
+        - http.html:"projectsend setup"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -29061,6 +29061,17 @@
   type: product
   engines: []
 
+- name: flowpaper
+  vendor: flowpaper
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="flexpaper"
+    - platform: shodan
+      queries:
+        - http.title:"flexpaper"
+
 - name: ncbi_toolbox
   vendor: nih
   type: product
@@ -29570,6 +29581,14 @@
   vendor: eyesofnetwork
   type: product
   engines: []
+
+- name: themegrill-demo-importer
+  vendor: themegrill
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/plugins/themegrill-demo-importer"
 
 - name: orion_platform
   vendor: solarwinds
@@ -31953,6 +31972,11 @@
 
 - name: dir820la1_firmware
   vendor: dlink
+  type: product
+  engines: []
+
+- name: datax-web
+  vendor: datax-web_project
   type: product
   engines: []
 
