@@ -3084,9 +3084,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugar setup wizard"
         - http.title:"sugarcrm"
-        - http.html:"sugarcrm inc. all rights reserved"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3205,8 +3205,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1701804003"
         - http.title:"servicenow"
+        - http.favicon.hash:"1701804003"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3641,9 +3641,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - icon_hash="-244067125"
         - body="solarview compact"
         - body="solarview compact" && title="top"
+        - icon_hash="-244067125"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -4020,8 +4020,8 @@
     - platform: fofa
       queries:
         - app="nagios-xi"
-        - icon_hash="1460499495"
         - title="nagios xi"
+        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5113,9 +5113,9 @@
   engines:
     - platform: shodan
       queries:
+        - 'x-powered-by: craft cms'
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.html:"craftcms"
-        - 'x-powered-by: craft cms'
         - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
@@ -12687,10 +12687,10 @@
   engines:
     - platform: shodan
       queries:
-        - x-jenkins
-        - http.title:"jenkins"
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
         - product:"jenkins"
+        - x-jenkins
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - http.title:"jenkins"
         - http.favicon.hash:"81586312"
     - platform: fofa
       queries:
@@ -12849,9 +12849,9 @@
   engines:
     - platform: fofa
       queries:
+        - title="phpmyadmin"
         - body="phpmyadmin"
         - body="server_databases.php"
-        - title="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
@@ -13238,8 +13238,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms/"
         - http.html:"/wp-content/plugins/ninja-forms"
+        - http.html:"/wp-content/plugins/ninja-forms/"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13630,9 +13630,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-1105083093"
         - http.title:"keycloak"
         - http.html:"keycloak"
+        - http.favicon.hash:"-1105083093"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13964,8 +13964,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ultimate-member"
         - http.html:/wp-content/plugins/ultimate-member/
+        - http.html:"/wp-content/plugins/ultimate-member"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14406,8 +14406,8 @@
     - platform: fofa
       queries:
         - icon_hash="1624375939"
-        - icon_hash="475145467"
         - app="zimbra-邮件系统"
+        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14948,8 +14948,8 @@
         - /wp-content/plugins/learnpress
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/learnpress"
         - http.html:"wp-content/plugins/learnpress"
+        - http.html:"/wp-content/plugins/learnpress"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/learnpress"
@@ -15282,9 +15282,9 @@
         - http.title:"crushftp webinterface"
     - platform: fofa
       queries:
+        - icon_hash="-1022206565"
         - body="crushftp"
         - title="crushftp webinterface"
-        - icon_hash="-1022206565"
     - platform: google
       queries:
         - intitle:"crushftp webinterface"
@@ -15523,8 +15523,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16036,12 +16036,12 @@
         - 'set-cookie: i_like_gogs='
     - platform: fofa
       queries:
-        - title="sign in - gogs"
         - title="installation - gogs"
-        - icon_hash="1935513730"
-        - 'set-cookie: i_like_gogs='
         - icon_hash="917966895"
+        - 'set-cookie: i_like_gogs='
+        - icon_hash="1935513730"
         - icon_hash="-449283196"
+        - title="sign in - gogs"
 
 - name: cobbler
   vendor: cobblerd
@@ -16524,8 +16524,8 @@
         - http.favicon.hash:"-655683626"
     - platform: fofa
       queries:
-        - icon_hash="-655683626"
         - title="prtg"
+        - icon_hash="-655683626"
     - platform: google
       queries:
         - intitle:"prtg"
@@ -18069,8 +18069,8 @@
         - http.title:"errors - misp"
     - platform: fofa
       queries:
-        - title="errors - misp"
         - title="users - misp"
+        - title="errors - misp"
         - icon_hash="-137577333"
     - platform: google
       queries:
@@ -18891,9 +18891,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"provided by projectsend"
         - http.html:"projectsend setup"
         - http.html:"projectsend"
+        - http.html:"provided by projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -28651,6 +28651,22 @@
       queries:
         - infoblox netmri
 
+- name: balance_two_firmware
+  vendor: peplink
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"peplink"
+
+- name: ads_pro
+  vendor: scripteo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/ap-plugin-scripteo"
+
 - name: Next.js
   vendor: vercel
   type: product
@@ -28680,14 +28696,6 @@
   vendor: apache
   type: product
   engines: []
-
-- name: balance_two_firmware
-  vendor: peplink
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"peplink"
 
 - name: labtech
   vendor: labtech_software
@@ -31528,14 +31536,6 @@
   vendor: solarwinds
   type: product
   engines: []
-
-- name: ads_pro
-  vendor: scripteo
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/ap-plugin-scripteo"
 
 - name: wp01
   vendor: wp01ru
