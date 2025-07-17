@@ -3084,9 +3084,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"sugarcrm inc. all rights reserved"
-        - http.title:"sugarcrm"
         - http.title:"sugar setup wizard"
+        - http.title:"sugarcrm"
+        - http.html:"sugarcrm inc. all rights reserved"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3094,9 +3094,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - body="sugarcrm inc. all rights reserved"
-        - title="sugarcrm"
         - title="sugar setup wizard"
+        - title="sugarcrm"
+        - body="sugarcrm inc. all rights reserved"
 
 - name: redash
   vendor: redash
@@ -3205,8 +3205,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"servicenow"
         - http.favicon.hash:"1701804003"
+        - http.title:"servicenow"
     - platform: google
       queries:
         - intitle:"ServiceNow"
@@ -3641,9 +3641,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact"
         - icon_hash="-244067125"
         - body="solarview compact" && title="top"
+        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -4019,9 +4019,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - icon_hash="1460499495"
-        - title="nagios xi"
         - app="nagios-xi"
+        - title="nagios xi"
+        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5113,10 +5113,10 @@
   engines:
     - platform: shodan
       queries:
-        - 'x-powered-by: craft cms'
-        - http.favicon.hash:"-47932290"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
+        - 'x-powered-by: craft cms'
     - platform: publicwww
       queries:
         - craftcms
@@ -5210,9 +5210,9 @@
         - 'set-cookie: dnn_ismobile'
     - platform: fofa
       queries:
-        - icon_hash="-1465479343"
         - 'set-cookie: dnn_ismobile'
         - app="dotnetnuke"
+        - icon_hash="-1465479343"
 
 - name: docker
   vendor: docker
@@ -12691,11 +12691,11 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"jenkins"
+        - http.favicon.hash:"81586312"
         - cpe:"cpe:2.3:a:jenkins:jenkins"
         - product:"jenkins"
+        - http.title:"jenkins"
         - x-jenkins
-        - http.favicon.hash:"81586312"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12854,9 +12854,9 @@
     - platform: fofa
       queries:
         - title="phpmyadmin"
+        - body="phpmyadmin"
         - body="server_databases.php"
         - body="pma_servername" && body="4.8.4"
-        - body="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13196,9 +13196,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
-        - title="cacti"
         - icon_hash="-1797138069"
+        - title="cacti"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13242,8 +13242,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms"
         - http.html:"/wp-content/plugins/ninja-forms/"
+        - http.html:"/wp-content/plugins/ninja-forms"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13635,8 +13635,8 @@
     - platform: shodan
       queries:
         - http.title:"keycloak"
-        - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -15070,8 +15070,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1380908726"
         - http.favicon.hash:"-250963920"
+        - http.favicon.hash:"1380908726"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -16040,12 +16040,12 @@
         - 'set-cookie: i_like_gogs='
     - platform: fofa
       queries:
-        - title="installation - gogs"
         - 'set-cookie: i_like_gogs='
         - icon_hash="917966895"
-        - icon_hash="-449283196"
         - title="sign in - gogs"
+        - icon_hash="-449283196"
         - icon_hash="1935513730"
+        - title="installation - gogs"
 
 - name: cobbler
   vendor: cobblerd
@@ -16528,8 +16528,8 @@
         - http.favicon.hash:"-655683626"
     - platform: fofa
       queries:
-        - title="prtg"
         - icon_hash="-655683626"
+        - title="prtg"
     - platform: google
       queries:
         - intitle:"prtg"
@@ -17339,12 +17339,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -18074,8 +18074,8 @@
     - platform: fofa
       queries:
         - title="users - misp"
-        - icon_hash="-137577333"
         - title="errors - misp"
+        - icon_hash="-137577333"
     - platform: google
       queries:
         - intitle:"users - misp"
@@ -18895,9 +18895,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"provided by projectsend"
         - http.html:"projectsend"
         - http.html:"projectsend setup"
+        - http.html:"provided by projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -22984,8 +22984,8 @@
         - http.favicon.hash:"-1922044295"
     - platform: fofa
       queries:
-        - '"micollab end user portal" && title=="redirecting..."'
         - icon_hash="-1922044295"
+        - '"micollab end user portal" && title=="redirecting..."'
 
 - name: footprints_service_core
   vendor: bmc
@@ -25974,8 +25974,8 @@
         - http.title:"privatebin"
     - platform: fofa
       queries:
-        - icon_hash="1358855492"
         - title="privatebin"
+        - icon_hash="1358855492"
 
 - name: openhab_web_interface
   vendor: openhab
@@ -26496,9 +26496,9 @@
         - http.title:"remote support portal"
     - platform: fofa
       queries:
-        - body="beyondtrust remote support"
         - title="remote support portal"
         - icon_hash="-694003434"
+        - body="beyondtrust remote support"
 
 - name: dixell_xweb-500
   vendor: emerson
@@ -28724,6 +28724,33 @@
       queries:
         - http.favicon.hash:"284403119"
 
+- name: ninja-tables
+  vendor: wpxpo
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/ninja-tables/"
+
+- name: broken_link_notifier
+  vendor: broken_link_notifier_project
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="blnotifier_front_end"
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/broken-link-notifier/
+
+- name: larecipe
+  vendor: binarytorch
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/binarytorch/larecipe/"
+
 - name: Next.js
   vendor: vercel
   type: product
@@ -28748,14 +28775,6 @@
   vendor: i-netsolution
   type: product
   engines: []
-
-- name: ninja-tables
-  vendor: wpxpo
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/ninja-tables/"
 
 - name: opensearch
   vendor: amazon
@@ -29286,25 +29305,6 @@
   vendor: wp01ru
   type: product
   engines: []
-
-- name: broken_link_notifier
-  vendor: broken_link_notifier_project
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="blnotifier_front_end"
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/broken-link-notifier/
-
-- name: larecipe
-  vendor: binarytorch
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/binarytorch/larecipe/"
 
 - name: bable\
   vendor: cmsmadesimple
@@ -33580,3 +33580,11 @@
   vendor: fortinet
   type: product
   engines: []
+
+- name: printer
+  vendor: generic
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - port:9100
