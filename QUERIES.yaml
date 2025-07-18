@@ -3084,8 +3084,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"sugar setup wizard"
         - http.html:"sugarcrm inc. all rights reserved"
+        - http.title:"sugar setup wizard"
         - http.title:"sugarcrm"
     - platform: google
       queries:
@@ -3094,8 +3094,8 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - title="sugarcrm"
         - title="sugar setup wizard"
+        - title="sugarcrm"
         - body="sugarcrm inc. all rights reserved"
 
 - name: redash
@@ -3642,8 +3642,8 @@
     - platform: fofa
       queries:
         - icon_hash="-244067125"
-        - body="solarview compact" && title="top"
         - body="solarview compact"
+        - body="solarview compact" && title="top"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3721,8 +3721,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"apache superset"
         - http.favicon.hash:"1582430156"
+        - http.html:"apache superset"
     - platform: fofa
       queries:
         - body="apache superset"
@@ -5113,10 +5113,10 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.html:"craftcms"
-        - 'x-powered-by: craft cms'
         - http.favicon.hash:"-47932290"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - 'x-powered-by: craft cms'
+        - http.html:"craftcms"
     - platform: publicwww
       queries:
         - craftcms
@@ -5210,8 +5210,8 @@
         - 'set-cookie: dnn_ismobile'
     - platform: fofa
       queries:
-        - 'set-cookie: dnn_ismobile'
         - app="dotnetnuke"
+        - 'set-cookie: dnn_ismobile'
         - icon_hash="-1465479343"
 
 - name: docker
@@ -12691,11 +12691,11 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
-        - product:"jenkins"
-        - x-jenkins
-        - http.favicon.hash:"81586312"
         - http.title:"jenkins"
+        - http.favicon.hash:"81586312"
+        - product:"jenkins"
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - x-jenkins
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12853,10 +12853,10 @@
   engines:
     - platform: fofa
       queries:
+        - title="phpmyadmin"
+        - body="phpmyadmin"
         - body="server_databases.php"
         - body="pma_servername" && body="4.8.4"
-        - body="phpmyadmin"
-        - title="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13196,8 +13196,8 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - icon_hash="-1797138069"
         - title="login to cacti"
+        - icon_hash="-1797138069"
         - title="cacti"
     - platform: google
       queries:
@@ -13242,8 +13242,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms/"
         - http.html:"/wp-content/plugins/ninja-forms"
+        - http.html:"/wp-content/plugins/ninja-forms/"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13635,9 +13635,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"keycloak"
-        - http.html:"keycloak"
         - http.favicon.hash:"-1105083093"
+        - http.html:"keycloak"
+        - http.title:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -13969,8 +13969,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/ultimate-member/
         - http.html:"/wp-content/plugins/ultimate-member"
+        - http.html:/wp-content/plugins/ultimate-member/
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14410,9 +14410,9 @@
   engines:
     - platform: fofa
       queries:
+        - icon_hash="475145467"
         - icon_hash="1624375939"
         - app="zimbra-邮件系统"
-        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14562,8 +14562,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -16041,12 +16041,12 @@
         - 'set-cookie: i_like_gogs='
     - platform: fofa
       queries:
-        - icon_hash="1935513730"
-        - icon_hash="917966895"
-        - title="installation - gogs"
-        - icon_hash="-449283196"
         - title="sign in - gogs"
+        - icon_hash="1935513730"
         - 'set-cookie: i_like_gogs='
+        - icon_hash="917966895"
+        - icon_hash="-449283196"
+        - title="installation - gogs"
 
 - name: cobbler
   vendor: cobblerd
@@ -17344,8 +17344,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -18074,9 +18074,9 @@
         - http.title:"errors - misp"
     - platform: fofa
       queries:
+        - title="users - misp"
         - icon_hash="-137577333"
         - title="errors - misp"
-        - title="users - misp"
     - platform: google
       queries:
         - intitle:"users - misp"
@@ -18896,9 +18896,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
+        - http.html:"projectsend"
         - http.html:"provided by projectsend"
         - http.html:"projectsend setup"
-        - http.html:"projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -22173,7 +22173,11 @@
   engines:
     - platform: fofa
       queries:
+        - title="lylme spage"
         - icon_hash="-282504889"
+    - platform: shodan
+      queries:
+        - http.favicon.hash:-282504889
 
 - name: dokan
   vendor: wedevs
@@ -26498,8 +26502,8 @@
     - platform: fofa
       queries:
         - title="remote support portal"
-        - icon_hash="-694003434"
         - body="beyondtrust remote support"
+        - icon_hash="-694003434"
 
 - name: dixell_xweb-500
   vendor: emerson
@@ -28767,11 +28771,6 @@
       queries:
         - port:9100
 
-- name: Next.js
-  vendor: vercel
-  type: product
-  engines: []
-
 - name: zpan
   vendor: saltbo
   type: product
@@ -28786,6 +28785,63 @@
     - platform: google
       queries:
         - intitle:"zpan"
+
+- name: 123solar
+  vendor: 123solar
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="123solar"
+    - platform: shodan
+      queries:
+        - http.title:"123solar"
+
+- name: acutoweb
+  vendor: opentext
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="acutoweb"
+    - platform: shodan
+      queries:
+        - http.title:"acutoweb"
+
+- name: idccms
+  vendor: idccms
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="idccms"
+    - platform: shodan
+      queries:
+        - http.title:"idccms"
+
+- name: events_manager
+  vendor: wp-events-plugin
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/events-manager/
+
+- name: ufida_erp-nc
+  vendor: yonyou
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - icon_hash="1085941792"
+    - platform: shodan
+      queries:
+        - http.title:"用友"
+
+- name: Next.js
+  vendor: vercel
+  type: product
+  engines: []
 
 - name: kyuubi
   vendor: apache
@@ -29142,17 +29198,6 @@
   type: product
   engines: []
 
-- name: 123solar
-  vendor: 123solar
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="123solar"
-    - platform: shodan
-      queries:
-        - http.title:"123solar"
-
 - name: arforms
   vendor: reputeinfosystems
   type: product
@@ -29188,17 +29233,6 @@
   type: product
   engines: []
 
-- name: acutoweb
-  vendor: opentext
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="acutoweb"
-    - platform: shodan
-      queries:
-        - http.title:"acutoweb"
-
 - name: easyspider
   vendor: naibowang
   type: product
@@ -29213,17 +29247,6 @@
   vendor: Linksys
   type: product
   engines: []
-
-- name: idccms
-  vendor: idccms
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="idccms"
-    - platform: shodan
-      queries:
-        - http.title:"idccms"
 
 - name: tp-link-archer-a20-v3-router
   vendor: tp-link
@@ -29369,25 +29392,6 @@
   vendor: wp01ru
   type: product
   engines: []
-
-- name: events_manager
-  vendor: wp-events-plugin
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/events-manager/
-
-- name: ufida_erp-nc
-  vendor: yonyou
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - icon_hash="1085941792"
-    - platform: shodan
-      queries:
-        - http.title:"用友"
 
 - name: bable\
   vendor: cmsmadesimple
