@@ -3104,9 +3104,9 @@
         - intext:"sugarcrm inc. all rights reserved"
     - platform: fofa
       queries:
-        - title="sugarcrm"
         - body="sugarcrm inc. all rights reserved"
         - title="sugar setup wizard"
+        - title="sugarcrm"
 
 - name: redash
   vendor: redash
@@ -3651,9 +3651,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact"
-        - icon_hash="-244067125"
         - body="solarview compact" && title="top"
+        - icon_hash="-244067125"
+        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -4033,9 +4033,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - icon_hash="1460499495"
-        - app="nagios-xi"
         - title="nagios xi"
+        - app="nagios-xi"
+        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -5128,8 +5128,8 @@
     - platform: shodan
       queries:
         - 'x-powered-by: craft cms'
-        - http.html:"craftcms"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.html:"craftcms"
         - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
@@ -5224,9 +5224,9 @@
         - 'set-cookie: dnn_ismobile'
     - platform: fofa
       queries:
+        - 'set-cookie: dnn_ismobile'
         - app="dotnetnuke"
         - icon_hash="-1465479343"
-        - 'set-cookie: dnn_ismobile'
 
 - name: docker
   vendor: docker
@@ -6656,9 +6656,9 @@
         - http.title:"papercut login"
     - platform: fofa
       queries:
-        - body='content="papercut'
         - icon_hash="-1142586156"
         - body="content=\"papercut\""
+        - body='content="papercut'
         - title="papercut login"
     - platform: google
       queries:
@@ -12724,11 +12724,11 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"jenkins"
-        - http.favicon.hash:"81586312"
-        - x-jenkins
-        - product:"jenkins"
         - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - x-jenkins
+        - http.favicon.hash:"81586312"
+        - product:"jenkins"
+        - http.title:"jenkins"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12859,9 +12859,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.favicon.hash:"892542951"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.title:"zabbix-server"
+        - http.favicon.hash:"892542951"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -12886,9 +12886,9 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
-        - title="phpmyadmin"
         - body="server_databases.php"
+        - title="phpmyadmin"
+        - body="phpmyadmin"
         - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
@@ -13229,9 +13229,9 @@
         - http.title:"login to cacti"
     - platform: fofa
       queries:
-        - icon_hash="-1797138069"
         - title="login to cacti"
         - title="cacti"
+        - icon_hash="-1797138069"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13592,9 +13592,9 @@
   engines:
     - platform: fofa
       queries:
+        - body="/geoserver/"
         - app="geoserver"
         - icon_hash="97540678"
-        - body="/geoserver/"
         - title="geoserver"
     - platform: shodan
       queries:
@@ -13917,8 +13917,8 @@
         - http.title:"revive adserver"
     - platform: fofa
       queries:
-        - icon_hash="106844876"
         - title="revive adserver"
+        - icon_hash="106844876"
     - platform: google
       queries:
         - intitle:"revive adserver"
@@ -14008,8 +14008,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ultimate-member"
         - http.html:/wp-content/plugins/ultimate-member/
+        - http.html:"/wp-content/plugins/ultimate-member"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14571,9 +14571,9 @@
     - platform: fofa
       queries:
         - title="| opnsense"
+        - server=="opnsense"
         - title="opnsense"
         - icon_hash="-1068289244"
-        - server=="opnsense"
         - icon_hash="-1148190371"
     - platform: google
       queries:
@@ -14610,8 +14610,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15004,8 +15004,8 @@
         - /wp-content/plugins/learnpress
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/learnpress"
         - http.html:"wp-content/plugins/learnpress"
+        - http.html:"/wp-content/plugins/learnpress"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/learnpress"
@@ -15122,8 +15122,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1380908726"
         - http.favicon.hash:"-250963920"
+        - http.favicon.hash:"1380908726"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -15339,10 +15339,10 @@
         - http.title:"crushftp"
     - platform: fofa
       queries:
-        - body="crushftp"
-        - title="crushftp webinterface"
         - title="crushftp"
         - icon_hash="-1022206565"
+        - title="crushftp webinterface"
+        - body="crushftp"
     - platform: google
       queries:
         - intitle:"crushftp"
@@ -16098,12 +16098,12 @@
         - 'set-cookie: i_like_gogs='
     - platform: fofa
       queries:
-        - icon_hash="917966895"
-        - icon_hash="1935513730"
-        - 'set-cookie: i_like_gogs='
         - title="sign in - gogs"
+        - icon_hash="917966895"
         - title="installation - gogs"
         - icon_hash="-449283196"
+        - 'set-cookie: i_like_gogs='
+        - icon_hash="1935513730"
 
 - name: cobbler
   vendor: cobblerd
@@ -17397,8 +17397,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"parallels h-sphere"
@@ -18131,8 +18131,8 @@
         - http.title:"errors - misp"
     - platform: fofa
       queries:
-        - title="users - misp"
         - icon_hash="-137577333"
+        - title="users - misp"
         - title="errors - misp"
     - platform: google
       queries:
@@ -18953,9 +18953,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"provided by projectsend"
         - http.html:"projectsend"
         - http.html:"projectsend setup"
+        - http.html:"provided by projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -23049,8 +23049,8 @@
         - http.favicon.hash:"-1922044295"
     - platform: fofa
       queries:
-        - icon_hash="-1922044295"
         - '"micollab end user portal" && title=="redirecting..."'
+        - icon_hash="-1922044295"
 
 - name: footprints_service_core
   vendor: bmc
@@ -23246,6 +23246,10 @@
     - platform: shodan
       queries:
         - http.favicon.hash:-831756631
+        - http.html:"n8n"
+    - platform: fofa
+      queries:
+        - body="n8n"
 
 - name: gophish
   vendor: getgophish
@@ -23735,8 +23739,8 @@
     - platform: fofa
       queries:
         - icon_hash="1937353549"
-        - 'set-cookie: ncentral_version='
         - icon_hash="1519363246"
+        - 'set-cookie: ncentral_version='
         - title="n-central login"
 
 - name: audiobookshelf
@@ -24440,8 +24444,8 @@
         - http.html:"var hst = location.hostname"
     - platform: fofa
       queries:
-        - icon_hash="-1341442175"
         - body="var hst = location.hostname"
+        - icon_hash="-1341442175"
 
 - name: scriptcase
   vendor: scriptcase
@@ -26587,9 +26591,9 @@
         - http.title:"remote support portal"
     - platform: fofa
       queries:
-        - icon_hash="-694003434"
-        - title="remote support portal"
         - body="beyondtrust remote support"
+        - title="remote support portal"
+        - icon_hash="-694003434"
 
 - name: dixell_xweb-500
   vendor: emerson
@@ -30862,6 +30866,14 @@
   vendor: wp01ru
   type: product
   engines: []
+
+- name: drag_and_drop_multiple_file_upload_contact_form_7
+  vendor: codedropz
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - wp-content/plugins/drag-and-drop-multiple-file-upload-contact-form-7/
 
 - name: klog_server
   vendor: klogserver
