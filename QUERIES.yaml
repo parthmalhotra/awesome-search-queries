@@ -3118,9 +3118,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.title:"sugar setup wizard"
         - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugarcrm"
-        - http.title:"sugar setup wizard"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3688,8 +3688,8 @@
     - platform: fofa
       queries:
         - icon_hash="-244067125"
-        - body="solarview compact"
         - body="solarview compact" && title="top"
+        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3771,9 +3771,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"superset"
         - http.favicon.hash:"1582430156"
         - http.html:"apache superset"
+        - http.html:"superset"
     - platform: fofa
       queries:
         - icon_hash="1582430156"
@@ -4071,9 +4071,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - title="nagios xi"
         - icon_hash="1460499495"
         - app="nagios-xi"
+        - title="nagios xi"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -4163,10 +4163,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"945408572"
-        - port:10443 http.favicon.hash:945408572
-        - http.html:"/remote/login" "xxxxxxxx"
         - cpe:"cpe:2.3:o:fortinet:fortios"
+        - http.html:"/remote/login" "xxxxxxxx"
+        - port:10443 http.favicon.hash:945408572
+        - http.favicon.hash:"945408572"
     - platform: fofa
       queries:
         - icon_hash="945408572"
@@ -5170,10 +5170,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
+        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -5269,9 +5269,9 @@
         - 'set-cookie: dnn_ismobile'
     - platform: fofa
       queries:
+        - app="dotnetnuke"
         - icon_hash="-1465479343"
         - 'set-cookie: dnn_ismobile'
-        - app="dotnetnuke"
 
 - name: docker
   vendor: docker
@@ -12786,11 +12786,11 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"81586312"
-        - http.title:"jenkins"
         - product:"jenkins"
-        - x-jenkins
+        - http.title:"jenkins"
         - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - http.favicon.hash:"81586312"
+        - x-jenkins
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12922,8 +12922,8 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.favicon.hash:"892542951"
         - http.title:"zabbix-server"
+        - http.favicon.hash:"892542951"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
     - platform: google
       queries:
@@ -12949,10 +12949,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="phpmyadmin"
-        - body="pma_servername" && body="4.8.4"
-        - body="server_databases.php"
         - title="phpmyadmin"
+        - body="server_databases.php"
+        - body="pma_servername" && body="4.8.4"
+        - body="phpmyadmin"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13298,10 +13298,10 @@
         - http.html:"graph_view.php" html:"cacti"
     - platform: fofa
       queries:
-        - body="graph_view.php" html:"cacti"
-        - icon_hash="-1797138069"
-        - title="cacti"
         - title="login to cacti"
+        - icon_hash="-1797138069"
+        - body="graph_view.php" html:"cacti"
+        - title="cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13665,9 +13665,9 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="97540678"
         - body="/geoserver/"
         - app="geoserver"
+        - icon_hash="97540678"
         - title="geoserver"
     - platform: shodan
       queries:
@@ -13746,9 +13746,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"keycloak"
         - http.favicon.hash:"-1105083093"
         - http.html:"keycloak"
+        - http.title:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -14198,8 +14198,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14523,11 +14523,11 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1624375939"
-        - app="zimbra-邮件系统"
+        - icon_hash="475145467"
         - body="zimbra collaboration suite web client"
         - title="zimbra collaboration suite"
-        - icon_hash="475145467"
+        - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14655,11 +14655,11 @@
         - http.title:"| opnsense"
     - platform: fofa
       queries:
-        - icon_hash="-1068289244"
         - title="opnsense"
-        - title="| opnsense"
         - icon_hash="-1148190371"
+        - title="| opnsense"
         - server=="opnsense"
+        - icon_hash="-1068289244"
     - platform: google
       queries:
         - intitle:"opnsense"
@@ -14695,8 +14695,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="163538942"
         - title="cdata arc"
+        - icon_hash="163538942"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15432,10 +15432,10 @@
         - http.title:"crushftp"
     - platform: fofa
       queries:
-        - body="crushftp"
-        - title="crushftp webinterface"
-        - title="crushftp"
         - icon_hash="-1022206565"
+        - title="crushftp"
+        - title="crushftp webinterface"
+        - body="crushftp"
     - platform: google
       queries:
         - intitle:"crushftp"
@@ -15683,8 +15683,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16201,12 +16201,12 @@
         - 'set-cookie: i_like_gogs='
     - platform: fofa
       queries:
+        - title="sign in - gogs"
+        - icon_hash="1935513730"
         - title="installation - gogs"
         - icon_hash="917966895"
-        - icon_hash="1935513730"
-        - 'set-cookie: i_like_gogs='
         - icon_hash="-449283196"
-        - title="sign in - gogs"
+        - 'set-cookie: i_like_gogs='
 
 - name: cobbler
   vendor: cobblerd
@@ -17395,8 +17395,8 @@
     - platform: fofa
       queries:
         - app="kubernetes-enterprise-manager"
-        - title="kubernetes web view"
         - icon_hash="-847792508"
+        - title="kubernetes web view"
     - platform: google
       queries:
         - intitle:"kubernetes web view"
@@ -17504,12 +17504,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -18802,8 +18802,8 @@
     - platform: fofa
       queries:
         - icon_hash="1574423538"
-        - icon_hash="-1908328911"
         - title="freepbx administration"
+        - icon_hash="-1908328911"
         - title="freepbx"
     - platform: google
       queries:
@@ -19074,8 +19074,8 @@
     - platform: shodan
       queries:
         - http.html:"projectsend"
-        - http.html:"provided by projectsend"
         - http.html:"projectsend setup"
+        - http.html:"provided by projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -20312,8 +20312,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1015186617"
         - icon_hash="-1889244460"
+        - icon_hash="1015186617"
     - platform: shodan
       queries:
         - http.favicon.hash:"-1889244460"
@@ -23191,11 +23191,11 @@
         - http.html:"mitel" html:"micollab"
     - platform: fofa
       queries:
-        - body="mitel" html:"micollab"
         - icon_hash="-1922044295"
-        - '"micollab end user portal" && title=="redirecting..."'
         - body="micollab end user portal"
         - body="mitel networks"
+        - '"micollab end user portal" && title=="redirecting..."'
+        - body="mitel" html:"micollab"
 
 - name: footprints_service_core
   vendor: bmc
@@ -23883,10 +23883,10 @@
         - 'set-cookie: ncentral_version='
     - platform: fofa
       queries:
-        - 'set-cookie: ncentral_version='
         - title="n-central login"
-        - icon_hash="1937353549"
         - icon_hash="1519363246"
+        - icon_hash="1937353549"
+        - 'set-cookie: ncentral_version='
 
 - name: audiobookshelf
   vendor: audiobookshelf
@@ -24592,8 +24592,8 @@
         - port:"7900"
     - platform: fofa
       queries:
-        - body="var hst = location.hostname"
         - icon_hash="-1341442175"
+        - body="var hst = location.hostname"
 
 - name: scriptcase
   vendor: scriptcase
@@ -26217,8 +26217,8 @@
         - http.title:"privatebin"
     - platform: fofa
       queries:
-        - title="privatebin"
         - icon_hash="1358855492"
+        - title="privatebin"
 
 - name: openhab_web_interface
   vendor: openhab
@@ -26743,8 +26743,8 @@
     - platform: fofa
       queries:
         - icon_hash="-694003434"
-        - body="beyondtrust remote support"
         - title="remote support portal"
+        - body="beyondtrust remote support"
 
 - name: dixell_xweb-500
   vendor: emerson
