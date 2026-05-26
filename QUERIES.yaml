@@ -3714,9 +3714,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
+        - body="solarview compact"
         - body="solarview compact" && title="top"
         - icon_hash="-244067125"
-        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3798,11 +3798,11 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1582430156"
         - http.title:"superset"
+        - http.html:"apache superset"
+        - http.favicon.hash:"1582430156"
         - product:"apache superset"
         - http.html:"superset"
-        - http.html:"apache superset"
     - platform: fofa
       queries:
         - app="apache-superset" || title="superset"
@@ -4105,9 +4105,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - icon_hash="1460499495"
-        - app="nagios-xi"
         - title="nagios xi"
+        - app="nagios-xi"
+        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -4197,9 +4197,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"945408572"
         - port:10443 http.favicon.hash:945408572
         - http.html:"/remote/login" "xxxxxxxx"
-        - http.favicon.hash:"945408572"
         - cpe:"cpe:2.3:o:fortinet:fortios"
     - platform: fofa
       queries:
@@ -5213,8 +5213,8 @@
     - platform: shodan
       queries:
         - http.favicon.hash:"-47932290"
-        - http.html:"craftcms"
         - 'x-powered-by: craft cms'
+        - http.html:"craftcms"
         - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
@@ -5311,9 +5311,9 @@
         - 'set-cookie: dnn_ismobile'
     - platform: fofa
       queries:
+        - 'set-cookie: dnn_ismobile'
         - icon_hash="-1465479343"
         - app="dotnetnuke"
-        - 'set-cookie: dnn_ismobile'
 
 - name: docker
   vendor: docker
@@ -6755,9 +6755,9 @@
         - http.title:"papercut login"
     - platform: fofa
       queries:
+        - body='content="papercut'
         - icon_hash="-1142586156"
         - body="content=\"papercut\""
-        - body='content="papercut'
         - title="papercut login"
     - platform: google
       queries:
@@ -12844,11 +12844,11 @@
   engines:
     - platform: shodan
       queries:
-        - x-jenkins
-        - http.favicon.hash:"81586312"
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
-        - http.title:"jenkins"
         - product:"jenkins"
+        - http.title:"jenkins"
+        - x-jenkins
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - http.favicon.hash:"81586312"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -12980,9 +12980,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.favicon.hash:"892542951"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
         - http.title:"zabbix-server"
+        - http.favicon.hash:"892542951"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -13007,10 +13007,10 @@
   engines:
     - platform: fofa
       queries:
-        - body="pma_servername" && body="4.8.4"
         - body="phpmyadmin"
         - body="server_databases.php"
         - title="phpmyadmin"
+        - body="pma_servername" && body="4.8.4"
     - platform: hunter
       queries:
         - app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
@@ -13356,10 +13356,10 @@
         - http.html:"graph_view.php" html:"cacti"
     - platform: fofa
       queries:
+        - title="login to cacti"
+        - title="cacti"
         - icon_hash="-1797138069"
         - body="graph_view.php" html:"cacti"
-        - title="cacti"
-        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13403,8 +13403,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms/"
         - http.html:"/wp-content/plugins/ninja-forms"
+        - http.html:"/wp-content/plugins/ninja-forms/"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13723,10 +13723,10 @@
   engines:
     - platform: fofa
       queries:
-        - app="geoserver"
         - body="/geoserver/"
-        - title="geoserver"
+        - app="geoserver"
         - icon_hash="97540678"
+        - title="geoserver"
     - platform: shodan
       queries:
         - 'server: geohttpserver'
@@ -13804,8 +13804,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"keycloak"
         - http.favicon.hash:"-1105083093"
+        - http.title:"keycloak"
         - http.html:"keycloak"
     - platform: fofa
       queries:
@@ -14264,8 +14264,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14589,11 +14589,11 @@
   engines:
     - platform: fofa
       queries:
-        - body="zimbra collaboration suite web client"
-        - icon_hash="1624375939"
-        - app="zimbra-邮件系统"
         - title="zimbra collaboration suite"
+        - body="zimbra collaboration suite web client"
         - icon_hash="475145467"
+        - app="zimbra-邮件系统"
+        - icon_hash="1624375939"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14721,10 +14721,10 @@
         - http.title:"| opnsense"
     - platform: fofa
       queries:
-        - server=="opnsense"
-        - icon_hash="-1068289244"
         - icon_hash="-1148190371"
         - title="| opnsense"
+        - icon_hash="-1068289244"
+        - server=="opnsense"
         - title="opnsense"
     - platform: google
       queries:
@@ -15498,9 +15498,9 @@
         - http.title:"crushftp"
     - platform: fofa
       queries:
+        - icon_hash="-1022206565"
         - title="crushftp webinterface"
         - title="crushftp"
-        - icon_hash="-1022206565"
         - body="crushftp"
     - platform: google
       queries:
@@ -15751,8 +15751,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16269,11 +16269,11 @@
         - 'set-cookie: i_like_gogs='
     - platform: fofa
       queries:
-        - icon_hash="1935513730"
-        - icon_hash="917966895"
-        - 'set-cookie: i_like_gogs='
         - title="sign in - gogs"
         - icon_hash="-449283196"
+        - icon_hash="917966895"
+        - icon_hash="1935513730"
+        - 'set-cookie: i_like_gogs='
         - title="installation - gogs"
 
 - name: cobbler
@@ -17462,9 +17462,9 @@
         - http.title:"kubernetes web view"
     - platform: fofa
       queries:
+        - title="kubernetes web view"
         - app="kubernetes-enterprise-manager"
         - icon_hash="-847792508"
-        - title="kubernetes web view"
     - platform: google
       queries:
         - intitle:"kubernetes web view"
@@ -17572,12 +17572,12 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="parallels h-sphere"
         - title="h-sphere"
+        - title="parallels h-sphere"
     - platform: google
       queries:
-        - intitle:"h-sphere"
         - intitle:"parallels h-sphere"
+        - intitle:"h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -18310,8 +18310,8 @@
     - platform: fofa
       queries:
         - title="users - misp"
-        - title="errors - misp"
         - icon_hash="-137577333"
+        - title="errors - misp"
     - platform: google
       queries:
         - intitle:"users - misp"
@@ -18869,8 +18869,8 @@
         - http.title:"freepbx"
     - platform: fofa
       queries:
-        - icon_hash="1574423538"
         - title="freepbx"
+        - icon_hash="1574423538"
         - title="freepbx administration"
         - icon_hash="-1908328911"
     - platform: google
@@ -20380,8 +20380,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="1015186617"
         - icon_hash="-1889244460"
+        - icon_hash="1015186617"
     - platform: shodan
       queries:
         - http.favicon.hash:"-1889244460"
@@ -23265,11 +23265,11 @@
         - http.html:"mitel" html:"micollab"
     - platform: fofa
       queries:
-        - body="mitel networks"
-        - '"micollab end user portal" && title=="redirecting..."'
-        - body="mitel" html:"micollab"
         - icon_hash="-1922044295"
         - body="micollab end user portal"
+        - body="mitel networks"
+        - body="mitel" html:"micollab"
+        - '"micollab end user portal" && title=="redirecting..."'
 
 - name: footprints_service_core
   vendor: bmc
@@ -23960,10 +23960,10 @@
         - 'set-cookie: ncentral_version='
     - platform: fofa
       queries:
+        - icon_hash="1937353549"
+        - 'set-cookie: ncentral_version='
         - icon_hash="1519363246"
         - title="n-central login"
-        - 'set-cookie: ncentral_version='
-        - icon_hash="1937353549"
 
 - name: audiobookshelf
   vendor: audiobookshelf
@@ -26840,9 +26840,9 @@
         - http.title:"remote support portal"
     - platform: fofa
       queries:
-        - title="remote support portal"
-        - icon_hash="-694003434"
         - body="beyondtrust remote support"
+        - icon_hash="-694003434"
+        - title="remote support portal"
 
 - name: dixell_xweb-500
   vendor: emerson
@@ -33558,6 +33558,334 @@
       queries:
         - http.title:"taskingai | console"
 
+- name: ceselector
+  vendor: mmc
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"typo3 cms"
+
+- name: cogent-datahub
+  vendor: Cogent Real-Time Systems
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"datahub web server"
+
+- name: proficy-webspace
+  vendor: GE
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"proficy webspace"
+
+- name: ignition
+  vendor: Inductive Automation
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"ignition gateway"
+
+- name: lynx-router
+  vendor: Westermo
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"westermo"
+
+- name: thingworx
+  vendor: PTC
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"thingworx"
+
+- name: solaredge-telematics
+  vendor: SolarEdge
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"solaredge"
+
+- name: tac-vista
+  vendor: Schneider Electric
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"tac vista"
+
+- name: zenon
+  vendor: COPA-DATA
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - 'http.title:"copa-data :: zenon"'
+
+- name: shinelink
+  vendor: Growatt
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"growatt shinelink"
+
+- name: solar-inverter
+  vendor: kaco
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"kaco new energy"
+
+- name: mach-system
+  vendor: Reliable Controls
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"reliable controls"
+
+- name: ilon-smartserver
+  vendor: Echelon
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"i.lon smartserver"
+
+- name: solar-log
+  vendor: Solar-Log
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"solar-log"
+
+- name: twincat-hmi
+  vendor: Beckhoff
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"twincat" http.html:"beckhoff"
+
+- name: mate3s
+  vendor: outback-power
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"outback power"
+
+- name: aveva-edge
+  vendor: AVEVA
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"aveva edge"
+
+- name: scadabr
+  vendor: ScadaBR
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"scadabr"
+
+- name: pdu
+  vendor: Raritan
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"raritan" http.html:"pdu"
+
+- name: plc
+  vendor: Unitronics
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"unitronics"
+
+- name: umg
+  vendor: Janitza
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"janitza"
+
+- name: groov
+  vendor: Opto 22
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"groov"
+
+- name: gridvis
+  vendor: janitza
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"gridvis"
+
+- name: fronius-inverter
+  vendor: Fronius
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"fronius inverter"
+
+- name: fronius-datalogger-web
+  vendor: Fronius
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"fronius datalogger web"
+
+- name: hmi
+  vendor: Red Lion Controls
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"red lion"
+
+- name: promotic
+  vendor: MicroSys
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"promotic"
+
+- name: clearscada
+  vendor: Schneider Electric
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"clearscada"
+
+- name: prostar-mppt
+  vendor: morningstar
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"prostar mppt - live data"
+
+- name: andover-continuum
+  vendor: Andover
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"andover continuum"
+
+- name: factorytalk-viewpoint
+  vendor: Rockwell Automation
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"factorytalk viewpoint"
+
+- name: digi-router
+  vendor: Digi International
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"digi router"
+
+- name: mxview
+  vendor: Moxa
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"mxview one central manager"
+
+- name: sel-rtac
+  vendor: Schweitzer Engineering Laboratories
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"sel-rtac"
+
+- name: emoncms
+  vendor: OpenEnergyMonitor
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"emoncms - user login"
+
+- name: aveva-intouch-access-anywhere
+  vendor: AVEVA
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"intouch access anywhere"
+
+- name: dse855
+  vendor: deep-sea-electronics
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"dse 855"
+
+- name: openscada
+  vendor: OpenSCADA
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"openscada" port:10002
+
+- name: pi-vision
+  vendor: OSIsoft
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"pi vision"
+
+- name: webvisu
+  vendor: CODESYS
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"webvisu login"
+
+- name: vtscada
+  vendor: Trihedral
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"vtscada internet client from trihedral"
+
 - name: memcached
   vendor: memcached
   type: product
@@ -37418,14 +37746,6 @@
   type: product
   engines: []
 
-- name: ceselector
-  vendor: mmc
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.component:"typo3 cms"
-
 - name: gravitysmtp
   vendor: rocketgenius
   type: product
@@ -38441,14 +38761,6 @@
   type: product
   engines: []
 
-- name: cogent-datahub
-  vendor: Cogent Real-Time Systems
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"datahub web server"
-
 - name: password_manager
   vendor: oneidentity
   type: product
@@ -38464,26 +38776,10 @@
   type: product
   engines: []
 
-- name: proficy-webspace
-  vendor: GE
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"proficy webspace"
-
 - name: horizon
   vendor: vmware
   type: product
   engines: []
-
-- name: ignition
-  vendor: Inductive Automation
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"ignition gateway"
 
 - name: edgeos
   vendor: ui
@@ -38504,14 +38800,6 @@
   vendor: cpanel
   type: product
   engines: []
-
-- name: lynx-router
-  vendor: Westermo
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"westermo"
 
 - name: ion7600
   vendor: schneider-electric
@@ -38543,22 +38831,6 @@
   type: product
   engines: []
 
-- name: thingworx
-  vendor: PTC
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"thingworx"
-
-- name: solaredge-telematics
-  vendor: SolarEdge
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"solaredge"
-
 - name: global_management_system
   vendor: sonicwall
   type: product
@@ -38568,30 +38840,6 @@
   vendor: citrix
   type: product
   engines: []
-
-- name: tac-vista
-  vendor: Schneider Electric
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"tac vista"
-
-- name: zenon
-  vendor: COPA-DATA
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - 'http.title:"copa-data :: zenon"'
-
-- name: shinelink
-  vendor: Growatt
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"growatt shinelink"
 
 - name: digital_rebar
   vendor: rackn
@@ -38603,148 +38851,20 @@
   type: product
   engines: []
 
-- name: solar-inverter
-  vendor: kaco
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"kaco new energy"
-
-- name: mach-system
-  vendor: Reliable Controls
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"reliable controls"
-
-- name: ilon-smartserver
-  vendor: Echelon
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"i.lon smartserver"
-
 - name: druid
   vendor: alibaba
   type: product
   engines: []
-
-- name: solar-log
-  vendor: Solar-Log
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"solar-log"
-
-- name: twincat-hmi
-  vendor: Beckhoff
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"twincat" http.html:"beckhoff"
-
-- name: mate3s
-  vendor: outback-power
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"outback power"
-
-- name: aveva-edge
-  vendor: AVEVA
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"aveva edge"
-
-- name: scadabr
-  vendor: ScadaBR
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"scadabr"
-
-- name: pdu
-  vendor: Raritan
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"raritan" http.html:"pdu"
-
-- name: plc
-  vendor: Unitronics
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"unitronics"
-
-- name: umg
-  vendor: Janitza
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"janitza"
 
 - name: scalar_i500
   vendor: quantum
   type: product
   engines: []
 
-- name: groov
-  vendor: Opto 22
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"groov"
-
-- name: gridvis
-  vendor: janitza
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"gridvis"
-
 - name: netweaver_portal
   vendor: sap
   type: product
   engines: []
-
-- name: fronius-inverter
-  vendor: Fronius
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"fronius inverter"
-
-- name: fronius-datalogger-web
-  vendor: Fronius
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"fronius datalogger web"
-
-- name: hmi
-  vendor: Red Lion Controls
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"red lion"
 
 - name: horizon
   vendor: openstack
@@ -38756,55 +38876,15 @@
   type: product
   engines: []
 
-- name: promotic
-  vendor: MicroSys
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"promotic"
-
-- name: clearscada
-  vendor: Schneider Electric
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"clearscada"
-
-- name: prostar-mppt
-  vendor: morningstar
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"prostar mppt - live data"
-
 - name: vvx
   vendor: polycom
   type: product
   engines: []
 
-- name: andover-continuum
-  vendor: Andover
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"andover continuum"
-
 - name: ambari
   vendor: apache
   type: product
   engines: []
-
-- name: factorytalk-viewpoint
-  vendor: Rockwell Automation
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"factorytalk viewpoint"
 
 - name: xenmobile_device_manager_mdm
   vendor: citrix
@@ -38816,42 +38896,10 @@
   type: product
   engines: []
 
-- name: digi-router
-  vendor: Digi International
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"digi router"
-
 - name: enterprise_manager_base_platform
   vendor: oracle
   type: product
   engines: []
-
-- name: mxview
-  vendor: Moxa
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"mxview one central manager"
-
-- name: sel-rtac
-  vendor: Schweitzer Engineering Laboratories
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"sel-rtac"
-
-- name: emoncms
-  vendor: OpenEnergyMonitor
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"emoncms - user login"
 
 - name: integrated_lights-out_5
   vendor: hpe
@@ -38868,47 +38916,15 @@
   type: product
   engines: []
 
-- name: aveva-intouch-access-anywhere
-  vendor: AVEVA
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"intouch access anywhere"
-
 - name: zenario
   vendor: tribalsystems
   type: product
   engines: []
 
-- name: dse855
-  vendor: deep-sea-electronics
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"dse 855"
-
 - name: fiori
   vendor: sap
   type: product
   engines: []
-
-- name: openscada
-  vendor: OpenSCADA
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"openscada" port:10002
-
-- name: pi-vision
-  vendor: OSIsoft
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"pi vision"
 
 - name: labtech
   vendor: labtech_software
@@ -38924,22 +38940,6 @@
   vendor: compal
   type: product
   engines: []
-
-- name: webvisu
-  vendor: CODESYS
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.html:"webvisu login"
-
-- name: vtscada
-  vendor: Trihedral
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"vtscada internet client from trihedral"
 
 - name: samba
   vendor: samba
