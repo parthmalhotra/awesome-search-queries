@@ -3714,9 +3714,9 @@
         - cpe:"cpe:2.3:o:contec:solarview_compact_firmware"
     - platform: fofa
       queries:
-        - body="solarview compact"
         - body="solarview compact" && title="top"
         - icon_hash="-244067125"
+        - body="solarview compact"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3798,10 +3798,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"superset"
-        - http.html:"superset"
         - http.favicon.hash:"1582430156"
+        - http.title:"superset"
         - product:"apache superset"
+        - http.html:"superset"
         - http.html:"apache superset"
     - platform: fofa
       queries:
@@ -4105,9 +4105,9 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
+        - icon_hash="1460499495"
         - app="nagios-xi"
         - title="nagios xi"
-        - icon_hash="1460499495"
     - platform: google
       queries:
         - intitle:"nagios xi"
@@ -4197,10 +4197,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"/remote/login" "xxxxxxxx"
-        - cpe:"cpe:2.3:o:fortinet:fortios"
-        - http.favicon.hash:"945408572"
         - port:10443 http.favicon.hash:945408572
+        - http.html:"/remote/login" "xxxxxxxx"
+        - http.favicon.hash:"945408572"
+        - cpe:"cpe:2.3:o:fortinet:fortios"
     - platform: fofa
       queries:
         - body="/remote/login" "xxxxxxxx"
@@ -5212,10 +5212,10 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - http.favicon.hash:"-47932290"
         - http.html:"craftcms"
         - 'x-powered-by: craft cms'
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
     - platform: publicwww
       queries:
         - craftcms
@@ -5311,9 +5311,9 @@
         - 'set-cookie: dnn_ismobile'
     - platform: fofa
       queries:
-        - 'set-cookie: dnn_ismobile'
-        - app="dotnetnuke"
         - icon_hash="-1465479343"
+        - app="dotnetnuke"
+        - 'set-cookie: dnn_ismobile'
 
 - name: docker
   vendor: docker
@@ -6755,10 +6755,10 @@
         - http.title:"papercut login"
     - platform: fofa
       queries:
+        - icon_hash="-1142586156"
+        - body="content=\"papercut\""
         - body='content="papercut'
         - title="papercut login"
-        - body="content=\"papercut\""
-        - icon_hash="-1142586156"
     - platform: google
       queries:
         - intitle:"papercut login"
@@ -12844,10 +12844,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"81586312"
-        - http.title:"jenkins"
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
         - x-jenkins
+        - http.favicon.hash:"81586312"
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
+        - http.title:"jenkins"
         - product:"jenkins"
     - platform: fofa
       queries:
@@ -12980,9 +12980,9 @@
         - title="zabbix-server"
     - platform: shodan
       queries:
-        - http.title:"zabbix-server"
         - http.favicon.hash:"892542951"
         - cpe:"cpe:2.3:a:zabbix:zabbix"
+        - http.title:"zabbix-server"
     - platform: google
       queries:
         - intitle:"zabbix-server"
@@ -13356,10 +13356,10 @@
         - http.html:"graph_view.php" html:"cacti"
     - platform: fofa
       queries:
-        - title="login to cacti"
+        - icon_hash="-1797138069"
         - body="graph_view.php" html:"cacti"
         - title="cacti"
-        - icon_hash="-1797138069"
+        - title="login to cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13403,8 +13403,8 @@
         - /wp-content/plugins/ninja-forms/
     - platform: shodan
       queries:
-        - http.html:"/wp-content/plugins/ninja-forms"
         - http.html:"/wp-content/plugins/ninja-forms/"
+        - http.html:"/wp-content/plugins/ninja-forms"
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ninja-forms"
@@ -13723,10 +13723,10 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="97540678"
-        - title="geoserver"
         - app="geoserver"
         - body="/geoserver/"
+        - title="geoserver"
+        - icon_hash="97540678"
     - platform: shodan
       queries:
         - 'server: geohttpserver'
@@ -13804,9 +13804,9 @@
   engines:
     - platform: shodan
       queries:
-        - http.html:"keycloak"
-        - http.favicon.hash:"-1105083093"
         - http.title:"keycloak"
+        - http.favicon.hash:"-1105083093"
+        - http.html:"keycloak"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -14048,8 +14048,8 @@
         - http.title:"revive adserver"
     - platform: fofa
       queries:
-        - title="revive adserver"
         - icon_hash="106844876"
+        - title="revive adserver"
     - platform: google
       queries:
         - intitle:"revive adserver"
@@ -14088,8 +14088,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"phppgadmin"
         - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
+        - http.title:"phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -14589,11 +14589,11 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="475145467"
-        - title="zimbra collaboration suite"
         - body="zimbra collaboration suite web client"
         - icon_hash="1624375939"
         - app="zimbra-邮件系统"
+        - title="zimbra collaboration suite"
+        - icon_hash="475145467"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14721,11 +14721,11 @@
         - http.title:"| opnsense"
     - platform: fofa
       queries:
-        - title="opnsense"
+        - server=="opnsense"
         - icon_hash="-1068289244"
         - icon_hash="-1148190371"
-        - server=="opnsense"
         - title="| opnsense"
+        - title="opnsense"
     - platform: google
       queries:
         - intitle:"opnsense"
@@ -14761,8 +14761,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="163538942"
         - title="cdata arc"
+        - icon_hash="163538942"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15161,9 +15161,9 @@
         - /wp-content/plugins/learnpress/
     - platform: shodan
       queries:
-        - http.html:"wp-content/plugins/learnpress"
-        - http.html:"/wp-content/plugins/learnpress"
         - http.html:"/wp-content/plugins/learnpress/"
+        - http.html:"/wp-content/plugins/learnpress"
+        - http.html:"wp-content/plugins/learnpress"
     - platform: fofa
       queries:
         - body="wp-content/plugins/learnpress"
@@ -15498,10 +15498,10 @@
         - http.title:"crushftp"
     - platform: fofa
       queries:
-        - icon_hash="-1022206565"
-        - body="crushftp"
         - title="crushftp webinterface"
         - title="crushftp"
+        - icon_hash="-1022206565"
+        - body="crushftp"
     - platform: google
       queries:
         - intitle:"crushftp"
@@ -15751,8 +15751,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - title="cloudpanel"
         - icon_hash="151132309"
+        - title="cloudpanel"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16269,12 +16269,12 @@
         - 'set-cookie: i_like_gogs='
     - platform: fofa
       queries:
-        - title="sign in - gogs"
         - icon_hash="1935513730"
-        - icon_hash="-449283196"
-        - 'set-cookie: i_like_gogs='
-        - title="installation - gogs"
         - icon_hash="917966895"
+        - 'set-cookie: i_like_gogs='
+        - title="sign in - gogs"
+        - icon_hash="-449283196"
+        - title="installation - gogs"
 
 - name: cobbler
   vendor: cobblerd
@@ -17462,9 +17462,9 @@
         - http.title:"kubernetes web view"
     - platform: fofa
       queries:
-        - title="kubernetes web view"
         - app="kubernetes-enterprise-manager"
         - icon_hash="-847792508"
+        - title="kubernetes web view"
     - platform: google
       queries:
         - intitle:"kubernetes web view"
@@ -17572,8 +17572,8 @@
         - http.title:"parallels h-sphere"
     - platform: fofa
       queries:
-        - title="h-sphere"
         - title="parallels h-sphere"
+        - title="h-sphere"
     - platform: google
       queries:
         - intitle:"h-sphere"
@@ -18869,10 +18869,10 @@
         - http.title:"freepbx"
     - platform: fofa
       queries:
-        - icon_hash="-1908328911"
         - icon_hash="1574423538"
         - title="freepbx"
         - title="freepbx administration"
+        - icon_hash="-1908328911"
     - platform: google
       queries:
         - intitle:"freepbx administration"
@@ -19141,9 +19141,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"provided by projectsend"
-        - http.html:"projectsend"
         - http.html:"projectsend setup"
+        - http.html:"projectsend"
+        - http.html:"provided by projectsend"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -23266,10 +23266,10 @@
     - platform: fofa
       queries:
         - body="mitel networks"
-        - icon_hash="-1922044295"
         - '"micollab end user portal" && title=="redirecting..."'
-        - body="micollab end user portal"
         - body="mitel" html:"micollab"
+        - icon_hash="-1922044295"
+        - body="micollab end user portal"
 
 - name: footprints_service_core
   vendor: bmc
@@ -23960,10 +23960,10 @@
         - 'set-cookie: ncentral_version='
     - platform: fofa
       queries:
-        - 'set-cookie: ncentral_version='
-        - title="n-central login"
-        - icon_hash="1937353549"
         - icon_hash="1519363246"
+        - title="n-central login"
+        - 'set-cookie: ncentral_version='
+        - icon_hash="1937353549"
 
 - name: audiobookshelf
   vendor: audiobookshelf
@@ -26840,8 +26840,8 @@
         - http.title:"remote support portal"
     - platform: fofa
       queries:
-        - icon_hash="-694003434"
         - title="remote support portal"
+        - icon_hash="-694003434"
         - body="beyondtrust remote support"
 
 - name: dixell_xweb-500
@@ -33304,6 +33304,260 @@
       queries:
         - http.html:"aapanel linux panel"
 
+- name: web-check
+  vendor: lissy93
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - title="web-check"
+    - platform: shodan
+      queries:
+        - http.title:"web-check"
+
+- name: kong-gateway
+  vendor: konghq
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - 'header="server: kong"'
+    - platform: shodan
+      queries:
+        - 'http.title:"kong" || "server: kong"'
+
+- name: SwarmUI
+  vendor: mcmonkeyprojects
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"swarmui"
+
+- name: skyvern
+  vendor: skyvern-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"skyvern"
+
+- name: OpenLLM
+  vendor: BentoML
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"openllm"
+
+- name: Kubeflow Pipelines
+  vendor: Kubeflow
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"kubeflow pipelines"
+
+- name: Metaflow UI
+  vendor: Netflix
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"metaflow ui"
+
+- name: chatbot-ui
+  vendor: mckaywrigley
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"chatbot ui"
+
+- name: mlflow
+  vendor: databricks
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"mlflow"
+
+- name: tensorboard
+  vendor: tensorflow
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"tensorboard"
+
+- name: facefusion
+  vendor: facefusion
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"facefusion"
+
+- name: langsmith
+  vendor: langchain
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"langsmith"
+
+- name: phoenix
+  vendor: Arize-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"phoenix" port:6006 http.html:"arize"
+
+- name: lmstudio
+  vendor: lmstudio
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"lm studio chat"
+
+- name: chainlit
+  vendor: chainlit
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"chainlit"
+
+- name: cognita
+  vendor: truefoundry
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"cognita"
+
+- name: fastgpt
+  vendor: labring
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"fastgpt"
+
+- name: Letta
+  vendor: Letta AI
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"letta"
+
+- name: big-agi
+  vendor: big-agi
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"big-agi"
+
+- name: evidently
+  vendor: evidently-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"evidently"
+
+- name: perplexica
+  vendor: perplexica
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"perplexica"
+
+- name: typebot
+  vendor: typebot
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"typebot"
+
+- name: polynote
+  vendor: polynote
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"polynote"
+
+- name: localgpt
+  vendor: promptengineer
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"localgpt"
+
+- name: ragflow
+  vendor: infiniflow
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"ragflow"
+
+- name: vanna
+  vendor: vanna-ai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"vanna"
+
+- name: botpress
+  vendor: botpress
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"@botpress/ui-admin"
+
+- name: Voilà
+  vendor: Voilà
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"/voila/"
+
+- name: serge
+  vendor: serge-chat
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"serge" port:8008
+
+- name: Argilla
+  vendor: Argilla
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"argilla"
+
+- name: taskingai
+  vendor: taskingai
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"taskingai | console"
+
 - name: memcached
   vendor: memcached
   type: product
@@ -36594,17 +36848,6 @@
   type: product
   engines: []
 
-- name: web-check
-  vendor: lissy93
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - title="web-check"
-    - platform: shodan
-      queries:
-        - http.title:"web-check"
-
 - name: responsive-pricing-table
   vendor: wpdarko
   type: product
@@ -37174,6 +37417,14 @@
   vendor: internlm
   type: product
   engines: []
+
+- name: ceselector
+  vendor: mmc
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.component:"typo3 cms"
 
 - name: gravitysmtp
   vendor: rocketgenius
@@ -38170,17 +38421,6 @@
   type: product
   engines: []
 
-- name: kong-gateway
-  vendor: konghq
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - 'header="server: kong"'
-    - platform: shodan
-      queries:
-        - 'http.title:"kong" || "server: kong"'
-
 - name: opensearch
   vendor: amazon
   type: product
@@ -38191,14 +38431,6 @@
   type: product
   engines: []
 
-- name: SwarmUI
-  vendor: mcmonkeyprojects
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"swarmui"
-
 - name: hadoop
   vendor: apache
   type: product
@@ -38208,6 +38440,14 @@
   vendor: paloaltonetworks
   type: product
   engines: []
+
+- name: cogent-datahub
+  vendor: Cogent Real-Time Systems
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"datahub web server"
 
 - name: password_manager
   vendor: oneidentity
@@ -38224,47 +38464,31 @@
   type: product
   engines: []
 
-- name: skyvern
-  vendor: skyvern-ai
+- name: proficy-webspace
+  vendor: GE
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"skyvern"
+        - http.title:"proficy webspace"
 
 - name: horizon
   vendor: vmware
   type: product
   engines: []
 
-- name: OpenLLM
-  vendor: BentoML
+- name: ignition
+  vendor: Inductive Automation
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"openllm"
+        - http.title:"ignition gateway"
 
 - name: edgeos
   vendor: ui
   type: product
   engines: []
-
-- name: Kubeflow Pipelines
-  vendor: Kubeflow
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"kubeflow pipelines"
-
-- name: Metaflow UI
-  vendor: Netflix
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"metaflow ui"
 
 - name: siteomat
   vendor: orpak
@@ -38276,26 +38500,18 @@
   type: product
   engines: []
 
-- name: chatbot-ui
-  vendor: mckaywrigley
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"chatbot ui"
-
 - name: whm
   vendor: cpanel
   type: product
   engines: []
 
-- name: mlflow
-  vendor: databricks
+- name: lynx-router
+  vendor: Westermo
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"mlflow"
+        - http.html:"westermo"
 
 - name: ion7600
   vendor: schneider-electric
@@ -38307,34 +38523,10 @@
   type: product
   engines: []
 
-- name: tensorboard
-  vendor: tensorflow
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"tensorboard"
-
 - name: skycaiji
   vendor: skycaiji
   type: product
   engines: []
-
-- name: facefusion
-  vendor: facefusion
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"facefusion"
-
-- name: langsmith
-  vendor: langchain
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"langsmith"
 
 - name: email_security
   vendor: forcepoint
@@ -38351,6 +38543,22 @@
   type: product
   engines: []
 
+- name: thingworx
+  vendor: PTC
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"thingworx"
+
+- name: solaredge-telematics
+  vendor: SolarEdge
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"solaredge"
+
 - name: global_management_system
   vendor: sonicwall
   type: product
@@ -38360,6 +38568,30 @@
   vendor: citrix
   type: product
   engines: []
+
+- name: tac-vista
+  vendor: Schneider Electric
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"tac vista"
+
+- name: zenon
+  vendor: COPA-DATA
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - 'http.title:"copa-data :: zenon"'
+
+- name: shinelink
+  vendor: Growatt
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"growatt shinelink"
 
 - name: digital_rebar
   vendor: rackn
@@ -38371,60 +38603,148 @@
   type: product
   engines: []
 
-- name: phoenix
-  vendor: Arize-ai
+- name: solar-inverter
+  vendor: kaco
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"phoenix" port:6006 http.html:"arize"
+        - http.title:"kaco new energy"
 
-- name: lmstudio
-  vendor: lmstudio
+- name: mach-system
+  vendor: Reliable Controls
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"lm studio chat"
+        - http.title:"reliable controls"
+
+- name: ilon-smartserver
+  vendor: Echelon
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"i.lon smartserver"
 
 - name: druid
   vendor: alibaba
   type: product
   engines: []
 
-- name: chainlit
-  vendor: chainlit
+- name: solar-log
+  vendor: Solar-Log
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.html:"chainlit"
+        - http.title:"solar-log"
 
-- name: cognita
-  vendor: truefoundry
+- name: twincat-hmi
+  vendor: Beckhoff
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"cognita"
+        - http.html:"twincat" http.html:"beckhoff"
 
-- name: fastgpt
-  vendor: labring
+- name: mate3s
+  vendor: outback-power
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"fastgpt"
+        - http.title:"outback power"
+
+- name: aveva-edge
+  vendor: AVEVA
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"aveva edge"
+
+- name: scadabr
+  vendor: ScadaBR
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"scadabr"
+
+- name: pdu
+  vendor: Raritan
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"raritan" http.html:"pdu"
+
+- name: plc
+  vendor: Unitronics
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"unitronics"
+
+- name: umg
+  vendor: Janitza
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"janitza"
 
 - name: scalar_i500
   vendor: quantum
   type: product
   engines: []
 
+- name: groov
+  vendor: Opto 22
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"groov"
+
+- name: gridvis
+  vendor: janitza
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"gridvis"
+
 - name: netweaver_portal
   vendor: sap
   type: product
   engines: []
+
+- name: fronius-inverter
+  vendor: Fronius
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"fronius inverter"
+
+- name: fronius-datalogger-web
+  vendor: Fronius
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"fronius datalogger web"
+
+- name: hmi
+  vendor: Red Lion Controls
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"red lion"
 
 - name: horizon
   vendor: openstack
@@ -38436,79 +38756,55 @@
   type: product
   engines: []
 
-- name: Letta
-  vendor: Letta AI
+- name: promotic
+  vendor: MicroSys
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"letta"
+        - http.title:"promotic"
 
-- name: big-agi
-  vendor: big-agi
+- name: clearscada
+  vendor: Schneider Electric
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"big-agi"
+        - http.title:"clearscada"
 
-- name: evidently
-  vendor: evidently-ai
+- name: prostar-mppt
+  vendor: morningstar
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"evidently"
-
-- name: perplexica
-  vendor: perplexica
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"perplexica"
+        - http.title:"prostar mppt - live data"
 
 - name: vvx
   vendor: polycom
   type: product
   engines: []
 
-- name: typebot
-  vendor: typebot
+- name: andover-continuum
+  vendor: Andover
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"typebot"
+        - http.html:"andover continuum"
 
 - name: ambari
   vendor: apache
   type: product
   engines: []
 
-- name: polynote
-  vendor: polynote
+- name: factorytalk-viewpoint
+  vendor: Rockwell Automation
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"polynote"
-
-- name: localgpt
-  vendor: promptengineer
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"localgpt"
-
-- name: ragflow
-  vendor: infiniflow
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"ragflow"
+        - http.title:"factorytalk viewpoint"
 
 - name: xenmobile_device_manager_mdm
   vendor: citrix
@@ -38520,42 +38816,42 @@
   type: product
   engines: []
 
+- name: digi-router
+  vendor: Digi International
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"digi router"
+
 - name: enterprise_manager_base_platform
   vendor: oracle
   type: product
   engines: []
 
-- name: vanna
-  vendor: vanna-ai
+- name: mxview
+  vendor: Moxa
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"vanna"
+        - http.title:"mxview one central manager"
 
-- name: botpress
-  vendor: botpress
+- name: sel-rtac
+  vendor: Schweitzer Engineering Laboratories
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.html:"@botpress/ui-admin"
+        - http.title:"sel-rtac"
 
-- name: Voilà
-  vendor: Voilà
+- name: emoncms
+  vendor: OpenEnergyMonitor
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.html:"/voila/"
-
-- name: serge
-  vendor: serge-chat
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"serge" port:8008
+        - http.title:"emoncms - user login"
 
 - name: integrated_lights-out_5
   vendor: hpe
@@ -38572,36 +38868,52 @@
   type: product
   engines: []
 
+- name: aveva-intouch-access-anywhere
+  vendor: AVEVA
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"intouch access anywhere"
+
 - name: zenario
   vendor: tribalsystems
   type: product
   engines: []
+
+- name: dse855
+  vendor: deep-sea-electronics
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"dse 855"
 
 - name: fiori
   vendor: sap
   type: product
   engines: []
 
-- name: Argilla
-  vendor: Argilla
+- name: openscada
+  vendor: OpenSCADA
   type: product
   engines:
     - platform: shodan
       queries:
-        - http.title:"argilla"
+        - http.title:"openscada" port:10002
+
+- name: pi-vision
+  vendor: OSIsoft
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"pi vision"
 
 - name: labtech
   vendor: labtech_software
   type: product
   engines: []
-
-- name: taskingai
-  vendor: taskingai
-  type: product
-  engines:
-    - platform: shodan
-      queries:
-        - http.title:"taskingai | console"
 
 - name: sitefinity_cms
   vendor: progress
@@ -38612,6 +38924,22 @@
   vendor: compal
   type: product
   engines: []
+
+- name: webvisu
+  vendor: CODESYS
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.html:"webvisu login"
+
+- name: vtscada
+  vendor: Trihedral
+  type: product
+  engines:
+    - platform: shodan
+      queries:
+        - http.title:"vtscada internet client from trihedral"
 
 - name: samba
   vendor: samba
