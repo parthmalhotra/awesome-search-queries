@@ -3166,9 +3166,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.html:"sugarcrm inc. all rights reserved"
         - http.title:"sugar setup wizard"
         - http.title:"sugarcrm"
-        - http.html:"sugarcrm inc. all rights reserved"
     - platform: google
       queries:
         - intitle:"sugarcrm"
@@ -3177,8 +3177,8 @@
     - platform: fofa
       queries:
         - title="sugar setup wizard"
-        - body="sugarcrm inc. all rights reserved"
         - title="sugarcrm"
+        - body="sugarcrm inc. all rights reserved"
 
 - name: redash
   vendor: redash
@@ -3736,8 +3736,8 @@
     - platform: fofa
       queries:
         - icon_hash="-244067125"
-        - body="solarview compact" && title="top"
         - body="solarview compact"
+        - body="solarview compact" && title="top"
 
 - name: skysa_app_bar_integration_plugin
   vendor: skysa
@@ -3819,11 +3819,11 @@
   engines:
     - platform: shodan
       queries:
-        - http.title:"superset"
         - http.html:"apache superset"
-        - http.html:"superset"
         - product:"apache superset"
+        - http.title:"superset"
         - http.favicon.hash:"1582430156"
+        - http.html:"superset"
     - platform: fofa
       queries:
         - app="apache-superset" || title="superset"
@@ -4129,8 +4129,8 @@
         - http.title:"nagios xi"
     - platform: fofa
       queries:
-        - icon_hash="1460499495"
         - title="nagios xi"
+        - icon_hash="1460499495"
         - app="nagios-xi"
     - platform: google
       queries:
@@ -4221,10 +4221,10 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"945408572"
-        - http.html:"/remote/login" "xxxxxxxx"
         - port:10443 http.favicon.hash:945408572
         - cpe:"cpe:2.3:o:fortinet:fortios"
+        - http.html:"/remote/login" "xxxxxxxx"
+        - http.favicon.hash:"945408572"
     - platform: fofa
       queries:
         - icon_hash="945408572"
@@ -5236,10 +5236,10 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-47932290"
+        - cpe:"cpe:2.3:a:craftcms:craft_cms"
         - 'x-powered-by: craft cms'
         - http.html:"craftcms"
-        - cpe:"cpe:2.3:a:craftcms:craft_cms"
-        - http.favicon.hash:"-47932290"
     - platform: publicwww
       queries:
         - craftcms
@@ -6785,10 +6785,10 @@
         - http.title:"papercut login"
     - platform: fofa
       queries:
-        - title="papercut login"
         - body='content="papercut'
-        - body="content=\"papercut\""
         - icon_hash="-1142586156"
+        - title="papercut login"
+        - body="content=\"papercut\""
     - platform: google
       queries:
         - intitle:"papercut login"
@@ -12672,9 +12672,9 @@
         - http.title:"globalprotect" port:443
     - platform: fofa
       queries:
+        - title="globalprotect"
         - icon_hash="-631559155"
         - title="globalprotect" port:443
-        - title="globalprotect"
     - platform: google
       queries:
         - intitle:"globalprotect" port:443
@@ -12901,10 +12901,10 @@
     - platform: shodan
       queries:
         - http.title:"jenkins"
+        - cpe:"cpe:2.3:a:jenkins:jenkins"
         - product:"jenkins"
         - http.favicon.hash:"81586312"
         - x-jenkins
-        - cpe:"cpe:2.3:a:jenkins:jenkins"
     - platform: fofa
       queries:
         - icon_hash="81586312"
@@ -13065,9 +13065,9 @@
   engines:
     - platform: fofa
       queries:
+        - body="pma_servername" && body="4.8.4"
         - title="phpmyadmin"
         - body="server_databases.php"
-        - body="pma_servername" && body="4.8.4"
         - body="phpmyadmin"
     - platform: hunter
       queries:
@@ -13417,10 +13417,10 @@
         - http.html:"graph_view.php" html:"cacti"
     - platform: fofa
       queries:
+        - body="graph_view.php" html:"cacti"
         - icon_hash="-1797138069"
         - title="login to cacti"
         - title="cacti"
-        - body="graph_view.php" html:"cacti"
     - platform: google
       queries:
         - intitle:"cacti"
@@ -13787,10 +13787,10 @@
   engines:
     - platform: fofa
       queries:
-        - app="geoserver"
+        - icon_hash="97540678"
         - body="/geoserver/"
         - title="geoserver"
-        - icon_hash="97540678"
+        - app="geoserver"
     - platform: shodan
       queries:
         - 'server: geohttpserver'
@@ -13868,9 +13868,9 @@
   engines:
     - platform: shodan
       queries:
+        - http.favicon.hash:"-1105083093"
         - http.html:"keycloak"
         - http.title:"keycloak"
-        - http.favicon.hash:"-1105083093"
     - platform: fofa
       queries:
         - icon_hash="-1105083093"
@@ -14155,8 +14155,8 @@
   engines:
     - platform: shodan
       queries:
-        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
         - http.title:"phppgadmin"
+        - cpe:"cpe:2.3:a:phppgadmin_project:phppgadmin"
     - platform: fofa
       queries:
         - title="phppgadmin"
@@ -14206,8 +14206,8 @@
         - /wp-content/plugins/ultimate-member/
     - platform: shodan
       queries:
-        - http.html:/wp-content/plugins/ultimate-member/
         - http.html:"/wp-content/plugins/ultimate-member"
+        - http.html:/wp-content/plugins/ultimate-member/
     - platform: fofa
       queries:
         - body="/wp-content/plugins/ultimate-member"
@@ -14331,8 +14331,8 @@
         - http.html:"moosocial installation"
     - platform: fofa
       queries:
-        - body="moosocial installation"
         - icon_hash="702863115"
+        - body="moosocial installation"
 
 - name: deep_castle_g2
   vendor: icewarp
@@ -14656,11 +14656,11 @@
   engines:
     - platform: fofa
       queries:
+        - title="zimbra collaboration suite"
+        - app="zimbra-邮件系统"
         - body="zimbra collaboration suite web client"
         - icon_hash="1624375939"
-        - app="zimbra-邮件系统"
         - icon_hash="475145467"
-        - title="zimbra collaboration suite"
     - platform: shodan
       queries:
         - http.favicon.hash:"475145467"
@@ -14789,10 +14789,10 @@
     - platform: fofa
       queries:
         - title="opnsense"
-        - icon_hash="-1068289244"
         - icon_hash="-1148190371"
-        - server=="opnsense"
         - title="| opnsense"
+        - icon_hash="-1068289244"
+        - server=="opnsense"
     - platform: google
       queries:
         - intitle:"opnsense"
@@ -14828,8 +14828,8 @@
   engines:
     - platform: fofa
       queries:
-        - title="cdata arc"
         - icon_hash="163538942"
+        - title="cdata arc"
     - platform: shodan
       queries:
         - http.favicon.hash:"163538942"
@@ -15239,8 +15239,8 @@
     - platform: shodan
       queries:
         - http.html:"wp-content/plugins/learnpress"
-        - http.html:"/wp-content/plugins/learnpress"
         - http.html:"/wp-content/plugins/learnpress/"
+        - http.html:"/wp-content/plugins/learnpress"
     - platform: fofa
       queries:
         - body="wp-content/plugins/learnpress"
@@ -15358,8 +15358,8 @@
   engines:
     - platform: shodan
       queries:
-        - http.favicon.hash:"1380908726"
         - http.favicon.hash:"-250963920"
+        - http.favicon.hash:"1380908726"
     - platform: fofa
       queries:
         - icon_hash="-250963920"
@@ -15403,8 +15403,8 @@
         - title="teamcity"
     - platform: shodan
       queries:
-        - http.title:"teamcity"
         - http.component:"teamcity"
+        - http.title:"teamcity"
     - platform: google
       queries:
         - intitle:"teamcity"
@@ -15575,9 +15575,9 @@
         - http.title:"crushftp"
     - platform: fofa
       queries:
-        - body="crushftp"
-        - icon_hash="-1022206565"
         - title="crushftp webinterface"
+        - icon_hash="-1022206565"
+        - body="crushftp"
         - title="crushftp"
     - platform: google
       queries:
@@ -15835,8 +15835,8 @@
         - http.favicon.hash:"151132309"
     - platform: fofa
       queries:
-        - icon_hash="151132309"
         - title="cloudpanel"
+        - icon_hash="151132309"
     - platform: google
       queries:
         - intitle:"cloudpanel"
@@ -16361,13 +16361,13 @@
         - http.title:"gogs"
     - platform: fofa
       queries:
-        - 'set-cookie: i_like_gogs='
-        - icon_hash="1935513730"
-        - title="installation - gogs"
-        - title="gogs"
-        - icon_hash="917966895"
         - icon_hash="-449283196"
+        - icon_hash="917966895"
+        - 'set-cookie: i_like_gogs='
+        - title="installation - gogs"
         - title="sign in - gogs"
+        - title="gogs"
+        - icon_hash="1935513730"
 
 - name: cobbler
   vendor: cobblerd
@@ -17558,8 +17558,8 @@
     - platform: fofa
       queries:
         - icon_hash="-847792508"
-        - title="kubernetes web view"
         - app="kubernetes-enterprise-manager"
+        - title="kubernetes web view"
     - platform: google
       queries:
         - intitle:"kubernetes web view"
@@ -17671,8 +17671,8 @@
         - title="h-sphere"
     - platform: google
       queries:
-        - intitle:"parallels h-sphere"
         - intitle:"h-sphere"
+        - intitle:"parallels h-sphere"
 
 - name: ubigeo_de_peru_para_woocommerce
   vendor: ubigeo_de_peru_para_woocommerce_project
@@ -18974,10 +18974,10 @@
         - http.title:"freepbx"
     - platform: fofa
       queries:
+        - title="freepbx administration"
+        - title="freepbx"
         - icon_hash="1574423538"
         - icon_hash="-1908328911"
-        - title="freepbx"
-        - title="freepbx administration"
     - platform: google
       queries:
         - intitle:"freepbx administration"
@@ -19246,9 +19246,9 @@
         - intext:provided by projectsend
     - platform: shodan
       queries:
-        - http.html:"projectsend setup"
         - http.html:"provided by projectsend"
         - http.html:"projectsend"
+        - http.html:"projectsend setup"
     - platform: fofa
       queries:
         - body="projectsend setup"
@@ -20489,8 +20489,8 @@
   engines:
     - platform: fofa
       queries:
-        - icon_hash="-1889244460"
         - icon_hash="1015186617"
+        - icon_hash="-1889244460"
     - platform: shodan
       queries:
         - http.favicon.hash:"-1889244460"
@@ -23399,11 +23399,11 @@
         - http.html:"mitel" html:"micollab"
     - platform: fofa
       queries:
-        - body="micollab end user portal"
-        - icon_hash="-1922044295"
         - body="mitel networks"
-        - '"micollab end user portal" && title=="redirecting..."'
+        - body="micollab end user portal"
         - body="mitel" html:"micollab"
+        - '"micollab end user portal" && title=="redirecting..."'
+        - icon_hash="-1922044295"
 
 - name: footprints_service_core
   vendor: bmc
@@ -24099,12 +24099,12 @@
         - http.title:"n-central"
     - platform: fofa
       queries:
-        - 'set-cookie: ncentral_version='
-        - title="n-central login redirect"
         - title="n-central login"
-        - icon_hash="1937353549"
         - icon_hash="1519363246"
         - title="n-central"
+        - icon_hash="1937353549"
+        - 'set-cookie: ncentral_version='
+        - title="n-central login redirect"
     - platform: google
       queries:
         - intitle:"n-central"
@@ -24825,8 +24825,8 @@
         - port:"7900"
     - platform: fofa
       queries:
-        - body="var hst = location.hostname"
         - icon_hash="-1341442175"
+        - body="var hst = location.hostname"
 
 - name: scriptcase
   vendor: scriptcase
@@ -26511,8 +26511,8 @@
         - http.title:"privatebin"
     - platform: fofa
       queries:
-        - title="privatebin"
         - icon_hash="1358855492"
+        - title="privatebin"
 
 - name: openhab_web_interface
   vendor: openhab
@@ -33491,10 +33491,10 @@
   engines:
     - platform: fofa
       queries:
+        - body="litellm"
         - title="litellm api"
         - icon_hash="539724359"
         - title="litellm api - swagger ui"
-        - body="litellm"
     - platform: shodan
       queries:
         - http.favicon.hash:"539724359"
@@ -38890,6 +38890,112 @@
       queries:
         - http.html:"concrete cms"
 
+- name: AK-SM 800A
+  vendor: Danfoss
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="ak-sm 800a"
+    - platform: shodan
+      queries:
+        - http.html:"ak-sm 800a"
+
+- name: file-manager-advanced
+  vendor: saad-iqbal
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/file-manager-advanced/"
+
+- name: simple_membership
+  vendor: ordasoft
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="com_simplemembership"
+    - platform: shodan
+      queries:
+        - http.html:"com_simplemembership"
+
+- name: agile-store-locator
+  vendor: agile-logix
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/agile-store-locator/"
+
+- name: nex-forms-express-wp-form-builder
+  vendor: basix
+  type: product
+  engines:
+    - platform: publicwww
+      queries:
+        - /wp-content/plugins/nex-forms-express-wp-form-builder/
+
+- name: mcp-chrome-bridge
+  vendor: hangwin
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="chrome mcp"
+    - platform: shodan
+      queries:
+        - http.html:"chrome mcp"
+
+- name: file-manager
+  vendor: bit-apps
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/file-manager/"
+
+- name: media-library-assistant
+  vendor: david-lingren
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/media-library-assistant/"
+
+- name: wp-ticket
+  vendor: emarket-design
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/wp-ticket"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/wp-ticket"
+
+- name: paisa
+  vendor: ananthakumaran
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="paisa is an open source personal finance manager"
+    - platform: shodan
+      queries:
+        - http.title:"paisa"
+
+- name: jetpack
+  vendor: automattic
+  type: product
+  engines:
+    - platform: fofa
+      queries:
+        - body="/wp-content/plugins/jetpack/"
+    - platform: shodan
+      queries:
+        - http.html:"/wp-content/plugins/jetpack/"
+
 - name: aria_operations_for_networks
   vendor: vmware
   type: product
@@ -39024,17 +39130,6 @@
   vendor: oracle
   type: product
   engines: []
-
-- name: AK-SM 800A
-  vendor: Danfoss
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="ak-sm 800a"
-    - platform: shodan
-      queries:
-        - http.html:"ak-sm 800a"
 
 - name: ion7600
   vendor: schneider-electric
@@ -40226,25 +40321,6 @@
   type: product
   engines: []
 
-- name: file-manager-advanced
-  vendor: saad-iqbal
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/file-manager-advanced/"
-
-- name: simple_membership
-  vendor: ordasoft
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="com_simplemembership"
-    - platform: shodan
-      queries:
-        - http.html:"com_simplemembership"
-
 - name: windmill
   vendor: windmill-labs
   type: product
@@ -40285,14 +40361,6 @@
   type: product
   engines: []
 
-- name: agile-store-locator
-  vendor: agile-logix
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/agile-store-locator/"
-
 - name: modern_events_calendar
   vendor: webnus
   type: product
@@ -40323,14 +40391,6 @@
   type: product
   engines: []
 
-- name: nex-forms-express-wp-form-builder
-  vendor: basix
-  type: product
-  engines:
-    - platform: publicwww
-      queries:
-        - /wp-content/plugins/nex-forms-express-wp-form-builder/
-
 - name: mcp-for-argocd
   vendor: argoproj-labs
   type: product
@@ -40350,25 +40410,6 @@
   vendor: cozyvision1
   type: product
   engines: []
-
-- name: mcp-chrome-bridge
-  vendor: hangwin
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="chrome mcp"
-    - platform: shodan
-      queries:
-        - http.html:"chrome mcp"
-
-- name: file-manager
-  vendor: bit-apps
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/file-manager/"
 
 - name: jotty
   vendor: fccview
@@ -40410,14 +40451,6 @@
   type: product
   engines: []
 
-- name: media-library-assistant
-  vendor: david-lingren
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/media-library-assistant/"
-
 - name: bluesnap-payment-gateway-for-woocommerce
   vendor: bluesnap
   type: product
@@ -40428,17 +40461,6 @@
   type: product
   engines: []
 
-- name: wp-ticket
-  vendor: emarket-design
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/wp-ticket"
-    - platform: shodan
-      queries:
-        - http.html:"/wp-content/plugins/wp-ticket"
-
 - name: joomsport-sports-league-results-management
   vendor: beardev
   type: product
@@ -40448,17 +40470,6 @@
   vendor: wp-developer
   type: product
   engines: []
-
-- name: paisa
-  vendor: ananthakumaran
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="paisa is an open source personal finance manager"
-    - platform: shodan
-      queries:
-        - http.title:"paisa"
 
 - name: restler
   vendor: luracast
@@ -44194,17 +44205,6 @@
   vendor: i-netsolution
   type: product
   engines: []
-
-- name: jetpack
-  vendor: automattic
-  type: product
-  engines:
-    - platform: fofa
-      queries:
-        - body="/wp-content/plugins/jetpack/"
-    - platform: shodan
-      queries:
-        - http.html:"/wp-content/plugins/jetpack/"
 
 - name: dpi
   vendor: dell
